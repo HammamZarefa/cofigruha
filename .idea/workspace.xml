@@ -20,604 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b9c3d3c-a351-4ab6-90ca-e38cb16d2c4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env.example" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/company-profile-master.iml" afterPath="$PROJECT_DIR$/.idea/company-profile-master.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" afterPath="$PROJECT_DIR$/.styleci.yml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/AssistantExport.php" afterPath="$PROJECT_DIR$/app/Exports/AssistantExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/CertificadoExport.php" afterPath="$PROJECT_DIR$/app/Exports/CertificadoExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/CursoExport.php" afterPath="$PROJECT_DIR$/app/Exports/CursoExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/EntidadExport.php" afterPath="$PROJECT_DIR$/app/Exports/EntidadExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/FormadorExport.php" afterPath="$PROJECT_DIR$/app/Exports/FormadorExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/OperatorExport.php" afterPath="$PROJECT_DIR$/app/Exports/OperatorExport.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AsistentController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AsistentController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BannerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BannerController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarnetController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarnetController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CertificadoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CertificadoController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CursosController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EntidadesFormadoreasController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EntidadesFormadoreasController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExamenController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExamenController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FaqController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FaqController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormadoresController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormadoresController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GeneralController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GeneralController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HorarioController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HorarioController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OperadoresController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OperadoresController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PCategoryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PCategoryController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscriberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscriberController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestimonialController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestimonialController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/printController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/printController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/About.php" afterPath="$PROJECT_DIR$/app/Models/About.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Asistent.php" afterPath="$PROJECT_DIR$/app/Models/Asistent.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Banner.php" afterPath="$PROJECT_DIR$/app/Models/Banner.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Carnet.php" afterPath="$PROJECT_DIR$/app/Models/Carnet.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" afterPath="$PROJECT_DIR$/app/Models/Category.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Certificado.php" afterPath="$PROJECT_DIR$/app/Models/Certificado.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cursos.php" afterPath="$PROJECT_DIR$/app/Models/Cursos.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EntidadesFormadoreas.php" afterPath="$PROJECT_DIR$/app/Models/EntidadesFormadoreas.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Examen.php" afterPath="$PROJECT_DIR$/app/Models/Examen.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Faq.php" afterPath="$PROJECT_DIR$/app/Models/Faq.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Formadores.php" afterPath="$PROJECT_DIR$/app/Models/Formadores.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/General.php" afterPath="$PROJECT_DIR$/app/Models/General.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Horario.php" afterPath="$PROJECT_DIR$/app/Models/Horario.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Link.php" afterPath="$PROJECT_DIR$/app/Models/Link.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Operadores.php" afterPath="$PROJECT_DIR$/app/Models/Operadores.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Page.php" afterPath="$PROJECT_DIR$/app/Models/Page.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Partner.php" afterPath="$PROJECT_DIR$/app/Models/Partner.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Pcategory.php" afterPath="$PROJECT_DIR$/app/Models/Pcategory.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Portfolio.php" afterPath="$PROJECT_DIR$/app/Models/Portfolio.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" afterPath="$PROJECT_DIR$/app/Models/Post.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Practica.php" afterPath="$PROJECT_DIR$/app/Models/Practica.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Service.php" afterPath="$PROJECT_DIR$/app/Models/Service.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Subscriber.php" afterPath="$PROJECT_DIR$/app/Models/Subscriber.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" afterPath="$PROJECT_DIR$/app/Models/Tag.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" afterPath="$PROJECT_DIR$/app/Models/Team.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Teoria.php" afterPath="$PROJECT_DIR$/app/Models/Teoria.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Testimonial.php" afterPath="$PROJECT_DIR$/app/Models/Testimonial.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tipo_De_Curso.php" afterPath="$PROJECT_DIR$/app/Models/Tipo_De_Curso.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tipo_Maquina.php" afterPath="$PROJECT_DIR$/app/Models/Tipo_Maquina.php" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Models/User.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/tools/build-appbundle.sh" afterPath="$PROJECT_DIR$/app/tools/build-appbundle.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/build-icon.sh" afterPath="$PROJECT_DIR$/app/tools/build-icon.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/change-bundleid.sh" afterPath="$PROJECT_DIR$/app/tools/change-bundleid.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/clean-all.sh" afterPath="$PROJECT_DIR$/app/tools/clean-all.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/configs/change-bundleid.conf" afterPath="$PROJECT_DIR$/app/tools/configs/change-bundleid.conf" />
-      <change beforePath="$PROJECT_DIR$/app/tools/configs/create-keystore.conf" afterPath="$PROJECT_DIR$/app/tools/configs/create-keystore.conf" />
-      <change beforePath="$PROJECT_DIR$/app/tools/create-keystore.sh" afterPath="$PROJECT_DIR$/app/tools/create-keystore.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/fastlane.sh" afterPath="$PROJECT_DIR$/app/tools/fastlane.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/fastlane_android.sh" afterPath="$PROJECT_DIR$/app/tools/fastlane_android.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/fastlane_ios.sh" afterPath="$PROJECT_DIR$/app/tools/fastlane_ios.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/install_flutter.sh" afterPath="$PROJECT_DIR$/app/tools/install_flutter.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/build-appbundle.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/build-appbundle.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/change_package_name.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/change_package_name.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/check_flutter.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/check_flutter.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/copy_order_keystore.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/copy_order_keystore.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/isExistFile.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/isExistFile.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/isExistFolder.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/isExistFolder.sh" />
-      <change beforePath="$PROJECT_DIR$/app/tools/scripts/updateKeyProperties.sh" afterPath="$PROJECT_DIR$/app/tools/scripts/updateKeyProperties.sh" />
-      <change beforePath="$PROJECT_DIR$/artisan" afterPath="$PROJECT_DIR$/artisan" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" afterPath="$PROJECT_DIR$/config/cache.php" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" afterPath="$PROJECT_DIR$/config/cors.php" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" afterPath="$PROJECT_DIR$/config/hashing.php" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" afterPath="$PROJECT_DIR$/config/logging.php" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" afterPath="$PROJECT_DIR$/config/mail.php" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" afterPath="$PROJECT_DIR$/config/queue.php" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" afterPath="$PROJECT_DIR$/config/session.php" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" afterPath="$PROJECT_DIR$/config/view.php" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" afterPath="$PROJECT_DIR$/database/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_100143_create_generals_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_100143_create_generals_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_114144_create_banners_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_114144_create_banners_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_125701_create_abouts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_125701_create_abouts_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_133441_create_portfolios_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_133441_create_portfolios_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_01_134310_create_pcategories_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_134310_create_pcategories_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_113421_create_categories_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_113421_create_categories_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_115319_create_tags_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_115319_create_tags_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_115935_create_posts_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_115935_create_posts_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_02_120059_create_post_tag_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_02_120059_create_post_tag_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_065405_create_testimonials_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_065405_create_testimonials_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_072245_create_pages_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_072245_create_pages_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_073641_create_links_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_073641_create_links_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_075643_create_faqs_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_075643_create_faqs_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_080922_create_partners_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_080922_create_partners_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_082839_create_services_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_082839_create_services_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_103255_create_teams_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_103255_create_teams_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_03_103405_create_subscribers_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_12_03_103405_create_subscribers_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_095257_create_entidades_formadoreas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_095257_create_entidades_formadoreas_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_095257_create_formadores_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_095257_create_formadores_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_095307_create_foreign_keys.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_095307_create_foreign_keys.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_asistent_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_asistent_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_carnet_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_carnet_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_cursos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_cursos_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_examen_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_examen_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_horario_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_horario_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_operadores_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_operadores_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_practica_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_practica_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_teoria_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_teoria_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_tipo_de_curso_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_tipo_de_curso_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_tipo_maquina_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_12_14_123323_create_tipo_maquina_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_02_20_084714_update_horario_table_add_tipo_machina.php" afterPath="$PROJECT_DIR$/database/migrations/2022_02_20_084714_update_horario_table_add_tipo_machina.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_18_144216_update_carnets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_18_144216_update_carnets_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_18_145208_update_carnet_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_18_145208_update_carnet_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_18_151149_create_carnet_tipo__maquina_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_18_151149_create_carnet_tipo__maquina_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_18_193124_create_certificados_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_18_193124_create_certificados_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_19_200237_create_certificado_tipo__maquina_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_19_200237_create_certificado_tipo__maquina_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_21_151818_update_certificados_table.php" afterPath="$PROJECT_DIR$/database/migrations/2022_03_21_151818_update_certificados_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/alaa.css" afterPath="$PROJECT_DIR$/public/admin/alaa.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/material-dashboard.css" afterPath="$PROJECT_DIR$/public/admin/css/material-dashboard.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/material-dashboard.min.css" afterPath="$PROJECT_DIR$/public/admin/css/material-dashboard.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/nucleo-icons.css" afterPath="$PROJECT_DIR$/public/admin/css/nucleo-icons.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/nucleo-svg.css" afterPath="$PROJECT_DIR$/public/admin/css/nucleo-svg.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/sb-admin-2.css" afterPath="$PROJECT_DIR$/public/admin/css/sb-admin-2.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/sb-admin-2.min.css" afterPath="$PROJECT_DIR$/public/admin/css/sb-admin-2.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/img/anapat.png" afterPath="$PROJECT_DIR$/public/admin/img/anapat.png" />
-      <change beforePath="$PROJECT_DIR$/public/admin/img/logo-anpat.png" afterPath="$PROJECT_DIR$/public/admin/img/logo-anpat.png" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/chart-area-demo.js" afterPath="$PROJECT_DIR$/public/admin/js/demo/chart-area-demo.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/chart-bar-demo.js" afterPath="$PROJECT_DIR$/public/admin/js/demo/chart-bar-demo.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/chart-pie-demo.js" afterPath="$PROJECT_DIR$/public/admin/js/demo/chart-pie-demo.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/demo/datatables-demo.js" afterPath="$PROJECT_DIR$/public/admin/js/demo/datatables-demo.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/sb-admin-2.js" afterPath="$PROJECT_DIR$/public/admin/js/sb-admin-2.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/sb-admin-2.min.js" afterPath="$PROJECT_DIR$/public/admin/js/sb-admin-2.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/js/summernote-image-title.js" afterPath="$PROJECT_DIR$/public/admin/js/summernote-image-title.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_buttons.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_cards.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_cards.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_charts.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_charts.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_dropdowns.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_dropdowns.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_error.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_error.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_footer.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_footer.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_global.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_global.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_login.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_login.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_navs.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_navs.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_utilities.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_utilities.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/admin/scss/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/navs/_global.scss" afterPath="$PROJECT_DIR$/public/admin/scss/navs/_global.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/navs/_sidebar.scss" afterPath="$PROJECT_DIR$/public/admin/scss/navs/_sidebar.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/navs/_topbar.scss" afterPath="$PROJECT_DIR$/public/admin/scss/navs/_topbar.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/sb-admin-2.scss" afterPath="$PROJECT_DIR$/public/admin/scss/sb-admin-2.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_animation.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_animation.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_background.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_background.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_border.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_border.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_display.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_display.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_progress.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_progress.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_rotate.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_rotate.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/scss/utilities/_text.scss" afterPath="$PROJECT_DIR$/public/admin/scss/utilities/_text.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_alert.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_alert.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_badge.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_badge.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_breadcrumb.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_breadcrumb.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_button-group.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_button-group.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_buttons.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_card.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_card.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_carousel.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_carousel.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_close.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_close.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_code.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_code.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_custom-forms.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_custom-forms.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_dropdown.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_dropdown.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_forms.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_forms.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_functions.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_functions.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_grid.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_grid.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_images.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_images.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_input-group.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_input-group.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_jumbotron.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_jumbotron.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_list-group.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_list-group.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_media.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_media.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_modal.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_modal.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_nav.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_nav.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_navbar.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_navbar.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_pagination.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_pagination.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_popover.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_popover.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_print.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_print.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_progress.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_progress.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_reboot.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_reboot.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_root.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_root.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_spinners.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_spinners.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_tables.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_tables.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_toasts.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_toasts.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_tooltip.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_tooltip.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_transitions.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_transitions.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_type.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_type.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_utilities.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_utilities.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap-grid.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap-grid.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap-reboot.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap-reboot.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/bootstrap.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_alert.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_alert.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_background-variant.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_background-variant.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_badge.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_badge.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_border-radius.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_border-radius.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_box-shadow.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_box-shadow.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_breakpoints.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_breakpoints.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_caret.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_caret.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_clearfix.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_clearfix.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_deprecate.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_deprecate.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_float.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_float.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_forms.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_forms.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_gradients.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_gradients.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_grid-framework.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_grid-framework.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_grid.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_grid.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_hover.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_hover.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_image.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_image.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_list-group.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_list-group.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_lists.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_lists.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_nav-divider.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_nav-divider.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_pagination.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_pagination.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_reset-text.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_reset-text.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_resize.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_resize.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_screen-reader.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_screen-reader.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_size.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_size.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_table-row.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_table-row.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-emphasis.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-emphasis.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-hide.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-hide.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-truncate.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_text-truncate.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_transition.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_transition.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_visibility.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/mixins/_visibility.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_align.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_align.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_background.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_background.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_borders.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_borders.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_clearfix.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_clearfix.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_display.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_display.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_embed.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_embed.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_flex.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_flex.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_float.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_float.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_interactions.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_interactions.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_overflow.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_overflow.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_position.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_position.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_screenreaders.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_screenreaders.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_shadows.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_shadows.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_sizing.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_sizing.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_spacing.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_spacing.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_stretched-link.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_stretched-link.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_text.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_text.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_visibility.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/utilities/_visibility.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/vendor/_rfs.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/bootstrap/scss/vendor/_rfs.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.bundle.js" afterPath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.js" afterPath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/chart.js/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.css" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.js" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/dataTables.bootstrap4.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/jquery.dataTables.js" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/jquery.dataTables.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/datatables/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/datatables/jquery.dataTables.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/LICENSE.txt" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/LICENSE.txt" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/all.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/all.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/all.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/all.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/brands.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/brands.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/brands.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/brands.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/fontawesome.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/fontawesome.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/fontawesome.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/fontawesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/regular.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/regular.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/regular.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/regular.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/solid.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/solid.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/solid.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/solid.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/svg-with-js.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/svg-with-js.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/svg-with-js.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/svg-with-js.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/v4-shims.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/v4-shims.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/v4-shims.min.css" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/css/v4-shims.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/all.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/all.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/all.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/all.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/brands.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/brands.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/brands.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/brands.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/conflict-detection.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/conflict-detection.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/conflict-detection.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/conflict-detection.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/fontawesome.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/fontawesome.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/fontawesome.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/fontawesome.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/regular.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/regular.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/regular.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/regular.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/solid.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/solid.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/solid.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/solid.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/v4-shims.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/v4-shims.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/v4-shims.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/js/v4-shims.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_animated.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_animated.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_bordered-pulled.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_bordered-pulled.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_core.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_core.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_fixed-width.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_fixed-width.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_icons.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_icons.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_larger.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_larger.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_list.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_list.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_mixins.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_mixins.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_rotated-flipped.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_rotated-flipped.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_screen-reader.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_screen-reader.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_shims.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_shims.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_stacked.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_stacked.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_variables.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/_variables.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/brands.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/brands.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/fontawesome.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/fontawesome.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/regular.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/regular.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/solid.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/solid.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/v4-shims.less" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/less/v4-shims.less" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/categories.yml" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/categories.yml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/icons.yml" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/icons.yml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/shims.yml" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/shims.yml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/sponsors.yml" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/metadata/sponsors.yml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/package.json" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/package.json" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_animated.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_animated.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_bordered-pulled.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_core.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_core.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_fixed-width.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_icons.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_icons.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_larger.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_larger.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_list.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_list.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_rotated-flipped.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_screen-reader.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_shims.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_shims.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_stacked.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_stacked.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/brands.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/brands.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/fontawesome.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/fontawesome.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/regular.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/regular.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/solid.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/solid.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/v4-shims.scss" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/scss/v4-shims.scss" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/brands.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/brands.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/regular.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/regular.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/solid.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/sprites/solid.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/laravel.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/laravel.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/safari.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/safari.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/twitch.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/brands/twitch.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/hand-holding-usd.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/hand-holding-usd.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/shapes.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/shapes.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/swatchbook.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/svgs/solid/swatchbook.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-brands-400.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-brands-400.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-regular-400.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-regular-400.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-solid-900.svg" afterPath="$PROJECT_DIR$/public/admin/vendor/fontawesome-free/webfonts/fa-solid-900.svg" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery-easing/jquery.easing.compatibility.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery-easing/jquery.easing.compatibility.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery-easing/jquery.easing.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery-easing/jquery.easing.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.slim.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.slim.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.slim.min.js" afterPath="$PROJECT_DIR$/public/admin/vendor/jquery/jquery.slim.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/css/style-anapat.css" afterPath="$PROJECT_DIR$/public/front/css/style-anapat.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/css/style.css" afterPath="$PROJECT_DIR$/public/front/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/img/style.css" afterPath="$PROJECT_DIR$/public/front/img/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/js/main.js" afterPath="$PROJECT_DIR$/public/front/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.compat.css" afterPath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.compat.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.css" afterPath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/animate.css/animate.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/boxicons/css/animations.css" afterPath="$PROJECT_DIR$/public/front/vendor/boxicons/css/animations.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/boxicons/css/boxicons.css" afterPath="$PROJECT_DIR$/public/front/vendor/boxicons/css/boxicons.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/boxicons/css/transformations.css" afterPath="$PROJECT_DIR$/public/front/vendor/boxicons/css/transformations.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/boxicons/fonts/boxicons.svg" afterPath="$PROJECT_DIR$/public/front/vendor/boxicons/fonts/boxicons.svg" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/icofont/icofont.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/icofont/icofont.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/isotope-layout/isotope.pkgd.js" afterPath="$PROJECT_DIR$/public/front/vendor/isotope-layout/isotope.pkgd.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/isotope-layout/isotope.pkgd.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/isotope-layout/isotope.pkgd.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/jquery-sticky/jquery.sticky.js" afterPath="$PROJECT_DIR$/public/front/vendor/jquery-sticky/jquery.sticky.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/jquery/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/LICENSE" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/README.md" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/README.md" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.carousel.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.carousel.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.carousel.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.carousel.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.default.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.default.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.default.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.green.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.green.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.green.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/assets/owl.theme.green.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/owl.carousel.js" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/owl.carousel.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/owl.carousel/owl.carousel.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/owl.carousel/owl.carousel.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/php-email-form/changelog.txt" afterPath="$PROJECT_DIR$/public/front/vendor/php-email-form/changelog.txt" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/php-email-form/validate.js" afterPath="$PROJECT_DIR$/public/front/vendor/php-email-form/validate.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.css" afterPath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.less" afterPath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.less" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.svg" afterPath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.svg" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.symbol.svg" afterPath="$PROJECT_DIR$/public/front/vendor/remixicon/remixicon.symbol.svg" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.css" afterPath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.js" afterPath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.min.css" afterPath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/venobox/venobox.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/front/vendor/waypoints/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/public/front/vendor/waypoints/jquery.waypoints.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/html5-3.6-respond-1.1.0.min.js" afterPath="$PROJECT_DIR$/public/js/html5-3.6-respond-1.1.0.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/jQuery.print.js" afterPath="$PROJECT_DIR$/public/js/jQuery.print.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/jQuery.print.min.js" afterPath="$PROJECT_DIR$/public/js/jQuery.print.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" afterPath="$PROJECT_DIR$/public/web.config" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" afterPath="$PROJECT_DIR$/resources/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
+      <change beforePath="$PROJECT_DIR$/company.sql" afterPath="" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/message.php" afterPath="$PROJECT_DIR$/resources/lang/en/message.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" afterPath="$PROJECT_DIR$/resources/sass/app.scss" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/about.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/asistent/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/asistent/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/asistent/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/asistent/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/asistent/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/asistent/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banner/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banner/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/carnet/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/carnet/add.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/carnet/choseOperador.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/carnet/choseOperador.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/carnet/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/carnet/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/carnet/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/carnet/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/carnet/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/carnet/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/certificado/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/certificado/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/certificado/create2.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/certificado/create2.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/certificado/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/certificado/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/certificado/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/certificado/index.blade.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/cursos/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cursos/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/cursos/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cursos/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/cursos/print.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cursos/print.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/entidades_formadoreas/show.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/examen/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/examen/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/examen/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/examen/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/examen/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/examen/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/faq/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/faq/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/faq/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/faq/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/faq/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/faq/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/formadores/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/formadores/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/formadores/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/formadores/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/formadores/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/formadores/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/general.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/general.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/horario/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/horario/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/horario/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/horario/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/horario/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/horario/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/link/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/link/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/link/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/link/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/link/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/link/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/operadores/certificado.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/operadores/certificado.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/operadores/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/operadores/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/operadores/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/operadores/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/operadores/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/operadores/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/operadores/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/operadores/show.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partner/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partner/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partner/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partner/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partner/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partner/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pcategory/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pcategory/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pcategory/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pcategory/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/post/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/post/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/trash.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/post/trash.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/tag/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/tag/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testi/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/testi/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testi/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/testi/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testi/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/testi/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/about.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/blog.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/blog.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/blogshow.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/blogshow.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/carnet.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/carnet.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/carnets.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/carnets.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/category.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/category.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/cotact.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/cotact.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/curso.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/curso.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/cursos.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/cursos.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/entidade_formadora.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/entidade_formadora.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/entidades_formadoras.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/entidades_formadoras.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/entidades_formadoreas.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/entidades_formadoreas.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/formadores.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/formadores.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/page.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/page.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/partner.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/partner.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/partners.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/partners.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/testi.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/testi.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/front.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/print.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/print.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-tailwind.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-tailwind.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/tailwind.blade.php" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/tailwind.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" afterPath="$PROJECT_DIR$/routes/channels.php" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" afterPath="$PROJECT_DIR$/routes/console.php" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/examen/test/K4khMyPJxfqv2hP1dJFL35eu8zgRcFJ2mfTNmfdh.txt" afterPath="$PROJECT_DIR$/storage/app/public/examen/test/K4khMyPJxfqv2hP1dJFL35eu8zgRcFJ2mfTNmfdh.txt" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/examen/test/t1XEgnoF2BIOFCH4vg1A8ZQEXBDhvcsn7Fy5UT0v.txt" afterPath="$PROJECT_DIR$/storage/app/public/examen/test/t1XEgnoF2BIOFCH4vg1A8ZQEXBDhvcsn7Fy5UT0v.txt" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" afterPath="$PROJECT_DIR$/webpack.mix.js" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
@@ -748,6 +154,208 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+              <folding>
+                <marker date="1656151896975" expanded="true" signature="9:24" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="36:44" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1343:1352" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1364:1380" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1437:1455" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1505:1534" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1762:1781" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1906:1950" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="1964:1976" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2100:2125" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2310:2334" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2452:2501" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2575:2599" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2645:2671" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2718:2735" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2741:2795" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2800:2825" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="2980:3010" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3195:3221" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3300:3330" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3442:3493" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3544:3561" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3571:3588" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3741:3768" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="3956:3988" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4205:4225" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4352:4397" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4411:4424" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4552:4578" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4759:4780" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4854:4893" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="4964:5010" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5085:5109" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5159:5179" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5230:5244" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5250:5298" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5303:5321" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5515:5531" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5641:5653" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5762:5789" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="5915:5937" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6021:6068" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6124:6148" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6178:6200" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6231:6246" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6252:6302" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6307:6326" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6417:6445" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6582:6610" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6704:6759" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6822:6846" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6876:6900" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6931:6947" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="6953:7012" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7017:7037" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7187:7215" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7309:7363" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7426:7450" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7480:7504" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7535:7550" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7556:7614" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7619:7638" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7788:7816" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="7910:7964" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8027:8051" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8081:8105" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8136:8151" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8157:8215" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8220:8239" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8330:8365" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8500:8526" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8635:8686" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8700:8719" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8788:8820" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="8931:8954" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9050:9098" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9112:9128" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9227:9256" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9364:9384" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9477:9522" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9536:9549" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9642:9668" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9799:9822" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9918:9966" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="9980:9996" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10095:10124" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10239:10266" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10368:10420" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10434:10454" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10561:10594" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10710:10738" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10839:10892" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="10906:10927" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11026:11060" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11124:11164" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11246:11274" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11358:11405" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11461:11485" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11515:11537" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11568:11583" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11589:11639" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11644:11663" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11754:11782" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="11892:11921" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12005:12052" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12108:12132" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12162:12184" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12215:12230" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12236:12286" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12291:12310" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="12401:12429" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13175:13202" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13302:13354" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13368:13388" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13494:13527" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13715:13736" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13743:13764" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="13882:13929" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="14058:14098" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="14234:14255" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="14334:14373" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="14565:14585" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="14662:14700" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="15578:15598" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="15654:15663" ph="..." />
+                <marker date="1656151896975" expanded="true" signature="20540:20602" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1281">
+              <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="41" />
+              <folding>
+                <marker date="1654445707000" expanded="true" signature="9:24" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="36:42" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="115:136" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="178:197" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="380:397" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="449:470" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="516:553" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="750:767" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="824:845" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="896:933" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="961:970" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="1210:1231" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="1277:1302" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2436:2465" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2646:2665" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2701:2705" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2718:2750" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2756:2770" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="2966:2985" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="3026:3051" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="3099:3103" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="3165:3179" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="3600:3642" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="3907:3933" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4082:4103" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4154:4182" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4192:4200" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4206:4218" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4432:4453" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4513:4519" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4524:4549" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4647:4659" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4733:4746" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4810:4821" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="4849:4872" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="7058:7083" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="7232:7252" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="7413:7444" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="7524:7559" ph="..." />
+                <marker date="1654445707000" expanded="true" signature="7660:7674" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5187">
+              <caret line="247" column="36" lean-forward="false" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -756,8 +364,23 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Tip</find>
+      <find>tipo de</find>
+      <find>nues</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/lang/en/message.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
@@ -891,10 +514,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="205" />
-    <option name="y" value="249" />
-    <option name="width" value="1550" />
-    <option name="height" value="830" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectId" id="22HEjWGSU0Za6M8iEXiMxXgokqw" />
   <component name="ProjectView">
@@ -920,6 +543,52 @@
             <path>
               <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
               <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cursos" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="cofigruha.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cofigruha.org" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="front" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -1038,34 +707,36 @@
       <workItem from="1652455406803" duration="6276000" />
       <workItem from="1652619096699" duration="7339000" />
       <workItem from="1652898953170" duration="5066000" />
-      <workItem from="1656029469979" duration="82000" />
+      <workItem from="1656029469979" duration="1800000" />
+      <workItem from="1656151239987" duration="651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82000" />
+    <option name="totallyTimeSpent" value="2451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25349087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1123,5 +794,391 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1656151896975" expanded="true" signature="9:24" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="36:44" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1343:1352" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1364:1380" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1437:1455" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1505:1534" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1762:1781" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1906:1950" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1964:1976" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2100:2125" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2310:2334" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2452:2501" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2575:2599" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2645:2671" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2718:2735" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2741:2795" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2800:2825" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2980:3010" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3195:3221" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3300:3330" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3442:3493" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3544:3561" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3571:3588" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3741:3768" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3956:3988" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4205:4225" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4352:4397" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4411:4424" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4552:4578" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4759:4780" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4854:4893" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4964:5010" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5085:5109" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5159:5179" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5230:5244" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5250:5298" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5303:5321" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5515:5531" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5641:5653" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5762:5789" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5915:5937" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6021:6068" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6124:6148" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6178:6200" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6231:6246" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6252:6302" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6307:6326" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6417:6445" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6582:6610" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6704:6759" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6822:6846" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6876:6900" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6931:6947" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6953:7012" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7017:7037" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7187:7215" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7309:7363" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7426:7450" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7480:7504" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7535:7550" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7556:7614" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7619:7638" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7788:7816" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7910:7964" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8027:8051" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8081:8105" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8136:8151" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8157:8215" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8220:8239" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8330:8365" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8500:8526" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8635:8686" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8700:8719" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8788:8820" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8931:8954" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9050:9098" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9112:9128" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9227:9256" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9364:9384" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9477:9522" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9536:9549" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9642:9668" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9799:9822" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9918:9966" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9980:9996" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10095:10124" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10239:10266" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10368:10420" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10434:10454" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10561:10594" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10710:10738" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10839:10892" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10906:10927" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11026:11060" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11124:11164" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11246:11274" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11358:11405" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11461:11485" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11515:11537" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11568:11583" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11589:11639" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11644:11663" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11754:11782" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11892:11921" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12005:12052" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12108:12132" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12162:12184" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12215:12230" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12236:12286" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12291:12310" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12401:12429" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13175:13202" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13302:13354" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13368:13388" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13494:13527" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13715:13736" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13743:13764" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13882:13929" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14058:14098" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14234:14255" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14334:14373" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14565:14585" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14662:14700" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="15578:15598" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="15654:15663" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="20540:20602" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="41" />
+          <folding>
+            <marker date="1654445707000" expanded="true" signature="9:24" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="36:42" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="115:136" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="178:197" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="380:397" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="449:470" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="516:553" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="750:767" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="824:845" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="896:933" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="961:970" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="1210:1231" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="1277:1302" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2436:2465" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2646:2665" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2701:2705" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2718:2750" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2756:2770" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2966:2985" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3026:3051" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3099:3103" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3165:3179" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3600:3642" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3907:3933" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4082:4103" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4154:4182" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4192:4200" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4206:4218" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4432:4453" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4513:4519" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4524:4549" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4647:4659" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4733:4746" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4810:4821" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4849:4872" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7058:7083" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7232:7252" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7413:7444" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7524:7559" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7660:7674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5187">
+          <caret line="247" column="36" lean-forward="false" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="41" />
+          <folding>
+            <marker date="1654445707000" expanded="true" signature="9:24" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="36:42" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="115:136" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="178:197" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="380:397" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="449:470" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="516:553" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="750:767" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="824:845" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="896:933" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="961:970" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="1210:1231" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="1277:1302" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2436:2465" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2646:2665" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2701:2705" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2718:2750" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2756:2770" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="2966:2985" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3026:3051" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3099:3103" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3165:3179" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3600:3642" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="3907:3933" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4082:4103" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4154:4182" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4192:4200" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4206:4218" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4432:4453" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4513:4519" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4524:4549" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4647:4659" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4733:4746" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4810:4821" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="4849:4872" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7058:7083" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7232:7252" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7413:7444" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7524:7559" ph="..." />
+            <marker date="1654445707000" expanded="true" signature="7660:7674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5187">
+          <caret line="247" column="36" lean-forward="false" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/cursos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+          <folding>
+            <marker date="1656151896975" expanded="true" signature="9:24" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="36:44" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1343:1352" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1364:1380" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1437:1455" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1505:1534" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1762:1781" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1906:1950" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="1964:1976" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2100:2125" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2310:2334" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2452:2501" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2575:2599" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2645:2671" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2718:2735" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2741:2795" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2800:2825" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="2980:3010" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3195:3221" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3300:3330" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3442:3493" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3544:3561" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3571:3588" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3741:3768" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="3956:3988" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4205:4225" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4352:4397" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4411:4424" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4552:4578" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4759:4780" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4854:4893" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="4964:5010" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5085:5109" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5159:5179" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5230:5244" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5250:5298" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5303:5321" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5515:5531" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5641:5653" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5762:5789" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="5915:5937" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6021:6068" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6124:6148" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6178:6200" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6231:6246" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6252:6302" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6307:6326" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6417:6445" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6582:6610" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6704:6759" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6822:6846" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6876:6900" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6931:6947" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="6953:7012" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7017:7037" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7187:7215" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7309:7363" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7426:7450" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7480:7504" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7535:7550" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7556:7614" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7619:7638" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7788:7816" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="7910:7964" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8027:8051" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8081:8105" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8136:8151" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8157:8215" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8220:8239" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8330:8365" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8500:8526" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8635:8686" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8700:8719" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8788:8820" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="8931:8954" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9050:9098" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9112:9128" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9227:9256" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9364:9384" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9477:9522" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9536:9549" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9642:9668" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9799:9822" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9918:9966" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="9980:9996" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10095:10124" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10239:10266" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10368:10420" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10434:10454" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10561:10594" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10710:10738" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10839:10892" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="10906:10927" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11026:11060" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11124:11164" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11246:11274" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11358:11405" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11461:11485" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11515:11537" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11568:11583" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11589:11639" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11644:11663" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11754:11782" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="11892:11921" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12005:12052" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12108:12132" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12162:12184" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12215:12230" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12236:12286" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12291:12310" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="12401:12429" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13175:13202" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13302:13354" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13368:13388" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13494:13527" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13715:13736" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13743:13764" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="13882:13929" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14058:14098" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14234:14255" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14334:14373" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14565:14585" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="14662:14700" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="15578:15598" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="15654:15663" ph="..." />
+            <marker date="1656151896975" expanded="true" signature="20540:20602" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

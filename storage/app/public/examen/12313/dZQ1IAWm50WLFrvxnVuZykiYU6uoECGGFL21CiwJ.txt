@@ -1,0 +1,1 @@
+curso,tipo_curso,tipo_maquina_1,tipo_maquina_2,tipo_maquina_3,tipo_maquina_4,codigo,entidad,formador,formador_apoyo_1,formador_apoyo_2,formador_apoyo_3,fecha_inicio,direccion,ciudad,provincia,codigo_postal,examen_t,examen_p,asistentes_pdf,fecha_alta,publico_privado,observaciones,cerrado,estado

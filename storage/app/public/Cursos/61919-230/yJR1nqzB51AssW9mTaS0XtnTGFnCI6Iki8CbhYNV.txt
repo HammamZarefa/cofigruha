@@ -1,0 +1,1 @@
+dni,apellidos,nombre,entidad,foto,dni_img,fecha_nacimiento,provincia,ciudad,direccion,codigo_postal,mail,carnet,fecha,estado

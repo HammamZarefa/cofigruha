@@ -123,7 +123,7 @@
                 <div class="col-md-4">
                     <label for="codigo" class="col-sm-2 col-form-label">{{__('message.Codigo')}}</label>
                     <div class="col-sm-9">
-                        <input type="text" readonly name='codigo' class="form-control {{$errors->first('codigo') ? "is-invalid" : "" }} " value="{{old('codigo') ? old('codigo') : $cursos->codigo}}" id="codigo" placeholder="Código de prácticas">
+                        <input type="text"  name='codigo' class="form-control {{$errors->first('codigo') ? "is-invalid" : "" }} " value="{{old('codigo') ? old('codigo') : $cursos->codigo}}" id="codigo" placeholder="Código de prácticas">
                         <div class="invalid-feedback">
                             {{ $errors->first('codigo') }}
                         </div>
@@ -223,7 +223,7 @@
                     <label for="fecha_inicio" class="col-sm-4 col-form-label">{{__('message.Fecha Inicio')}}:</label>
 {{--                    <label for="fecha_inicio" class="col-sm-7 col-form-label">{{$cursos->fecha_inicio != null ? date('d/m/Y H:i:s',strtotime($cursos->fecha_inicio)) : ""}}</label>--}}
                     <div class="col-sm-9">
-                        <input type="datetime-local" name='fecha_inicio' class="form-control {{$errors->first('fecha_inicio') ? "is-invalid" : "" }} " value="{{old('fecha_inicio') ? old('fecha_inicio') : $cursos->fecha_inicio != null ? date('Y-m-d\TH:i:s',strtotime($cursos->fecha_inicio)) : ""}}" id="fecha_inicio" placeholder="{{$cursos->fecha_inicio}}" >
+                        {{--<input type="datetime-local" name='fecha_inicio' class="form-control {{$errors->first('fecha_inicio') ? 'is-invalid' : '' }} " value="{{old('fecha_inicio') ? old('fecha_inicio') : $cursos->fecha_inicio != null ? date('Y-m-d\TH:i:s',strtotime($cursos->fecha_inicio)) : ""}}" id="fecha_inicio" placeholder="{{$cursos->fecha_inicio}}" >--}}
                         <div class="invalid-feedback">
                             {{ $errors->first('fecha_inicio') }}
                         </div>
@@ -477,7 +477,7 @@
 
                                     <th>{{__('message.Nombre')}}</th>
 
-                                    <th>{{__('message.Apellido')}}.</th>
+                                    <th>{{__('message.Apellidos')}}</th>
 
                                     <th>{{__('message.Número de asistente')}}</th>
 
@@ -527,6 +527,9 @@
 
                                         <td>
                                             <a href="{{route('admin.asistent.edit', [$asistent->id])}}" class="btn btn-info btn-sm"> {{__('message.Update')}} </a>
+                                            @if(auth()->user()->perfil=='Administrador' || (auth()->user()->perfil=='Responsable_de_Formacion'))
+                                                <a href="{{route('admin.operador.edit', [$asistent->operador,$cursos->id])}}" class="btn btn-edit btn-sm"> <i class="fas fa-eye"></i> </a>
+                                            @endif
                                             <a href="{{asset('storage/' . $asistent->examen_t_pdf)}}" class="btn btn-edit btn-sm" download title="descargar Examen T">T</a>
                                             <a href="{{asset('storage/' . $asistent->examen_p_pdf)}}" class="btn btn-edit btn-sm" download title="descargar Examen P">P</a>
                                             @if(auth()->user()->perfil=='Administrador' || (auth()->user()->perfil=='Responsable_de_Formacion'))
@@ -633,87 +636,6 @@
             }
         </script>
 
-        <script>
-            var a1CheckBox = document.getElementById('1');
-            var b1CheckBox = document.getElementById('2');
-            var a2CheckBox = document.getElementById('3');
-            var b2CheckBox = document.getElementById('4');
-            var a3CheckBox = document.getElementById('5');
-            var b3CheckBox = document.getElementById('6');
-
-            var searchBox = document.getElementById('codigo');
-            var code = document.getElementById('curso').value;
-
-
-            function updateSearchBox() {
-                if(a2CheckBox.checked){
-                    a1CheckBox.disabled  = true;
-                    b1CheckBox.disabled  = true;
-                    b2CheckBox.disabled  = true;
-                    b3CheckBox.disabled  = true;
-                    a3CheckBox.disabled  = true;
-                }
-                if(b2CheckBox.checked){
-                    a1CheckBox.disabled  = true;
-                    b1CheckBox.disabled  = true;
-                    a2CheckBox.disabled  = true;
-                    b3CheckBox.disabled  = true;
-                    a3CheckBox.disabled  = true;
-                }
-                if(a1CheckBox.checked || b1CheckBox.checked || a3CheckBox.checked || b3CheckBox.checked){
-                    a2CheckBox.disabled  = true;
-                    b2CheckBox.disabled  = true;
-                }
-                if(!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked){
-                    a1CheckBox.disabled  = false;
-                    b1CheckBox.disabled  = false;
-                    a2CheckBox.disabled  = false;
-                    b2CheckBox.disabled  = false;
-                    b3CheckBox.disabled  = false;
-                    a3CheckBox.disabled  = false;
-                }
-
-
-                if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B01-' + code;
-                }else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B02-' + code;
-                }else if (!a1CheckBox.checked && !b1CheckBox.checked && a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B03-' + code;
-                }else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value ='B04-' + code;
-                }else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B05-' + code;
-                }else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B06-' + code;
-                }else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B07-' + code;
-                }else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B08-' + code;
-                }else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B09-' + code;
-                }else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B10-' + code;
-                }else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B11-' + code;
-                }else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B12-' + code;
-                }else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
-                    searchBox.value = 'B13-' + code;
-                }else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B14-' + code;
-                }else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B15-' + code;
-                }else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B17-' + code;
-                }else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
-                    searchBox.value = 'B16-' + code;
-                } else {
-                    searchBox.value = '{{__("message.you can not choose this type of machine togother")}}';
-                }
-            }
-
-        </script>
         <script>
             // Prepare the preview for profile picture
             $("#wizard-picture").change(function(){

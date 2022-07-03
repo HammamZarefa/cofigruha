@@ -89,7 +89,7 @@
                         <td>{{ $operadores->apellidos }}</td>
 
                         <td>{{ $operadores->direccion  }}</td>
-                        <td>{{ $operadores->estado == 1 ? "Yes" : "No"  }}</td>
+                        <td>{{ $operadores->estado == 1 ? "Si" : "No"  }}</td>
 
                         <td>
                             @if(count($operadores->asistent) > 0)

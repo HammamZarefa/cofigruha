@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Exports\AssistantExport;
 use App\Exports\CursoExport;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-use App\Models\{
-    Asistent,
+use App\Models\{Asistent,
+    Carnet,
+    Certificado,
     Cursos,
     EntidadesFormadoreas,
     Examen,
@@ -17,8 +19,7 @@ use App\Models\{
     Practica,
     Teoria,
     Tipo_De_Curso,
-    Tipo_Maquina
-};
+    Tipo_Maquina};
 use Maatwebsite\Excel\Facades\Excel;
 
 class AsistentController extends Controller
@@ -45,9 +46,9 @@ class AsistentController extends Controller
     {
         $user = auth()->user();
         if ($user->perfil == 'Administrador') {
-            $operador = Operadores::select('id', 'nombre', 'apellidos')->get();
+            $operador = Operadores::select('id', 'nombre', 'apellidos')->where('estado',0)->get();
         } else {
-            $operador = Operadores::select('id', 'nombre', 'apellidos')->where('entidad', '=', $user->entidad)->get();
+            $operador = Operadores::select('id', 'nombre', 'apellidos')->where('estado',0)->where('entidad', '=', $user->entidad)->get();
         }
         $curso = Cursos::select('id', 'codigo')->get();
         $cursos = Cursos::orderBy('id', 'desc')->get();
@@ -55,6 +56,128 @@ class AsistentController extends Controller
         $tipo_carnet = Teoria::select('id', 'formacion')->get();
         $tipo = Tipo_Maquina::orderBy('id', 'desc')->get();
         $corse = Cursos::where('id', $id)->first();
+//        $tipo_maq = [];
+//        $notes = [];
+//        if ($corse->tipo_maquina_1 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_1);
+//        }
+//        if ($corse->tipo_maquina_2 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_2);
+//        }
+//        if ($corse->tipo_maquina_3 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_3);
+//        }
+//        if ($corse->tipo_maquina_4 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_4);
+//        }
+//        if (count($tipo_maq) == 4){
+//            for ($i = 1 ; $i <16 ;$i++){
+//                array_push($notes,$i);
+//            }
+//        }elseif (count($tipo_maq) == 3){
+//
+//            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1 || $tipo_maq[2] == 1){
+////                array_push($notes,1);
+//            }
+//            else{
+//                array_push($notes,2);
+//                array_push($notes,4);
+//                array_push($notes,6);
+//                array_push($notes,8);
+//                array_push($notes,10);
+//                array_push($notes,12);
+//                array_push($notes,14);
+//            }
+//
+//            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2){
+////                array_push($notes,2);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,4);
+//                array_push($notes,5);
+//                array_push($notes,8);
+//                array_push($notes,9);
+//                array_push($notes,12);
+//                array_push($notes,13);
+//            }
+//            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+////                array_push($notes,4);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,2);
+//                array_push($notes,3);
+//                array_push($notes,8);
+//                array_push($notes,9);
+//                array_push($notes,10);
+//                array_push($notes,11);
+//            }
+//            if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+////                array_push($notes,8);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,2);
+//                array_push($notes,3);
+//                array_push($notes,4);
+//                array_push($notes,5);
+//                array_push($notes,6);
+//                array_push($notes,7);
+//            }
+//
+//        }elseif (count($tipo_maq) == 2){
+//            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1){
+//                if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2){
+//                    array_push($notes,1);
+//                    array_push($notes,2);
+//                    array_push($notes,3);
+//                }elseif ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+//                    array_push($notes,1);
+//                    array_push($notes,4);
+//                    array_push($notes,5);
+//                }elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,1);
+//                    array_push($notes,8);
+//                    array_push($notes,9);
+//                }
+//
+//            }
+//            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2){
+//                if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+//                    array_push($notes,2);
+//                    array_push($notes,4);
+//                    array_push($notes,6);
+//                }elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,2);
+//                    array_push($notes,8);
+//                    array_push($notes,10);
+//                }
+//
+//            }
+//            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5){
+//                if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,4);
+//                    array_push($notes,8);
+//                    array_push($notes,12);
+//                }
+//
+//            }
+//        }elseif (count($tipo_maq) == 1){
+//            if ($tipo_maq[0] == 1){
+//                array_push($notes,1);
+//            }elseif ($tipo_maq[0] == 2){
+//                array_push($notes,2);
+//            }elseif ($tipo_maq[0] == 3){
+//                array_push($notes,16);
+//            }elseif ($tipo_maq[0] == 4){
+//                array_push($notes,17);
+//            }elseif ($tipo_maq[0] == 5){
+//                array_push($notes,4);
+//            }elseif ($tipo_maq[0] == 3){
+//                array_push($notes,8);
+//            }
+//        }
         $x =Asistent::select('orden')->orderBy('id','desc')->latest()->get();
         if(count($x) > 0){
             $orden = $x[0]->orden +1;
@@ -78,6 +201,7 @@ class AsistentController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
         $request->validate([
             'curso' => 'required',
             'orden' => 'required|max:7',
@@ -86,6 +210,8 @@ class AsistentController extends Controller
             'nota_t' => 'required|numeric',
             'nota_p' => 'required|numeric',
             'tipo_1' => 'required',
+            'examen_p_pdf' => 'max:2048',
+            'examen_t_pdf' => 'max:2048',
         ]);
 //dd($request);
 
@@ -118,14 +244,10 @@ class AsistentController extends Controller
         }
         $operador = Operadores::findOrFail((int)$request->operador);
         $asistent->emision = $operador->fecha;
-        $asistent->vencimiento = $operador->fecha_nacimiento;
-
-//        $cover = $request->file('cover');
-//
-//        if($cover){
-//        $cover_path = $cover->store('images/Asistent', 'public');
-//        $Asistent->cover = $cover_path;
-//        }
+        $ven = new Carbon($operador->fecha);
+        $x = $ven->addYears(5);
+//        dd();
+        $asistent->vencimiento = Carbon::parse($x)->format('Y-m-d');
         $cursos = Cursos::findOrFail($request->curso);
         $entidad = EntidadesFormadoreas::select('id', 'nombre')->get();
         $formador = Formadores::select('id', 'nombre')->get();
@@ -138,7 +260,146 @@ class AsistentController extends Controller
         $formadors3 = Formadores::select('id', 'nombre')->get();
 
         if ($asistent->save()) {
-//            dd($asistent);
+            if ($operador->carnett != null){
+
+                $carnet = $operador->carnett;
+                $carnet->curso = $cursos->id;
+                $carnet->estado = 1;
+                $carnet->fecha_de_alta = $asistent->vencimiento;
+                $carnet->fecha_de_emision = $asistent->emision;
+//                $carnet->
+
+                $carnet->save();
+                if ($cursos->tipo_maquina_1 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_1);
+                }
+                if ($cursos->tipo_maquina_2 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_2);
+                }
+                if ($cursos->tipo_maquina_3 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_3);
+                }
+                if ($cursos->tipo_maquina_4 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_4);
+                }
+            }
+            else{
+                $carnet = new Carnet();
+
+                if ($operador->carnet != null){
+                    $carnet->numero = $operador->carnet;
+                }else{
+                    $carnet->numero = substr(md5(microtime()),rand(0,26),8) ;
+                }
+
+//                $carnet->numero = $operador->carnet;
+                $carnet->operador = $operador->id;
+                $carnet->fecha_de_alta = $asistent->vencimiento;
+                $carnet->fecha_de_emision = $asistent->emision;
+                $carnet->foto = $operador->foto;
+                $carnet->curso = $cursos->id;
+                $carnet->estado = 1 ;
+//                dd($carnet);
+                $carnet->save();
+                if ($cursos->tipo_maquina_1 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_1);
+                }
+                if ($cursos->tipo_maquina_2 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_2);
+                }
+                if ($cursos->tipo_maquina_3 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_3);
+                }
+                if ($cursos->tipo_maquina_4 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_4);
+                }
+            }
+            $certificado = new Certificado();
+            $asi_fecha = date('Y', strtotime($asistent->created_at));
+            $asi_fecham = date('m', strtotime($asistent->created_at));
+            $asi_fechad = date('d', strtotime($asistent->created_at));
+            $asi_fechah = date('h', strtotime($asistent->created_at));
+            $asi_fechai = date('i', strtotime($asistent->created_at));
+            $asi_fechas = date('s', strtotime($asistent->created_at));
+            $asi_orden = $asistent->orden;
+            $cert_numero = $asi_fecha . "" . $asi_fecham . "" . $asi_fechad . "" . $asi_fechah . "" . $asi_fechai . "" . $asi_fechas . "" . $operador->dni;
+            $certificado->numero = $cert_numero;
+            $certificado->cer_apellidos = $operador->apellidos;
+            $certificado->cer_nombre = $operador->nombre;
+            $certificado->operador = $operador->id;
+            if ($operador->entidad != 0){
+                $certificado->entidad = $operador->entidad;
+                $certificado->entidad_nombre = $operador->entidades_formadoreas->nombre;
+            }else{
+                $certificado->entidad = 0;
+                $certificado->entidad_nombre = "";
+            }
+            $certificado->curso = $asistent->curso;
+            $certificado->emision = $asistent->emision;
+            $certificado->vencimiento = $asistent->vencimiento;
+            $certificado->observaciones = $asistent->observaciones;
+            $certificado->dni = $operador->dni;
+            if ($cursos != null){
+                if ($cursos->tipo_curso == 1){
+                    $certificado->cer_type_course = 'Básico';
+                    $certificado->tipos_carnet = $asistent->tipos_carnet;
+                }else{
+                    $certificado->cer_type_course = 'Renovación';
+                    $certificado->tipos_carnet = $asistent->tipos_carnet;
+                }
+                $certificado->fecha_alta = $cursos->fecha_alta;
+            }else{
+                $certificado->cer_type_course = '-';
+                $certificado->tipos_carnet = '-';
+                $certificado->fecha_alta = null;
+            }
+            if ($asistent->tipo_1 != 0){
+                $tipo_1 =Tipo_Maquina::findOrFail($asistent->tipo_1);
+
+                if($tipo_1 != null){
+                    $certificado->tipo_1 = $tipo_1->tipo_maquina;
+
+                }else{
+                    $certificado->tipo_1 = '-----';
+                }
+            }else{
+                $certificado->tipo_1 = '-----';
+            }
+            if ($asistent->tipo_2 != 0) {
+                $tipo_2 = Tipo_Maquina::findOrFail($asistent->tipo_2);
+                if ($tipo_2 != null) {
+                    $certificado->tipo_2 = $tipo_2->tipo_maquina;
+
+                } else {
+                    $certificado->tipo_2 = '-----';
+                }
+            }else{
+                $certificado->tipo_2 = '-----';
+            }
+            if ($asistent->tipo_3 != 0){
+                $tipo_3 =Tipo_Maquina::findOrFail($asistent->tipo_3);
+                if($tipo_3 != null){
+                    $certificado->tipo_3 = $tipo_3->tipo_maquina;
+                }else{
+                    $certificado->tipo_3 = '-----';
+                }
+            }else{
+                $certificado->tipo_3 = '-----';
+            }
+            if ($asistent->tipo_4 != 0) {
+                $tipo_4 = Tipo_Maquina::findOrFail($asistent->tipo_4);
+                if ($tipo_4 != null) {
+                    $certificado->tipo_4 = $tipo_4->tipo_maquina;
+                } else {
+                    $certificado->tipo_4 = '-----';
+                }
+            } else {
+                $certificado->tipo_4 = '-----';
+            }
+            if ($operador->carnett != null){
+                $certificado->carnet = $operador->carnett->numero;
+            }
+            $certificado->save();
 
 
             return redirect()->route('admin.cursos.edit', $cursos->id)->with('cursos', 'entidad', 'formador', 'tipo_maquina', 'tipo_curso', 'examen_t', 'examen_p', 'formadors', 'formadors2', 'formadors3');
@@ -161,9 +422,131 @@ class AsistentController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,$curso)
     {
-        //
+//        dd($curso);
+        $user = auth()->user();
+        if ($user->perfil == 'Administrador') {
+            $entidad = EntidadesFormadoreas::select('id', 'nombre')->get();
+        } else {
+            $entidad = EntidadesFormadoreas::select('id', 'nombre')->where('id', '=', $user->entidad)->first();
+        }
+        $operadores = Operadores::findOrFail($id);
+
+        return view('admin.asistent.operador', compact('operadores', 'entidad','curso'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateOperador(Request $request, $id)
+    {
+//        dd($request);
+        $request->validate([
+            'dni' => 'required',
+            'apellidos' => 'required',
+            'nombre' => 'required',
+            'entidad' => 'required',
+            'codigo_postal' => 'max:7',
+            'foto' => 'max:2048',
+            'dni_img' => 'max:2048',
+        ]);
+//dd($request);
+        $operadores = Operadores::findOrFail($id);
+        $operadores->dni = $request->dni;
+        $operadores->apellidos = $request->apellidos;
+        $operadores->nombre = $request->nombre;
+        $operadores->entidad = $request->entidad;
+        $operadores->fecha_nacimiento = $request->fecha_nacimiento;
+        $operadores->provincia = $request->provincia;
+        $operadores->ciudad = $request->ciudad;
+        $operadores->direccion = $request->direccion;
+        $operadores->codigo_postal = $request->codigo_postal;
+        $operadores->mail = $request->mail;
+        $operadores->carnet = $request->carnet;
+        $operadores->fecha = $request->fecha;
+        if ($request->estado == null) {
+            $operadores->estado = 0;
+        } elseif ($request->estado == "on" || $request->estado == "1") {
+            $operadores->estado = 1;
+        } else {
+            $operadores->estado = 0;
+        }
+
+        $foto = $request->file('foto');
+        $dni_img = $request->file('dni_img');
+        if ($foto) {
+            if ($operadores->foto && file_exists(storage_path('app/public/' . $operadores->foto))) {
+                \Storage::delete('public/' . $operadores->foto);
+            }
+
+            $foto_path = $foto->store('operadore/' . $request->nombre, 'public');
+
+            $operadores->foto = $foto_path;
+        }
+        if ($dni_img) {
+            if ($operadores->dni_img && file_exists(storage_path('app/public/' . $operadores->dni_img))) {
+                \Storage::delete('public/' . $operadores->dni_img);
+            }
+
+            $dni_img_path = $dni_img->store('operadore/' . $request->nombre, 'public');
+
+            $operadores->dni_img = $dni_img_path;
+        }
+
+
+        if ($operadores->save()) {
+            if ($request['carnet'] != null ){
+                if ($operadores->carnett == null){
+                    $carnet = new Carnet();
+                    if ($request->carnet != null){
+                        $carnet->numero = $request->carnet;
+                    }else{
+                        $carnet->numero = substr(md5(microtime()),rand(0,26),8) ;
+                    }
+//                    $carnet->numero = $request->carnet;
+                    $carnet->operador = $operadores->id;
+                    $fotoCarnet = $request->file('foto');
+                    if ($fotoCarnet) {
+                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
+
+                        $carnet->foto = $fotopath;
+                    } else {
+                        $carnet->foto = $operadores->foto;
+                    }
+                    $carnet->curso = 0;
+                    $carnet->estado = 0 ;
+                    $carnet->save();
+                }else{
+                    $carnet = $operadores->carnett;
+                    $carnet->numero = $request->carnet;
+                    $carnet->operador = $operadores->id;
+                    $fotoCarnet = $request->file('foto');
+                    if ($fotoCarnet) {
+                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
+
+                        $carnet->foto = $fotopath;
+                    } else {
+                        $carnet->foto = '';
+                    }
+
+                    $carnet->save();
+                }
+
+
+            }
+
+            return redirect()->route('admin.cursos.edit', [$request->curso])->with('success', 'Data deleted successfully');
+
+        } else {
+
+            return back()->with('error', 'Data failed to Update');
+
+        }
     }
 
     /**
@@ -190,6 +573,128 @@ class AsistentController extends Controller
         $tipo_3 = $corse->tipo_maquina_3;
         $tipo_4 = $corse->tipo_maquina_4;
         $tipos = [$tipo_1,$tipo_2,$tipo_3,$tipo_4];
+//        $tipo_maq = [];
+//        $notes = [];
+//        if ($corse->tipo_maquina_1 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_1);
+//        }
+//        if ($corse->tipo_maquina_2 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_2);
+//        }
+//        if ($corse->tipo_maquina_3 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_3);
+//        }
+//        if ($corse->tipo_maquina_4 != null){
+//            array_push($tipo_maq,$corse->tipo_maquina_4);
+//        }
+//        if (count($tipo_maq) == 4){
+//            for ($i = 1 ; $i <16 ;$i++){
+//                array_push($notes,$i);
+//            }
+//        }elseif (count($tipo_maq) == 3){
+//
+//            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1 || $tipo_maq[2] == 1){
+////                array_push($notes,1);
+//            }
+//            else{
+//                array_push($notes,2);
+//                array_push($notes,4);
+//                array_push($notes,6);
+//                array_push($notes,8);
+//                array_push($notes,10);
+//                array_push($notes,12);
+//                array_push($notes,14);
+//            }
+//
+//            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2){
+////                array_push($notes,2);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,4);
+//                array_push($notes,5);
+//                array_push($notes,8);
+//                array_push($notes,9);
+//                array_push($notes,12);
+//                array_push($notes,13);
+//            }
+//            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+////                array_push($notes,4);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,2);
+//                array_push($notes,3);
+//                array_push($notes,8);
+//                array_push($notes,9);
+//                array_push($notes,10);
+//                array_push($notes,11);
+//            }
+//            if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+////                array_push($notes,8);
+//            }
+//            else{
+//                array_push($notes,1);
+//                array_push($notes,2);
+//                array_push($notes,3);
+//                array_push($notes,4);
+//                array_push($notes,5);
+//                array_push($notes,6);
+//                array_push($notes,7);
+//            }
+//
+//        }elseif (count($tipo_maq) == 2){
+//            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1){
+//                if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2){
+//                    array_push($notes,1);
+//                    array_push($notes,2);
+//                    array_push($notes,3);
+//                }elseif ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+//                    array_push($notes,1);
+//                    array_push($notes,4);
+//                    array_push($notes,5);
+//                }elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,1);
+//                    array_push($notes,8);
+//                    array_push($notes,9);
+//                }
+//
+//            }
+//            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2){
+//                if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5){
+//                    array_push($notes,2);
+//                    array_push($notes,4);
+//                    array_push($notes,6);
+//                }elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,2);
+//                    array_push($notes,8);
+//                    array_push($notes,10);
+//                }
+//
+//            }
+//            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5){
+//                if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6){
+//                    array_push($notes,4);
+//                    array_push($notes,8);
+//                    array_push($notes,12);
+//                }
+//
+//            }
+//        }elseif (count($tipo_maq) == 1){
+//            if ($tipo_maq[0] == 1){
+//                array_push($notes,1);
+//            }elseif ($tipo_maq[0] == 2){
+//                array_push($notes,2);
+//            }elseif ($tipo_maq[0] == 3){
+//                array_push($notes,16);
+//            }elseif ($tipo_maq[0] == 4){
+//                array_push($notes,17);
+//            }elseif ($tipo_maq[0] == 5){
+//                array_push($notes,4);
+//            }elseif ($tipo_maq[0] == 3){
+//                array_push($notes,8);
+//            }
+//        }
 //        dd($tipos);
 
         return view('admin.asistent.edit', compact('asistent', 'curso', 'operador', 'tipo_carnet', 'tipo','tipos'));
@@ -204,6 +709,7 @@ class AsistentController extends Controller
      */
     public function update(Request $request, $id)
     {
+//        dd($request);
 //        \Validator::make($request->all(), [
 //            "category" => "required",
 //            "desc" => "required"
@@ -216,18 +722,20 @@ class AsistentController extends Controller
             'nota_t' => 'required',
             'nota_p' => 'required',
             'tipo_1' => 'required',
+            'examen_p_pdf' => 'max:2048',
+            'examen_t_pdf' => 'max:2048',
         ]);
         $asistent = Asistent::findOrFail($id);
         $asistent->curso = $request->curso;
         $asistent->orden = $request->orden;
         $asistent->operador = $request->operador;
-        $asistent->tipo_carnet = $request->tipo_carnet;
+        $asistent->tipos_carnet = $request->tipos_carnet;
         $asistent->nota_t = $request->nota_t;
         $asistent->nota_p = $request->nota_p;
         $asistent->observaciones = $request->observaciones;
         $operador = Operadores::findOrFail((int)$request->operador);
         $asistent->emision = $operador->fecha;
-        $asistent->vencimiento = $operador->fecha_nacimiento;
+        $asistent->vencimiento = $request->vencimiento;
         $asistent->tipo_1 = $request->tipo_1;
         if (!$request->tipo_2) {
             $asistent->tipo_2 = 0;
@@ -273,6 +781,160 @@ class AsistentController extends Controller
 
 
         if ($asistent->save()) {
+
+            $cursos = Cursos::findOrFail($request->curso);
+            if ($operador->carnett != null){
+
+                $carnet = $operador->carnett;
+
+                $carnet->curso = $cursos->id;
+                $carnet->estado = 1;
+                $carnet->fecha_de_alta = $asistent->vencimiento;
+                $carnet->fecha_de_emision = $asistent->emision;
+//                $carnet->
+
+                $carnet->save();
+                if ($cursos->tipo_maquina_1 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_1);
+                }
+                if ($cursos->tipo_maquina_2 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_2);
+                }
+                if ($cursos->tipo_maquina_3 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_3);
+                }
+                if ($cursos->tipo_maquina_4 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_4);
+                }
+            }
+            else{
+                $carnet = new Carnet();
+                if ($operador->carnet != null){
+                    $carnet->numero = $operador->carnet;
+                }else{
+                    $carnet->numero = substr(md5(microtime()),rand(0,26),8) ;
+                }
+//                if ($operador->carnet)
+//                $carnet->numero = $operador->carnet;
+                $carnet->operador = $operador->id;
+                $carnet->fecha_de_alta = $asistent->vencimiento;
+                $carnet->fecha_de_emision = $asistent->emision;
+//                dd($cursos->tipo_maquina_1);
+
+
+                $carnet->foto = $operador->foto;
+
+                $carnet->curso = $cursos->id;
+                $carnet->estado = 1 ;
+//                dd($carnet);
+                $carnet->save();
+                if ($cursos->tipo_maquina_1 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_1);
+                }
+                if ($cursos->tipo_maquina_2 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_2);
+                }
+                if ($cursos->tipo_maquina_3 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_3);
+                }
+                if ($cursos->tipo_maquina_4 != null){
+                    $carnet->Tipo_Maquinas()->attach($cursos->tipo_maquina_4);
+                }
+            }
+            if ($operador->certificado()->where('curso' , $cursos->id)->first() != null){
+                $certificado = $operador->certificado()->where('curso' , $cursos->id)->first();
+//                dd($certificado);
+            }else{
+                $certificado = new Certificado();
+//                dd('2222222222');
+            }
+
+            $asi_fecha = date('Y', strtotime($asistent->created_at));
+            $asi_fecham = date('m', strtotime($asistent->created_at));
+            $asi_fechad = date('d', strtotime($asistent->created_at));
+            $asi_fechah = date('h', strtotime($asistent->created_at));
+            $asi_fechai = date('i', strtotime($asistent->created_at));
+            $asi_fechas = date('s', strtotime($asistent->created_at));
+            $asi_orden = $asistent->orden;
+            $cert_numero = $asi_fecha . "" . $asi_fecham . "" . $asi_fechad . "" . $asi_fechah . "" . $asi_fechai . "" . $asi_fechas . "" . $operador->dni;
+            $certificado->numero = $cert_numero;
+            $certificado->cer_apellidos = $operador->apellidos;
+            $certificado->cer_nombre = $operador->nombre;
+            $certificado->operador = $operador->id;
+            if ($operador->entidad != 0){
+                $certificado->entidad = $operador->entidad;
+                $certificado->entidad_nombre = $operador->entidades_formadoreas->nombre;
+            }else{
+                $certificado->entidad = 0;
+                $certificado->entidad_nombre = "";
+            }
+            $certificado->curso = $asistent->curso;
+            $certificado->emision = $asistent->emision;
+            $certificado->vencimiento = $asistent->vencimiento;
+            $certificado->observaciones = $asistent->observaciones;
+            $certificado->dni = $operador->dni;
+            if ($cursos != null){
+                if ($cursos->tipo_curso == 1){
+                    $certificado->cer_type_course = 'Básico';
+                    $certificado->tipos_carnet = $asistent->tipos_carnet;
+                }else{
+                    $certificado->cer_type_course = 'Renovación';
+                    $certificado->tipos_carnet = $asistent->tipos_carnet;
+                }
+                $certificado->fecha_alta = $cursos->fecha_alta;
+            }else{
+                $certificado->cer_type_course = '-';
+                $certificado->tipos_carnet = '-';
+                $certificado->fecha_alta = null;
+            }
+            if ($asistent->tipo_1 != 0){
+                $tipo_1 =Tipo_Maquina::findOrFail($asistent->tipo_1);
+
+                if($tipo_1 != null){
+                    $certificado->tipo_1 = $tipo_1->tipo_maquina;
+
+                }else{
+                    $certificado->tipo_1 = '-----';
+                }
+            }else{
+                $certificado->tipo_1 = '-----';
+            }
+            if ($asistent->tipo_2 != 0) {
+                $tipo_2 = Tipo_Maquina::findOrFail($asistent->tipo_2);
+                if ($tipo_2 != null) {
+                    $certificado->tipo_2 = $tipo_2->tipo_maquina;
+
+                } else {
+                    $certificado->tipo_2 = '-----';
+                }
+            }else{
+                $certificado->tipo_2 = '-----';
+            }
+            if ($asistent->tipo_3 != 0){
+                $tipo_3 =Tipo_Maquina::findOrFail($asistent->tipo_3);
+                if($tipo_3 != null){
+                    $certificado->tipo_3 = $tipo_3->tipo_maquina;
+                }else{
+                    $certificado->tipo_3 = '-----';
+                }
+            }else{
+                $certificado->tipo_3 = '-----';
+            }
+            if ($asistent->tipo_4 != 0) {
+                $tipo_4 = Tipo_Maquina::findOrFail($asistent->tipo_4);
+                if ($tipo_4 != null) {
+                    $certificado->tipo_4 = $tipo_4->tipo_maquina;
+                } else {
+                    $certificado->tipo_4 = '-----';
+                }
+            } else {
+                $certificado->tipo_4 = '-----';
+            }
+            if ($operador->carnett != null){
+                $certificado->carnet = $operador->carnett->numero;
+            }
+            $certificado->save();
+
 
             return redirect()->route('admin.cursos.edit', [$asistent->curso])->with('success', 'Data updated successfully');
 

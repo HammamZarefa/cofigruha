@@ -1,0 +1,5 @@
+"Installed 1 updated packages","Software Package Updates","root","188.161.125.75","2022-07-01 16:47"
+"Installed 2 updated packages","Software Package Updates","root","188.161.84.62","2022-06-29 21:30"
+"Installed 2 updated packages","Software Package Updates","root","158.140.98.183","2022-06-27 21:28"
+"Installed 45 updated packages","Software Package Updates","root","158.140.121.246","2022-06-26 12:39"
+"Logged into Webmin","None","root","158.140.121.246","2022-06-26 12:08"

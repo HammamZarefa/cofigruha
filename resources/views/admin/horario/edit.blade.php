@@ -109,6 +109,8 @@
 
     </form>
 @endsection
+
+@push('scripts')
 <script>
     function test($this){
         if ($this.checked){
@@ -129,3 +131,4 @@
             console.log(" un checked");
     }
 </script>
+@endpush

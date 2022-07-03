@@ -15,7 +15,7 @@
   color: #FFFFFF;
   /* border-radius: 50%; */
   margin: 5px auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
 }
@@ -140,8 +140,9 @@ input[type="radio"]:focus {
 {{--        </div>--}}
 {{--    </div>--}}
 
+
         <div class="form-group col-md-4">
-            <div class="picture-container">
+            <div class="picture-container" id="picture-container">
                 <div class="picture">
                     <img src="" class="picture-src" id="wizardPicturePreview1" height="200px" width="400px" title=""/>
                     <input type="file" id="wizard-picture1" name="dni_img" class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} ">
@@ -149,7 +150,13 @@ input[type="radio"]:focus {
                         {{ $errors->first('dni_img') }}
                     </div>
                 </div>
-                <h6>{{__('message.Dni Img')}}</h6>
+                <h6>{{__('message.Dni Img & Pdf')}}</h6>
+            </div>
+            <div id="dni_pdf" style="display: none">
+                <label for="dni_img" class="col-sm-2 col-form-label text-center">{{__('message.DNI')}}</label>
+                <label for="dni_img" class="col-sm-1 col-form-label">
+                    <a id="dni_img_download" href="#" download><i class="fa fa-download"></i> </a> </label>
+
             </div>
         </div>
 
@@ -282,6 +289,15 @@ function readURL(input) {
             var reader = new FileReader();
             reader.onload = function (e) {
                 $('#wizardPicturePreview1').attr('src', e.target.result).fadeIn('slow');
+                $('#dni_img_download').attr('href', e.target.result).fadeIn('slow');
+            }
+            if (input.files[0].type == 'application/pdf') {
+                $('#picture-container').attr('style','display : none;');
+
+                $('#dni_pdf').attr('style','display : block;');
+                console.log('Huzzah!')
+            }else {
+                console.log('Huzdsfsdfsdfsdfsdfzah!')
             }
             reader.readAsDataURL(input.files[0]);
         }

@@ -121,7 +121,7 @@
             color: #FFFFFF;
             /* border-radius: 50%; */
             margin: 5px auto;
-            overflow: hidden;
+            /*overflow: hidden;*/
             transition: all 0.2s;
             -webkit-transition: all 0.2s;
         }
@@ -259,16 +259,6 @@ Name">
                     </div>
                 </div>
             </div>
-
-            {{--<div class="form-group col-md-4">--}}
-            {{--<label for="quote" class="col-sm-2 col-form-label">Entidad</label>--}}
-            {{--<div class="col-sm-9">--}}
-            {{--<input type="text" name='entidad' class="form-control {{$errors->first('entidad') ? "is-invalid" : "" }} " value="{{old('entidad')}}" id="entidad" placeholder="entidad">--}}
-            {{--<div class="invalid-feedback">--}}
-            {{--{{ $errors->first('entidad') }}--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
             <div class="form-group col-md-4">
                 <label for="entidad" class="col-sm-2 col-form-label">{{__('message.Entidad')}} </label>
                 <div class="col-sm-9">
@@ -327,6 +317,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 @if(substr($formadores->dni_img, -3) == 'pdf')
+
                     @if($formadores->dni_img && file_exists(storage_path('app/public/' . $formadores->operador_pdf)))
                         <label for="dni_img" class="col-sm-1 col-form-label">
                             <a id="dni_img_download" href="{{asset('storage/' . $formadores->dni_img)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -540,31 +531,6 @@ Name">
     </form>
 @endsection
 @push('scripts')
-{{--    <script>--}}
-{{--        function show(elem) {--}}
-{{--// Get the modal--}}
-{{--//             console.log(id);--}}
-{{--            var modal = document.getElementById("myModal");--}}
-
-{{--            // Get the image and insert it inside the modal - use its "alt" text as a caption--}}
-{{--            var modalImg = document.getElementById("img01");--}}
-{{--            var captionText = document.getElementById("caption");--}}
-
-{{--            modal.style.display = "block";--}}
-{{--            modalImg.src = $(elem).attr('src');--}}
-{{--            // captionText.innerHTML = this.alt;--}}
-
-
-{{--            // Get the <span> element that closes the modal--}}
-{{--            var span = document.getElementsByClassName("close")[0];--}}
-
-{{--            // When the user clicks on <span> (x), close the modal--}}
-{{--            span.onclick = function() {--}}
-{{--                modal.style.display = "none";--}}
-{{--            }--}}
-{{--        }--}}
-
-{{--    </script>--}}
     <script>
         // Prepare the preview for profile picture
         $("#wizard-picture").change(function(){

@@ -27,7 +27,7 @@ class Cursos extends Model
 
     public function tipo_maquina()
     {
-        return $this->belongsTo('App\Model\Tipo_Maquina', 'tipo_maquina_1', 'tipo_maquina_2', 'tipo_maquina_3', 'tipo_maquina_4');
+        return $this->belongsTo(Tipo_Maquina::class, 'tipo_maquina_1', 'tipo_maquina_2', 'tipo_maquina_3', 'tipo_maquina_4');
     }
 
     public function tipo_de_curso()

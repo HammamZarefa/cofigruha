@@ -42,7 +42,7 @@ class FaqController extends Controller
             'descripción' => 'required',
         ]);
         $faq = new Faq();
-        $faq->question = $request->tipo_de_PEMPA;
+        $faq->question = $request->tipo_de_pempa;
         $faq->answer = $request->descripción;
         if ( $faq->save()) {
 

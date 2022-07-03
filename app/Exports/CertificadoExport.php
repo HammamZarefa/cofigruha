@@ -23,13 +23,34 @@ class CertificadoExport implements FromCollection,WithHeadings
     {
         $now = now().date('');
         if ($this->id == "1"){
-            $certificados = Certificado::orderBy('id','asc')->whereDate('vencimiento' , '>' ,$now )->get();
+//            $certificados = Certificado::orderBy('id','asc')->whereDate('vencimiento' , '>' ,$now )->get();
+            $certificados = Certificado::orderBy('id','desc')->get();
+
+
+            foreach ($certificados as $key=>$certificado){
+                $cerOpe = $certificado->operadorr;
+                $cerCurso = $certificado->cursoo;
+                if (!($cerOpe->estado == 1 && $cerCurso->estado == 0)){
+                    $certificados->forget($key);
+                }
+            }
         }else{
-            $certificados = Certificado::orderBy('id','asc')->whereDate('vencimiento' , '<=' ,$now )->get();
+            $certificados = Certificado::orderBy('id','desc')->get();
+
+
+            foreach ($certificados as $key=>$certificado){
+                $cerOpe = $certificado->operadorr;
+                $cerCurso = $certificado->cursoo;
+                if ($cerOpe->estado != 0 || $cerCurso->estado != 1 || $cerCurso->cerrado != 1){
+                    $certificados->forget($key);
+                }
+            }
+//            $certificados = Certificado::orderBy('id','asc')->whereDate('vencimiento' , '<=' ,$now )->get();
         }
 
 //        dd($certificados);
         foreach ($certificados as $certificado){
+            $ope = $certificado->operadorr;
             if($certificado->entidad != 0){
                 $entidad =EntidadesFormadoreas::findOrFail($certificado->entidad);
                 $certificado->entidad = $entidad->razon_social;
@@ -43,7 +64,7 @@ class CertificadoExport implements FromCollection,WithHeadings
             }else{
                 $certificado->curso = "";
             }
-
+            $certificado->estado_del_operador = $ope->estado == 1 ? 'activo' : 'inactivo' ;
         }
         return $certificados;
     }
@@ -76,6 +97,7 @@ class CertificadoExport implements FromCollection,WithHeadings
             'tipo_2',
             'tipo_3',
             'tipo_4',
+            'estado del operador'
 
         ];
     }

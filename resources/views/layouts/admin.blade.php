@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Cofigruha</title>
+    <?php
+    use App\Models\General;$general = General::find(1);
+    ?>
+    <title>{{$general->title}}</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -30,6 +32,9 @@
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
     <!-- Nucleo Icons -->
     <link href="{{ asset('admin/css/nucleo-icons.css')}}" rel="stylesheet"/>
+
+    <link href="{{ asset('storage/'.$general->favicon) }}" rel="icon">
+    <link href="{{ asset('storage/'.$general->favicon) }}" rel="apple-touch-icon">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -78,7 +83,32 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="d-flex nav-setting">
-               
+                @can('isAdmin')
+                    <!-- Nav Item - Pages Collapse Menu -->
+                        <li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[
+            'admin.post',
+            'admin.category',
+            'admin.tag',
+            'admin.post.trash',
+        ])? 'active' : ''}}">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                               aria-expanded="true" aria-controls="collapseTwo">
+                                <i class="fas fa-fw fa-table"></i>
+                                <span>{{__('message.Blog')}}</span>
+                            </a>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                 data-parent="#accordionSidebar">
+                                <div class=" py-2 collapse-inner rounded">
+                                    <a class="collapse-item" href="{{ route('admin.post') }}">{{__('message.Blog')}}</a>
+                                    <a class="collapse-item"
+                                       href="{{ route('admin.category') }}">{{__('message.Categories')}}</a>
+                                    <a class="collapse-item" href="{{ route('admin.tag') }}">{{__('message.Tags')}}</a>
+                                    <a class="collapse-item"
+                                       href="{{ route('admin.post.trash') }}">{{__('message.Trash')}}</a>
+                                </div>
+                            </div>
+                        </li>
+                @endcan
                 @can('isAdmin')
                     <!-- Nav Item - Utilities Collapse Menu -->
                         <li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[
@@ -367,7 +397,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; ANAPAT </span>
+                    <span>Copyright &copy; {{$general->footer}} </span>
                 </div>
             </div>
         </footer>
@@ -414,6 +444,23 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="errorsModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" >{{__('message.hubo errores')}}</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @foreach ($errors->all() as $error)
+                    <h4>{{ $error }}</h4>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
@@ -448,6 +495,12 @@
     });
 
 
+</script>
+
+<script>
+    @if (count($errors) > 0)
+    $('#errorsModal').modal('show');
+    @endif
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>

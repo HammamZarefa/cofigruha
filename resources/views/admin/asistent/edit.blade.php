@@ -352,29 +352,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>
-                    <div class="col-sm-9">
-                        <select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} "
-                                id="tipo_4">
-                            <option value="0" selected>{{__('message.Choose_One')}}</option>
-                            @foreach ($tipo as $tipo_4)
-                                @if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])
-                                    <option
-                                        value="{{ $tipo_4->id }}" {{$asistent->tipo_4 == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>
-                                @endif
-                            @endforeach
-                        </select>
-                        <div class="invalid-feedback">
-                            {{ $errors->first('tipo_4') }}
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="form-group col-md-4">--}}
+                    {{--<label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>--}}
+                    {{--<div class="col-sm-9">--}}
+                        {{--<select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} "--}}
+                                {{--id="tipo_4">--}}
+                            {{--<option value="0" selected>{{__('message.Choose_One')}}</option>--}}
+                            {{--@foreach ($tipo as $tipo_4)--}}
+                                {{--@if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])--}}
+                                    {{--<option--}}
+                                        {{--value="{{ $tipo_4->id }}" {{$asistent->tipo_4 == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>--}}
+                                {{--@endif--}}
+                            {{--@endforeach--}}
+                        {{--</select>--}}
+                        {{--<div class="invalid-feedback">--}}
+                            {{--{{ $errors->first('tipo_4') }}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             @else
                 <input type="hidden" name="tipo_1" value="{{$asistent->tipo_1}}">
                 <input type="hidden" name="tipo_2" value="{{$asistent->tipo_2}}">
                 <input type="hidden" name="tipo_3" value="{{$asistent->tipo_3}}">
-                <input type="hidden" name="tipo_4" value="{{$asistent->tipo_4}}">
+                {{--<input type="hidden" name="tipo_4" value="{{$asistent->tipo_4}}">--}}
             @endif
 
 

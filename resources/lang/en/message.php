@@ -302,7 +302,7 @@ return [
     'Create category' => 'Crear categoría',
     'Slug' => 'Slug',
     'Create tag' => 'Crear etiqueta',
-    ''
+    'Dni Img & Pdf'=>'Dni Img & Pdf'
 
 
 

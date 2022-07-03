@@ -243,7 +243,7 @@ return [
     'about home' => 'página de inicio sobre',
     'añadir nuevo' => 'añadir nuevo',
     'Link' => 'Enlace',
-    'Inform About ANAPAT Training' => 'INFORMAR SOBRE LA FORMACIÓN DE ANAPAT',
+    'Inform About ANAPAT Training' => 'INFORMAR SOBRE LA FORMACIÓN DE COFIGRUHA',
     'about ANAPAT' => 'sobre ANAPAT',
     'Our Partner' => 'MIEMBROS DE COFIGRUHA',
     'Company' => 'Empresa',

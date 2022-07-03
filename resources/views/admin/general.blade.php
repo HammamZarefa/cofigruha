@@ -194,117 +194,117 @@
 
         </div>
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="facebook" class="col-sm-2 col-form-label">Facebook</label>
+{{--            <label for="facebook" class="col-sm-2 col-form-label">Facebook</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <input type="text" name='facebook' class="form-control {{$errors->first('facebook') ? "is-invalid" : "" }} " value="{{old('facebook') ? old('facebook') : $general->facebook}}" id="facebook" placeholder="Facebook">
+{{--                <input type="text" name='facebook' class="form-control {{$errors->first('facebook') ? "is-invalid" : "" }} " value="{{old('facebook') ? old('facebook') : $general->facebook}}" id="facebook" placeholder="Facebook">--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('facebook') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('facebook') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="instagram" class="col-sm-2 col-form-label">Instagram</label>
+{{--            <label for="instagram" class="col-sm-2 col-form-label">Instagram</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <input type="text" name='instagram' class="form-control {{$errors->first('instagram') ? "is-invalid" : "" }} " value="{{old('instagram') ? old('instagram') : $general->instagram}}" id="instagram" placeholder="Instagram">
+{{--                <input type="text" name='instagram' class="form-control {{$errors->first('instagram') ? "is-invalid" : "" }} " value="{{old('instagram') ? old('instagram') : $general->instagram}}" id="instagram" placeholder="Instagram">--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('instagram') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('instagram') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="linkedin" class="col-sm-2 col-form-label">Linkedin</label>
+{{--            <label for="linkedin" class="col-sm-2 col-form-label">Linkedin</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <input type="text" name='linkedin' class="form-control {{$errors->first('linkedin') ? "is-invalid" : "" }} " value="{{old('linkedin') ? old('linkedin') : $general->linkedin}}" id="linkedin" placeholder="Linkedin">
+{{--                <input type="text" name='linkedin' class="form-control {{$errors->first('linkedin') ? "is-invalid" : "" }} " value="{{old('linkedin') ? old('linkedin') : $general->linkedin}}" id="linkedin" placeholder="Linkedin">--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('linkedin') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('linkedin') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="gmaps" class="col-sm-2 col-form-label">Link Gmaps</label>
+{{--            <label for="gmaps" class="col-sm-2 col-form-label">Link Gmaps</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <input type="text" name='gmaps' class="form-control {{$errors->first('gmaps') ? "is-invalid" : "" }} " value="{{old('gmaps') ? old('gmaps') : $general->gmaps}}" id="gmaps" placeholder="Link Gmaps">
+{{--                <input type="text" name='gmaps' class="form-control {{$errors->first('gmaps') ? "is-invalid" : "" }} " value="{{old('gmaps') ? old('gmaps') : $general->gmaps}}" id="gmaps" placeholder="Link Gmaps">--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('gmaps') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('gmaps') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="tawkto" class="col-sm-2 col-form-label">Tawk to</label>
+{{--            <label for="tawkto" class="col-sm-2 col-form-label">Tawk to</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <textarea name="tawkto" id="tawkto" cols="30" rows="10" class="form-control {{$errors->first('tawkto') ? "is-invalid" : "" }} ">{{old('tawkto') ? old('tawkto') : $general->tawkto}}</textarea>
+{{--                <textarea name="tawkto" id="tawkto" cols="30" rows="10" class="form-control {{$errors->first('tawkto') ? "is-invalid" : "" }} ">{{old('tawkto') ? old('tawkto') : $general->tawkto}}</textarea>--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('tawkto') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('tawkto') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="disqus" class="col-sm-2 col-form-label">Disqus</label>
+{{--            <label for="disqus" class="col-sm-2 col-form-label">Disqus</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <textarea name="disqus" id="disqus" cols="30" rows="10" class="form-control {{$errors->first('disqus') ? "is-invalid" : "" }} ">{{old('disqus') ? old('disqus') : $general->disqus}}</textarea>
+{{--                <textarea name="disqus" id="disqus" cols="30" rows="10" class="form-control {{$errors->first('disqus') ? "is-invalid" : "" }} ">{{old('disqus') ? old('disqus') : $general->disqus}}</textarea>--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('disqus') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('disqus') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-        <div class="form-group ml-5">
+{{--        <div class="form-group ml-5">--}}
 
-            <label for="sharethis" class="col-sm-2 col-form-label">Sharethis</label>
+{{--            <label for="sharethis" class="col-sm-2 col-form-label">Sharethis</label>--}}
 
-            <div class="col-sm-7">
+{{--            <div class="col-sm-7">--}}
 
-                <textarea name="sharethis" id="sharethis" cols="30" rows="10" class="form-control {{$errors->first('sharethis') ? "is-invalid" : "" }} ">{{old('sharethis') ? old('sharethis') : $general->sharethis}}</textarea>
+{{--                <textarea name="sharethis" id="sharethis" cols="30" rows="10" class="form-control {{$errors->first('sharethis') ? "is-invalid" : "" }} ">{{old('sharethis') ? old('sharethis') : $general->sharethis}}</textarea>--}}
 
-                <div class="invalid-feedback">
-                    {{ $errors->first('sharethis') }}
-                </div>
+{{--                <div class="invalid-feedback">--}}
+{{--                    {{ $errors->first('sharethis') }}--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
         <div class="form-group ml-5">
 

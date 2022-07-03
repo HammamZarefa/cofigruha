@@ -15,12 +15,22 @@
             color: #FFFFFF;
             /* border-radius: 50%; */
             margin: 5px auto;
-            overflow: hidden;
+            /*overflow: hidden;*/
             transition: all 0.2s;
             -webkit-transition: all 0.2s;
         }
         .picture:hover {
             border-color: #2ca8ff;
+        }
+        #dni_img{
+            cursor: pointer;
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0 !important;
+            position: absolute;
+            top: 0;
+            width: 100%;
         }
         .picture input[type="file"] {
             cursor: pointer;
@@ -137,22 +147,44 @@ input[type="radio"]:focus {
             </div>
 
             <div class="form-group col-md-4">
-                <div class="image">
-                    <div class="form-group col-md-12">
-                        <div class="picture-container">
-                            <div class="picture">
-                                <img src="{{asset('storage/' . $operadores->dni_img)}}" class="picture-src"
-                                     id="wizardPicturePreview1" height="200px" width="400px" title=""/>
-                                <input type="file" id="wizard-picture1" name="dni_img"
-                                       class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} " value="{{old('dni_img') ? old('dni_img') : $operadores->dni_img}}">
-                                <div class="invalid-feedback">
-                                    {{ $errors->first('dni_img') }}
-                                </div>
+                @if(substr($operadores->dni_img, -3) == 'pdf')
+                    @if($operadores->dni_img && file_exists(storage_path('app/public/' . $operadores->operador_pdf)))
+                        <label for="dni_img" class="col-sm-1 col-form-label">
+                            <a id="dni_img_download" href="{{asset('storage/' . $operadores->dni_img)}}" download><i class="fa fa-download"></i> </a> </label>
+                        <a id="dni_img_privew" target="_blank" href="{{asset('storage/' . $operadores->dni_img)}}"  ><i class="fa fa-eye"></i> </a>
+                        <div class="col-sm-12">
+                            <i class="fas fa-edit" style="font-size: 20px"></i>
+                            <input type="file" name='dni_img' class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} " value="{{old('dni_img') ? old('dni_img') : $operadores->dni_img}}" style="opacity: 0 !important" id="dni_img" placeholder="Link Linkedin">
+                            <div class="invalid-feedback">
+                                {{ $errors->first('dni_img') }}
                             </div>
-                            <h6>{{__('message.Dni Img')}}</h6>
+                        </div>
+                    @else
+                        <div class="col-sm-12">
+                            <input type="file" name='operador_pdf' class="form-control {{$errors->first('operador_pdf') ? "is-invalid" : "" }} " value="{{old('operador_pdf') ? old('operador_pdf') : $operadores->operador_pdf}}" id="operador_pdff" placeholder="Link Linkedin">
+                            <div class="invalid-feedback">
+                                {{ $errors->first('operador_pdf') }}
+                            </div>
+                        </div>
+                    @endif
+                @elseif(substr($operadores->dni_img, -3) != 'pdf')
+                    <div class="image">
+                        <div class="form-group col-md-12">
+                            <div class="picture-container">
+                                <div class="picture">
+                                    <img src="{{asset('storage/' . $operadores->dni_img)}}" class="picture-src"
+                                         id="wizardPicturePreview1" height="200px" width="400px" title=""/>
+                                    <input type="file" id="wizard-picture1" name="dni_img"
+                                           class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} " value="{{old('dni_img') ? old('dni_img') : $operadores->dni_img}}">
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('dni_img') }}
+                                    </div>
+                                </div>
+                                <h6>{{__('message.Dni Img & Pdf')}}</h6>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
 
             <div class="form-group col-md-4">
@@ -275,17 +307,38 @@ input[type="radio"]:focus {
             }
         }
     </script>
+
     <script>
         // Prepare the preview for profile picture
         $("#wizard-picture1").change(function(){
             readURL1(this);
         });
         //Function to show image before upload
+
         function readURL1(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     $('#wizardPicturePreview1').attr('src', e.target.result).fadeIn('slow');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <script>
+        // Prepare the preview for profile picture
+        $("#dni_img").change(function(){
+            readURL2(this);
+        });
+        //Function to show image before upload
+
+        function readURL2(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#dni_img_download').attr('href', e.target.result).fadeIn('slow');
+                    document.getElementById('dni_img_privew').style.display = "none";
                 }
                 reader.readAsDataURL(input.files[0]);
             }

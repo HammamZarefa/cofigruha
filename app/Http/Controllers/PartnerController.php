@@ -42,8 +42,8 @@ class PartnerController extends Controller
            'enlace' => 'required',
        ]);
        $partner = new Partner();
-       $partner->name = $request->name;
-       $partner->link = $request->link;
+       $partner->name = $request->nombre;
+       $partner->link = $request->enlace;
 
        $cover = $request->file('logo');
 

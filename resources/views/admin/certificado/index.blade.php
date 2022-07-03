@@ -56,6 +56,8 @@
 
                         <th>{{__('message.Apellidos')}}</th>
 
+                        <th>{{__('message.tipo_carnet')}}</th>
+
                         <th>{{__('message.Fecha De Emisión')}} </th>
 
                         <th>{{__('message.Fecha De Vencimiento')}} </th>
@@ -81,6 +83,7 @@
                         <td> {{ $certificado->entidad_nombre }} </td>
                         <td> {{ $certificado->cer_nombre }} </td>
                         <td> {{ $certificado->cer_apellidos }} </td>
+                        <td> {{ $certificado->tipos_carnet }} </td>
                         <td> {{date('d/m/Y',strtotime($certificado->emision))  }} </td>
                         <td>{{ date('d/m/Y',strtotime($certificado->vencimiento)) }}</td>
                         <td>

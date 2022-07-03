@@ -22,24 +22,24 @@
                 <input type="text" name='name' class="form-control {{$errors->first('name') ? "is-invalid" : "" }} " value="{{old('name') ? old('name') : $pcategory->name}}" id="name" placeholder="Name">
 
                 <div class="invalid-feedback">
-                    {{ $errors->first('name') }}    
-                </div>   
+                    {{ $errors->first('name') }}
+                </div>
 
             </div>
 
         </div>
-   
+
         <div class="form-group ">
-   
+
             <div class="col-sm-3">
-   
+
                 <button type="submit" class="btn btn-info">Update</button>
-   
+
             </div>
-   
+
         </div>
 
-    </div>      
+    </div>
 
   </form>
 @endsection

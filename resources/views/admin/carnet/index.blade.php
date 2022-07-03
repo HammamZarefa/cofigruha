@@ -29,7 +29,7 @@
     <div class="card-header py-3">
 
 
-        <a href="{{ route('admin.carnet.choseOperador') }}" class="btn btn-pass">{{__('message.add_new')}} carnet</a>
+{{--        <a href="{{ route('admin.carnet.choseOperador') }}" class="btn btn-pass">{{__('message.add_new')}} carnet</a>--}}
 
 
     </div>
@@ -73,8 +73,9 @@
                     <tr>
                         <td>{{ $carnets->numero }}</td>
                         <td>{{ $carnets->operadores->nombre }} {{$carnets->operadores->apellidos}}</td>
-                        <td> {{ date('d/m/Y',strtotime($carnets->fecha_de_alta)) }} </td>
                         <td>{{ date('d/m/Y',strtotime($carnets->fecha_de_emision))  }}</td>
+                        <td> {{ date('d/m/Y',strtotime($carnets->fecha_de_alta)) }} </td>
+
                         <td>
                             <img src="{{asset('storage/' . $carnets->foto)}}" width="96px"/>
                         </td>

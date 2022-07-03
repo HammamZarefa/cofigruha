@@ -16,7 +16,7 @@
             color: #FFFFFF;
             /* border-radius: 50%; */
             margin: 5px auto;
-            overflow: hidden;
+            /*overflow: hidden;*/
             transition: all 0.2s;
             -webkit-transition: all 0.2s;
         }
@@ -169,9 +169,9 @@ Name">
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
-                    <input type="file" name="cert_empresa_pdf" id="cert_empresa_pdf"   class="form-control {{$errors->first('cert_empresa_pdf	') ? "is-invalid" : "" }} " value="{{old('cert_empresa_pdf	')}}">
+                    <input type="file" name="cert_empresa_pdf" id="cert_empresa_pdf"   class="form-control {{$errors->first('cert_empresa_pdf') ? "is-invalid" : "" }} " value="{{old('cert_empresa_pdf	')}}">
                     <div class="invalid-feedback">
-                        {{ $errors->first('cert_empresa_pdf	') }}
+                        {{ $errors->first('cert_empresa_pdf') }}
                     </div>
                 </div>
             </div>

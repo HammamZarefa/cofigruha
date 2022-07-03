@@ -22,13 +22,13 @@ class Certificado extends Model
         return $this->belongsTo(EntidadesFormadoreas::class, 'entidad');
     }
 
-    public function curso()
+    public function cursoo()
     {
         return $this->belongsTo(Cursos::class, 'curso');
     }
 
 
-    public function operador()
+    public function operadorr()
     {
         return $this->belongsTo(Operadores::class, 'operador');
     }

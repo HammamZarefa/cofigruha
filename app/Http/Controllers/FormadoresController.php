@@ -68,7 +68,14 @@ class FormadoresController extends Controller
             'apellidos' => 'required',
             'nombre' => 'required',
             'dni' => 'required',
-            'dni_img' => 'required',
+            'dni_img' => 'required|max:2048',
+            'operador_pdf' => 'max:2048',
+            'cert_empresa_pdf' => 'max:2048',
+            'vida_laboral_pdf' => 'max:2048',
+            'prl_pdf' => 'max:2048',
+            'pemp_pdf' => 'max:2048',
+            'cap_pdf' => 'max:2048',
+
         ]);
 
 
@@ -191,6 +198,13 @@ class FormadoresController extends Controller
             'apellidos' => 'required',
             'nombre' => 'required',
             'dni' => 'required',
+            'dni_img' => 'max:2048',
+            'operador_pdf' => 'max:2048',
+            'cert_empresa_pdf' => 'max:2048',
+            'vida_laboral_pdf' => 'max:2048',
+            'prl_pdf' => 'max:2048',
+            'pemp_pdf' => 'max:2048',
+            'cap_pdf' => 'max:2048',
         ]);
 
         $formadores = Formadores::findOrFail($id);

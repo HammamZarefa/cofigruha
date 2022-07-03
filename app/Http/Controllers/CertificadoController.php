@@ -31,7 +31,16 @@ class CertificadoController extends Controller
 
         else
             $operadors = Operadores::orderBy('id','desc')->get();
-        $certificados = Certificado::orderBy('id','desc')->whereDate('vencimiento' , '>' ,$now )->get();
+        $certificados = Certificado::orderBy('id','desc')->get();
+
+
+        foreach ($certificados as $key=>$certificado){
+            $cerOpe = $certificado->operadorr;
+            $cerCurso = $certificado->cursoo;
+            if (!($cerOpe->estado == 1 && $cerCurso->estado == 0)){
+                $certificados->forget($key);
+            }
+        }
         $activo = 1;
         return view('admin.certificado.index',compact('operadors','certificados','activo'));
     }
@@ -51,7 +60,16 @@ class CertificadoController extends Controller
 
         else
             $operadors = Operadores::orderBy('id','desc')->get();
-        $certificados = Certificado::orderBy('id','desc')->whereDate('vencimiento' , '<=' ,$now )->get();
+        $certificados = Certificado::orderBy('id','desc')->get();
+
+
+        foreach ($certificados as $key=>$certificado){
+            $cerOpe = $certificado->operadorr;
+            $cerCurso = $certificado->cursoo;
+            if ($cerOpe->estado != 0 || $cerCurso->estado != 1 || $cerCurso->cerrado != 1){
+                $certificados->forget($key);
+            }
+        }
         $activo = 0;
         return view('admin.certificado.index',compact('operadors','certificados','activo'));
     }
@@ -170,7 +188,7 @@ class CertificadoController extends Controller
                 }
 
                 if ($operador->carnett != null){
-                    $certificado->carnet = $operador->carnett->id;
+                    $certificado->carnet = $operador->carnett->numero;
                 }
 
                 $cer = Certificado::where('operador',$operador->id)->where('curso',$asistent->curso)->get();

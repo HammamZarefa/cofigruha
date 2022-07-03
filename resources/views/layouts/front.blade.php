@@ -95,7 +95,7 @@
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="{{ route('login') }}"><i class="icofont-ui-user"></i></a>
+        <a href="{{ route('login') }}"><i class="icofont-ui-user"> Cuenta</i></a>
       </div>
 
     </div>

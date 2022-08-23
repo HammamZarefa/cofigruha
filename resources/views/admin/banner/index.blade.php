@@ -16,6 +16,7 @@
            <a href="{{ route('admin.banner.create') }}" class="btn btn-primary btn-md">{{__('message.add new Banner')}}</a>
           </div>
           <div class="card-body">
+              <h4>Las dimensiones de la foto deben ser 1700 * 1134 o lo que se adapte a estas dimensiones & El tamaño de la imagen debe ser inferior a 2 MB.</h4>
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>

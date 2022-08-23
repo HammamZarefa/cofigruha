@@ -41,6 +41,10 @@
 
                         <th>{{__('message.Nombre')}}</th>
 
+                        <th>{{__('message.Apellidos')}}</th>
+
+                        <th>{{__('message.Alias')}}</th>
+
                         <th>{{__('message.Email')}}</th>
 
                         <th>{{__('message.Perfil')}}</th>
@@ -65,6 +69,8 @@
                     <tr>
                         <td>{{ ++$no }}</td>
                         <td>{{ $user->nombre }}</td>
+                        <td>{{ $user->apellidos }}</td>
+                        <td>{{ $user->alias }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->perfil }}</td>
                         <td>

@@ -100,7 +100,7 @@ class CategoryController extends Controller
 
         $category = Category::findOrFail($id);
         $category->name = $request->name;
-        $category->slug = \Str::slug($request->name);
+        $category->slug = $category->slug;
         $category->keyword = $request->keyword;
         $category->meta_desc = $request->meta_desc;
 

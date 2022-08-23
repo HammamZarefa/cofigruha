@@ -83,32 +83,32 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="d-flex nav-setting">
-                @can('isAdmin')
-                    <!-- Nav Item - Pages Collapse Menu -->
-                        <li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[
-            'admin.post',
-            'admin.category',
-            'admin.tag',
-            'admin.post.trash',
-        ])? 'active' : ''}}">
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                               aria-expanded="true" aria-controls="collapseTwo">
-                                <i class="fas fa-fw fa-table"></i>
-                                <span>{{__('message.Blog')}}</span>
-                            </a>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                 data-parent="#accordionSidebar">
-                                <div class=" py-2 collapse-inner rounded">
-                                    <a class="collapse-item" href="{{ route('admin.post') }}">{{__('message.Blog')}}</a>
-                                    <a class="collapse-item"
-                                       href="{{ route('admin.category') }}">{{__('message.Categories')}}</a>
-                                    <a class="collapse-item" href="{{ route('admin.tag') }}">{{__('message.Tags')}}</a>
-                                    <a class="collapse-item"
-                                       href="{{ route('admin.post.trash') }}">{{__('message.Trash')}}</a>
-                                </div>
-                            </div>
-                        </li>
-                @endcan
+                {{--@can('isAdmin')--}}
+                    {{--<!-- Nav Item - Pages Collapse Menu -->--}}
+                        {{--<li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[--}}
+            {{--'admin.post',--}}
+            {{--'admin.category',--}}
+            {{--'admin.tag',--}}
+            {{--'admin.post.trash',--}}
+        {{--])? 'active' : ''}}">--}}
+                            {{--<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"--}}
+                               {{--aria-expanded="true" aria-controls="collapseTwo">--}}
+                                {{--<i class="fas fa-fw fa-table"></i>--}}
+                                {{--<span>{{__('message.Blog')}}</span>--}}
+                            {{--</a>--}}
+                            {{--<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"--}}
+                                 {{--data-parent="#accordionSidebar">--}}
+                                {{--<div class=" py-2 collapse-inner rounded">--}}
+                                    {{--<a class="collapse-item" href="{{ route('admin.post') }}">{{__('message.Blog')}}</a>--}}
+                                    {{--<a class="collapse-item"--}}
+                                       {{--href="{{ route('admin.category') }}">{{__('message.Categories')}}</a>--}}
+                                    {{--<a class="collapse-item" href="{{ route('admin.tag') }}">{{__('message.Tags')}}</a>--}}
+                                    {{--<a class="collapse-item"--}}
+                                       {{--href="{{ route('admin.post.trash') }}">{{__('message.Trash')}}</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</li>--}}
+                {{--@endcan--}}
                 @can('isAdmin')
                     <!-- Nav Item - Utilities Collapse Menu -->
                         <li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[

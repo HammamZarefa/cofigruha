@@ -21,7 +21,7 @@ Blog -
   <div class="sidebar-item categories">
     <ul>
       @foreach ($categories as $category)
-      <li><a href="{{ route('category',$category->slug) }}">{{ $category->name }} <span>({{ $category->count() }})</span></a></li>
+            <li><a href="{{ route('category',$category->slug) }}">{{ $category->name }} <span>({{ $category->posts->count() }})</span></a></li>
       @endforeach
     </ul>
 

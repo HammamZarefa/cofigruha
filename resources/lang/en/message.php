@@ -243,8 +243,8 @@ return [
     'about home' => 'página de inicio sobre',
     'añadir nuevo' => 'añadir nuevo',
     'Link' => 'Enlace',
-    'Inform About ANAPAT Training' => 'INFORMAR SOBRE LA FORMACIÓN DE ANAPAT',
-    'about ANAPAT' => 'sobre ANAPAT',
+    'Inform About ANAPAT Training' => 'INFORMAR SOBRE LA FORMACIÓN DE COFIGRUHA',
+    'about COFIGRUHA' => 'sobre COFIGRUHA',
     'Our Partner' => 'MIEMBROS DE COFIGRUHA',
     'Company' => 'Empresa',
     'Site Map' => 'Mapa del sitio',
@@ -302,7 +302,7 @@ return [
     'Create category' => 'Crear categoría',
     'Slug' => 'Slug',
     'Create tag' => 'Crear etiqueta',
-    ''
+    'Restablecer la contraseña' => '¿Ha olvidado su contraseña?',
 
 
 

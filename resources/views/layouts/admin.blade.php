@@ -10,7 +10,9 @@
     <meta name="author" content="">
 
     <title>Cofigruha</title>
-
+    <!-- Favicons -->
+    <link href="{{ asset('admin/img/anapat.png')}}" rel="icon">
+    <link href="{{ asset('admin/img/anapat.png')}}" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -367,7 +369,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; ANAPAT </span>
+                    <span>Copyright &copy; Cofigruha </span>
                 </div>
             </div>
         </footer>

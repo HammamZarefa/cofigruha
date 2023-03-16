@@ -14,16 +14,18 @@ class FormadorExport implements FromCollection,WithHeadings
     public function collection()
     {
 //        dd(Cursos::all());
-        return Formadores::all();
+        $formadores= Formadores::all();
+        foreach ($formadores as $formador)
+        {
+            $formador->fecha=date('d/m/Y',strtotime($formador->fecha));
+        }
+        return $formadores;
     }
 
     public function headings(): array
     {
         return[
             'Id',
-            'created_at',
-            'updated_at',
-            'deleted_at',
             'codigo',
             'entidad',
             'apellidos',
@@ -32,7 +34,6 @@ class FormadorExport implements FromCollection,WithHeadings
             'dni_img',
             'operador_pdf',
             'cert_empresa_pdf',
-
             'vida_laboral_pdf',
             'prl_pdf',
             'pemp_pdf',

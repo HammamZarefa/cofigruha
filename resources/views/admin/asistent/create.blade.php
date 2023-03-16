@@ -116,8 +116,14 @@
                         <div class="col-sm-9">
                             @foreach ($cursos as $cur)
                                 @if($id == $cur->id)
-                                    <input readonly type="text"  class="form-control {{$errors->first('tipos_carnet') ? "is-invalid" : "" }} " value="{{old('tipos_carnet') ? old('tipos_carnet') : $cur->tipo_de_curso->tipo_curso == 'Básico' ? 'B' : 'R' }}" id="Nota examen teórico" placeholder="{{__('message.tipo_carnet')}}">
-                                    <input type="hidden" name="tipos_carnet" value="{{$cur->tipo_de_curso->tipo_curso == 'Básico' ? 'B' : 'R'}}">
+{{--                                    <input readonly type="text"  class="form-control {{$errors->first('tipos_carnet') ? "is-invalid" : "" }} " value="{{old('tipos_carnet') ? old('tipos_carnet') : $cur->tipo_de_curso->tipo_curso == 'Básico' ? 'B' : 'R' }}" id="Nota examen teórico" placeholder="{{__('message.tipo_carnet')}}">--}}
+                                    <select name='tipos_carnet' class="form-control {{$errors->first('tipos_carnet') ? "is-invalid" : "" }} " id="tipos_carnet">
+                                        <option disabled selected>{{__('message.Choose_One')}}</option>
+                                            <option value="B">B</option>
+                                            <option value="R">R</option>
+
+                                    </select>
+{{--                                    <input type="hidden" name="tipos_carnet" value="{{$cur->tipo_de_curso->tipo_curso == 'Básico' ? 'B' : 'R'}}">--}}
                                 @endif
                             @endforeach
                             <div class="invalid-feedback">
@@ -128,24 +134,6 @@
                 </div>
             </div>
             <input type="hidden" name="tipo_carnet" value="0">
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-sm">--}}
-{{--                    <label for="tipo_carnet" class="col-sm-2 col-form-label">{{__('message.tipo_carnet')}}</label>--}}
-{{--                    <div class="col-sm-9">--}}
-{{--                        <select name='tipo_carnet' class="form-control {{$errors->first('tipo_carnet') ? "is-invalid" : "" }} " id="tipo_carnet">--}}
-{{--                            <option disabled selected>{{__('message.Choose_One')}}</option>--}}
-{{--                            @foreach ($tipo_carnet as $tipo_carnet)--}}
-{{--                                <option value="{{ $tipo_carnet->id }}" {{old('tipo_carnet') == $tipo_carnet->id ? "selected" : ""}}>{{ $tipo_carnet->formacion }}</option>--}}
-{{--                            @endforeach--}}
-{{--                        </select>--}}
-{{--                        <div class="invalid-feedback">--}}
-{{--                            {{ $errors->first('tipo_carnet') }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
         @else
             <input type="hidden" name="tipo_carnet" value="0">
         @endif
@@ -169,11 +157,22 @@
                 <div class="col-sm">
                     <label for="nota_p" class="col-sm-2 col-form-label">{{__('message.Nota_p')}}</label>
                     <div class="col-sm-9">
-                        <input type="text" name='nota_p' class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} " value="{{old('nota_p')}}" id="Nota examen práctico" >
+                        <input type="text" name='nota_p' class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} " value="{{old('nota_p')}}" id="Nota examen practica" >
                         <div class="invalid-feedback">
                             {{ $errors->first('nota_p') }}
                         </div>
                     </div>
+                    {{--<div class="col-sm-9">--}}
+                        {{--<select name='nota_p' class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} " id="nota_p">--}}
+                            {{--<option disabled selected>{{__('message.Choose_One')}}</option>--}}
+                            {{--@foreach ($notes as $note)--}}
+                                {{--<option value="{{ $note }}">{{$note}}</option>--}}
+                            {{--@endforeach--}}
+                        {{--</select>--}}
+                        {{--<div class="invalid-feedback">--}}
+                            {{--{{ $errors->first('nota_p') }}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
@@ -221,76 +220,6 @@
         </div>
 
 
-{{--        @if(auth()->user()->perfil=='Administrador' ) --}}{{--fifth row--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-sm">--}}
-{{--                    <label for="emision" class="col-sm-2 col-form-label">{{__('message.Emision')}}</label>--}}
-{{--                    <div class="col-sm-9">--}}
-{{--                        <input type="date" name='emision' class="form-control {{$errors->first('emision') ? "is-invalid" : "" }} " value="{{old('emision')}}" id="emision" placeholder="Fecha de emisión">--}}
-{{--                        <div class="invalid-feedback">--}}
-{{--                            {{ $errors->first('emision') }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-sm">--}}
-{{--                    <label for="vencimiento" class="col-sm-2 col-form-label">{{__('message.Vencimiento')}}</label>--}}
-{{--                    <div class="col-sm-9">--}}
-{{--                        <input type="date" name='vencimiento' class="form-control {{$errors->first('vencimiento') ? "is-invalid" : "" }} " value="{{old('vencimiento')}}" id="vencimiento" >--}}
-{{--                        <div class="invalid-feedback">--}}
-{{--                            {{ $errors->first('vencimiento') }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        @else--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-sm">--}}
-{{--                        <label for="emision" class="col-sm-2 col-form-label">{{__('message.Emision')}}</label>--}}
-{{--                        <div class="col-sm-9">--}}
-{{--                            <input type="date" name='emision' class="form-control {{$errors->first('emision') ? "is-invalid" : "" }} " value="{{old('emision')}}" id="emision" placeholder="Fecha de emisión">--}}
-{{--                            <div class="invalid-feedback">--}}
-{{--                                {{ $errors->first('emision') }}--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-sm">--}}
-{{--                        <label for="vencimiento" class="col-sm-2 col-form-label">{{__('message.Vencimiento')}}</label>--}}
-{{--                        <div class="col-sm-9">--}}
-{{--                            <input type="date" name='vencimiento' class="form-control {{$errors->first('vencimiento') ? "is-invalid" : "" }} " value="{{old('vencimiento')}}" id="vencimiento" >--}}
-{{--                            <div class="invalid-feedback">--}}
-{{--                                {{ $errors->first('vencimiento') }}--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        @endif--}}
-        {{--    <div class="container">--}}
-        {{--        <div class="row">--}}
-        {{--            <div class="col-sm">--}}
-        {{--                <label for="rememberToken" class="col-sm-2 col-form-label">RememberToken</label>--}}
-        {{--                <div class="col-sm-9">--}}
-        {{--                    <input type="text" name='rememberToken' class="form-control {{$errors->first('rememberToken') ? "is-invalid" : "" }} " value="{{old('rememberToken')}}" id="rememberToken" >--}}
-        {{--                    <div class="invalid-feedback">--}}
-        {{--                        {{ $errors->first('rememberToken') }}--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--            </div>--}}
-        {{--        </div>--}}
-        {{--    </div>--}}
-
-        {{--sixth row--}}
         @if(auth()->user()->perfil=='Administrador' )
         <div class="container">
             <div class="row">
@@ -298,13 +227,16 @@
                     <label for="tipo_1" class="col-sm-2 col-form-label">{{__('message.Tipo_1')}}</label>
                     <div class="col-sm-9">
                         <select name='tipo_1' class="form-control {{$errors->first('tipo_1') ? "is-invalid" : "" }} " id="tipo_1">
-                            <option disabled selected>Choose One!</option>
+                            <option disabled selected>{{__('message.Choose_One')}}</option>
                             @foreach ($tipo as $tipo_1)
                                 @if($tipo_1->id == $tipos[0] || $tipo_1->id == $tipos[1] || $tipo_1->id == $tipos[2] || $tipo_1->id == $tipos[3])
                                 <option value="{{ $tipo_1->id }}" {{old('tipo_1') == $tipo_1->id ? "selected" : ""}}>{{ $tipo_1->tipo_maquina }}</option>
                                 @endif
                             @endforeach
                         </select>
+                        <div class="invalid-feedback">
+                            {{ $errors->first('tipo_1') }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,13 +247,16 @@
                     <label for="tipo_2" class="col-sm-2 col-form-label">{{__('message.Tipo_2')}}</label>
                     <div class="col-sm-9">
                         <select name='tipo_2' class="form-control {{$errors->first('tipo_2') ? "is-invalid" : "" }} " id="tipo_2">
-                            <option disabled selected>Choose One!</option>
+                            <option value="0"  selected>{{__('message.Choose_One')}}</option>
                             @foreach ($tipo as $tipo_2)
                                 @if($tipo_2->id == $tipos[0] || $tipo_2->id == $tipos[1] || $tipo_2->id == $tipos[2] || $tipo_2->id == $tipos[3])
                                 <option value="{{ $tipo_2->id }}" {{old('tipo_2') == $tipo_2->id ? "selected" : ""}}>{{ $tipo_2->tipo_maquina }}</option>
                                 @endif
                             @endforeach
                         </select>
+                        <div class="invalid-feedback">
+                            {{ $errors->first('tipo_2') }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -332,39 +267,45 @@
                     <label for="tipo_3" class="col-sm-2 col-form-label">{{__('message.Tipo_3')}}</label>
                     <div class="col-sm-9">
                         <select name='tipo_3' class="form-control {{$errors->first('tipo_3') ? "is-invalid" : "" }} " id="tipo_3">
-                            <option disabled selected>Choose One!</option>
+                            <option value="0"  selected>{{__('message.Choose_One')}}</option>
                             @foreach ($tipo as $tipo_3)
                                 @if($tipo_3->id == $tipos[0] || $tipo_3->id == $tipos[1] || $tipo_3->id == $tipos[2] || $tipo_3->id == $tipos[3])
                                 <option value="{{ $tipo_3->id }}" {{old('tipo_3') == $tipo_3->id ? "selected" : ""}}>{{ $tipo_3->tipo_maquina }}</option>
                                 @endif
                             @endforeach
                         </select>
+                        <div class="invalid-feedback">
+                            {{ $errors->first('tipo_3') }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>
-                    <div class="col-sm-9">
-                        <select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} " id="tipo_4">
-                            <option disabled selected>Choose One!</option>
-                            @foreach ($tipo as $tipo_4)
-                                @if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])
-                                <option value="{{ $tipo_4->id }}" {{old('tipo_4') == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>
-                                @endif
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-sm">--}}
+                    {{--<label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>--}}
+                    {{--<div class="col-sm-9">--}}
+                        {{--<select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} " id="tipo_4">--}}
+                            {{--<option value="0" selected>{{__('message.Choose_One')}}</option>--}}
+                            {{--@foreach ($tipo as $tipo_4)--}}
+                                {{--@if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])--}}
+                                {{--<option value="{{ $tipo_4->id }}" {{old('tipo_4') == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>--}}
+                                {{--@endif--}}
+                            {{--@endforeach--}}
+                        {{--</select>--}}
+                        {{--<div class="invalid-feedback">--}}
+                            {{--{{ $errors->first('tipo_4') }}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         @else
             <input type="hidden" name="tipo_1" value="0">
             <input type="hidden" name="tipo_2" value="0">
             <input type="hidden" name="tipo_3" value="0">
-            <input type="hidden" name="tipo_4" value="0">
+            {{--<input type="hidden" name="tipo_4" value="0"  hidden="hidden">--}}
         @endif
         <div class="container">
             <div class="row">

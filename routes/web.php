@@ -105,6 +105,8 @@ Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>'auth'],function ()
     Route::get('asistent/export',[AsistentController::class, 'export'])->name('asistent.export');
     Route::post('asistent/edit/{id}', [AsistentController::class, 'update'])->name('asistent.update');
     Route::delete('asistent/destroy/{id}',[AsistentController::class, 'destroy'])->name('asistent.destroy');
+    Route::get('operador/edit/{id}/{curso}', [AsistentController::class, 'show'])->name('operador.edit');
+    Route::post('operador/edit/{id}', [AsistentController::class, 'updateOperador'])->name('operador.update');
 
     // Manage Portfolio
 //    Route::resource('cursos',CursosController::class);

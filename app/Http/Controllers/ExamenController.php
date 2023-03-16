@@ -48,7 +48,7 @@ class ExamenController extends Controller
         'codigo' => 'required',
         'tipo' => 'required',
         'nombre' => 'required',
-        'url' => 'required',
+        'url' => 'required|max:2048',
     ]);
 
         $examen = new Examen($request->except('_token','url'));
@@ -109,6 +109,7 @@ class ExamenController extends Controller
             'codigo' => 'required',
             'tipo' => 'required',
             'nombre' => 'required',
+            'url' => 'max:2048',
         ]);
         $examen = Examen::findOrFail($id);
         $examen->codigo = $request->codigo;

@@ -15,7 +15,7 @@
   color: #FFFFFF;
   /* border-radius: 50%; */
   margin: 5px auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
 }
@@ -207,8 +207,13 @@ input[type="radio"]:focus {
                                     {{ $errors->first('logo') }}
                                 </div>
                             </div>
+{{--                            <div class="invalid-feedback">--}}
+{{--                                {{ $errors->first('logo') }}--}}
+{{--                            </div>--}}
                             <h6>{{__('message.Logo')}}</h6>
+
                         </div>
+
                     </div>
 {{--            <div class="form-group col-md-4">--}}
 

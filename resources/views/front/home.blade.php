@@ -95,7 +95,7 @@
                     <ul class="hList">
                         <li>
                             <a href="#click" class="menu">
-                                <h2 class="menu-title menu-title_2nd">{{__('message.about ANAPAT')}}</h2>
+                                <h2 class="menu-title menu-title_2nd">{{__('message.about COFIGRUHA')}}</h2>
                                 <ul id="Inform-list" class="menu-dropdown col-md-3 col-sm-12" >
                                     @foreach($pages as $key=>$page)
                                     <li class="{{$key == 0 ? 'li-active' : ''}}" id="{{$key + 1}}">{{$page->title}}</li>

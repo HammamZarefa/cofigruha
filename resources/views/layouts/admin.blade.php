@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <?php
-    use App\Models\General;$general = General::find(1);
-    ?>
-    <title>{{$general->title}}</title>
 
+    <title>Cofigruha</title>
+    <!-- Favicons -->
+    <link href="{{ asset('admin/img/anapat.png')}}" rel="icon">
+    <link href="{{ asset('admin/img/anapat.png')}}" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -32,9 +32,6 @@
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
     <!-- Nucleo Icons -->
     <link href="{{ asset('admin/css/nucleo-icons.css')}}" rel="stylesheet"/>
-
-    <link href="{{ asset('storage/'.$general->favicon) }}" rel="icon">
-    <link href="{{ asset('storage/'.$general->favicon) }}" rel="apple-touch-icon">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -83,6 +80,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="d-flex nav-setting">
+
                 {{--@can('isAdmin')--}}
                     {{--<!-- Nav Item - Pages Collapse Menu -->--}}
                         {{--<li class="nav-item d-md-block d-none {{ in_array(Route::currentRouteName(),[--}}
@@ -397,7 +395,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; {{$general->footer}} </span>
+                    <span>Copyright &copy; Cofigruha </span>
                 </div>
             </div>
         </footer>
@@ -444,23 +442,6 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="errorsModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" >{{__('message.hubo errores')}}</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                @foreach ($errors->all() as $error)
-                    <h4>{{ $error }}</h4>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
@@ -495,12 +476,6 @@
     });
 
 
-</script>
-
-<script>
-    @if (count($errors) > 0)
-    $('#errorsModal').modal('show');
-    @endif
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>

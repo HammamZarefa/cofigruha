@@ -50,6 +50,9 @@
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
+                        <label style="margin-left: 90px;font-size: 13px;">
+                            <a href="{{ route('forget.password.get') }}">{{__('message.Restablecer la contraseña')}}</a>
+                        </label>
                         <input id="password" type="password" class="login__input" name="password" required autocomplete="current-password" placeholder="Contraseña">
 
                         @error('password')
@@ -69,6 +72,7 @@
 
                         <span class="button__text">Acceso</span>
                     </button>
+
                 </form>
                 <!-- <div class="social-login">
                   <h3>log in via</h3>

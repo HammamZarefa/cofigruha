@@ -26,6 +26,8 @@ use App\Models\{About,
     Service,
     Subscriber,
     Tipo_Maquina};
+use Illuminate\Support\Facades\Auth;
+
 class FrontController extends Controller
 {
     public function home()
@@ -215,11 +217,18 @@ class FrontController extends Controller
 
     public function blog()
     {
+        $user = Auth::user();
         $categories = Category::all();
         $general = General::find(1);
         $link = Link::all();
-        $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
-        $posts = Post::where('status','=','PUBLISH')->orderBy('id','desc')->paginate(3);
+        if ($user != null){
+            $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
+            $posts = Post::where('status','=','PUBLISH')->orderBy('id','desc')->paginate(3);
+        }else{
+            $lpost = Post::where('status','=','PUBLISH')->where('public',1)->orderBy('id','desc')->limit(5)->get();
+            $posts = Post::where('status','=','PUBLISH')->where('public',1)->orderBy('id','desc')->paginate(3);
+        }
+
         $recent = Post::orderBy('id','desc')->limit(5)->get();
         $tags = Tag::all();
 
@@ -228,11 +237,18 @@ class FrontController extends Controller
 
     public function blogshow($slug)
     {
+        $user = Auth::user();
         $categories = Category::all();
         $general = General::find(1);
         $link = Link::all();
-        $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
-        $post = Post::where('slug', $slug)->firstOrFail();
+        if ($user != null){
+            $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
+            $post = Post::where('slug', $slug)->firstOrFail();
+        }else{
+            $lpost = Post::where('status','=','PUBLISH')->where('public',1)->orderBy('id','desc')->limit(5)->get();
+            $post = Post::where('slug', $slug)->where('public',1)->firstOrFail();
+        }
+
         $old = $post->views;
         $new = $old + 1;
         $post->views = $new;
@@ -245,11 +261,40 @@ class FrontController extends Controller
 
     public function category(Category $category)
     {
+        $user = Auth::user();
         $categories = Category::where('id',$category->id)->firstOrFail();
         $general = General::find(1);
         $link = Link::all();
-        $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
-        $posts = $category->posts()->latest()->paginate(6);
+        if ($user != null){
+            $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
+            $posts = $category->posts()->where('public',1)->latest()->paginate(6);
+        }else{
+            $lpost = Post::where('status','=','PUBLISH')->where('public',1)->orderBy('id','desc')->limit(5)->get();
+            $posts = $category->posts()->where('public',1)->latest()->paginate(6);
+        }
+
+        $recent = Post::orderBy('id','desc')->limit(5)->get();
+        $tags = Tag::all();
+        return view ('front.category',compact('categories','general','link','lpost','posts','recent','tags'));
+    }
+
+    public function privadoCategory(Category $category)
+    {
+        $user = Auth::user();
+        $categories = Category::where('id',$category->id)->firstOrFail();
+        $general = General::find(1);
+        $link = Link::all();
+        if ($user != null){
+//            dd('1');
+            $lpost = Post::where('status','=','PUBLISH')->where('public',0)->orderBy('id','desc')->limit(5)->get();
+            $posts = $category->posts()->where('public',0)->latest()->paginate(6);
+        }else{
+//            dd('2');
+            $lpost = null;
+            $posts = null;
+        }
+//        dd($posts);
+
         $recent = Post::orderBy('id','desc')->limit(5)->get();
         $tags = Tag::all();
         return view ('front.category',compact('categories','general','link','lpost','posts','recent','tags'));
@@ -257,12 +302,21 @@ class FrontController extends Controller
 
     public function tag(Tag $tag)
     {
+        $user = Auth::user();
         $categories = Category::all();
         $general = General::find(1);
         $link = Link::all();
-        $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
-        $posts = $tag->posts()->latest()->paginate(12);
-        $recent = Post::orderBy('id','desc')->limit(5)->get();
+        if ($user != null){
+            $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
+            $posts = $tag->posts()->latest()->paginate(12);
+            $recent = Post::orderBy('id','desc')->limit(5)->get();
+        }else{
+            $lpost = Post::where('status','=','PUBLISH')->where('public',1)->orderBy('id','desc')->limit(5)->get();
+            $posts = $tag->posts()->where('public',1)->latest()->paginate(12);
+            $recent = Post::orderBy('id','desc')->where('public',1)->limit(5)->get();
+        }
+
+
         $tags = Tag::all();
         return view ('front.blog',compact('categories','general','link','lpost','posts','recent','tags'));
     }

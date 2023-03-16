@@ -6,7 +6,7 @@
         <!-- ======= Services Section ======= -->
         <section id="services" class="services section-bg">
             <div class="container" data-aos="fade-up">
-                <h2 class="title" style="margin-top: 50px;">{{__('message.Partner')}}</h2>
+                <h2 class="title" style="margin-top: 50px;">{{__('message.Our Partner')}}</h2>
                 <div class="row">
                     @foreach ($partners as $partners)
                         <div class="col-lg-4 col-md-6 d-flex justify-content-center mt-4" data-aos="zoom-in" data-aos-delay="100">

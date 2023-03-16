@@ -75,7 +75,12 @@ class PostController extends Controller
         $post->tags()->attach(request('tags'));
 
         if ($post) {
-
+            if($request->public == null){
+                $post->public = 0;
+            }else{
+                $post->public = 1;
+            }
+            $post->save();
                 return redirect()->route('admin.post')->with('success', 'Post added successfully');
 
                } else {
@@ -154,6 +159,13 @@ class PostController extends Controller
         $post->tags()->sync(request('tags'));
 
         if ($update) {
+            if($request->public == "0"){
+                $post->public = 0;
+            }else{
+                $post->public = 1;
+            }
+//                        dd($post->public);
+            $post->save();
 
                 return redirect()->route('admin.post')->with('success', 'Data added successfully');
 

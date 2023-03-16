@@ -55,7 +55,7 @@
     <main id="main">
 
         <!-- ======= about us Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="Qué_hacemos" class="portfolio">
             <div class="container">
 
                 <div class="section-title">
@@ -88,7 +88,7 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2 >{{__('message.Inform About ANAPAT Training')}}</h2>
+                    <h2 >{{__('message.LA FORMACIÓN DE ANAPAT. CARACTERÍSTICAS')}}</h2>
                 </div>
 
                 <div class="row">
@@ -136,7 +136,7 @@
         </section>
         <!-- End about us Section -->
         <!-- ======= Our Clients Section ======= -->
-        <section id="clients" class="clients">
+        <section id="partners" class="clients">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">

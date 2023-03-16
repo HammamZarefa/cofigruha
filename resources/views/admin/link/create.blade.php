@@ -34,7 +34,7 @@
 
             <div class="col-sm-7">
 
-                <textarea name="descripción" class="form-control {{$errors->first('descripción') ? "is-invalid" : "" }} "  id="" cols="30" rows="10">{{old('descripción')}}</textarea>
+                <textarea name="descripción" class="form-control {{$errors->first('descripción') ? "is-invalid" : "" }} "  id="summernote" cols="30" rows="10">{{old('descripción')}}</textarea>
                 <div class="invalid-feedback">
                     {{ $errors->first('descripción') }}
                 </div>

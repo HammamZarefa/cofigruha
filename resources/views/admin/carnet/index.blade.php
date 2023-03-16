@@ -77,7 +77,7 @@
                         <td> {{ date('d/m/Y',strtotime($carnets->fecha_de_alta)) }} </td>
 
                         <td>
-                            <img src="{{asset('storage/' . $carnets->foto)}}" width="96px"/>
+                            <img src="{{asset('storage/' . $carnets->operadores->foto)}}" width="96px"/>
                         </td>
                         <td>
 {{--                        <a href="{{route('admin.carnet.edit', [$carnets->id])}}" class="btn btn-edit btn-sm"> <i class="fas fa-edit"></i> </a>--}}

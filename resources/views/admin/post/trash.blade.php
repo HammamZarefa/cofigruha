@@ -72,7 +72,7 @@
 
                         <td>{{ $post->title }}</td>
 
-                        <td>{{ @$post->category->name }}</td>
+                        <td>{{ $post->category->name }}</td>
 
                         <td>{{ $post->status }}</td>
 

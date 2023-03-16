@@ -31,7 +31,7 @@
 
         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" style="background-image: url(http://anapat.e-dalely.com/wp-content/uploads/2021/10/EstudioAlquiler_ANAPAT_2020-e1634196672288.jpg);">
           <div class="carousel-container">
-           
+
           </div>
         </div>
 
@@ -68,7 +68,7 @@
         <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="" class="filter-active">PAV</li>
-           
+
               <li data-filter="">Mast Lifts</li>
               <li data-filter="">Scissor Lifts</li>
               <li data-filter="">Articulating Boom Lift</li>
@@ -100,27 +100,27 @@
       <div class="container">
 
       <div class="section-title">
-          <h2 >Inform About ANAPAT Training</h2>
+          <h2 >Inform About COFIGRUHA Training</h2>
         </div>
 
         <div class="row">
         <ul class="hList">
   <li>
     <a href="#click" class="menu">
-      <h2 class="menu-title menu-title_2nd">about ANAPAT</h2>
+      <h2 class="menu-title menu-title_2nd">about COFIGRUHA</h2>
       <ul class="menu-dropdown col-md-3 col-sm-12" >
-        <li>about ANAPAT</li>
+        <li>about COFIGRUHA</li>
         <li>Characteristics</li>
         <li>certifications</li>
       </ul>
     </a>
   </li>
-</ul>  
+</ul>
 
-          
+
             <div class="col-md-9 col-sm-12 info" data-aos="fade-up">
         <h2>Reach height: <span>3.60m – 5.10m</span></h2>
-     
+
         <p>
         Push around vertical platforms, often called PAVs or personnel lifts, are a small type of mobile vertical lift with scissor operation. PAVs are ideal for indoor low level access making them suitable for smaller warehouses and factories, replacing ladders and steps that are not recommended for safe access.
         They are compact and lightweight, which allows them to navigate aisles, doorways and narrow corners, and can be easily moved from location to location, including between floors in multistory buildings.
@@ -129,7 +129,7 @@
       <button>show more</button>
         </div>
           </div>
-     
+
       </div>
     </section>
     <!-- End about us Section -->
@@ -143,7 +143,7 @@
 
         <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
 
-        
+
           <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
               <a href=" target="_blank" rel="noopener noreferrer">
@@ -151,7 +151,7 @@
               </a>
             </div>
           </div>
-        
+
           <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
               <a href=" target="_blank" rel="noopener noreferrer">

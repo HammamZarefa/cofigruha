@@ -137,6 +137,7 @@ Name">
 {{--            </div>--}}
             <div class="form-group col-md-4">
                 <div class="picture-container" id="picture-container">
+                    <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                     <div class="picture">
                         <img src="" class="picture-src" id="wizardPicturePreview" height="200px" width="400px" title=""/>
                         <input type="file" id="wizard-picture" name="dni_img" class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} ">
@@ -155,6 +156,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="operador_pdf" class="col-sm-2 col-form-label">{{__('message.Operador pdf')}} </label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -166,6 +168,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="cert_empresa_pdf" class="col-sm-2 col-form-label">{{__('message.Cert Empresa PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -177,6 +180,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="vida_laboral_pdf" class="col-sm-2 col-form-label">{{__('message.Vida Laboral PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -188,6 +192,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="prl_pdf" class="col-sm-2 col-form-label">{{__('message.PRL PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -199,6 +204,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="pemp_pdf" class="col-sm-2 col-form-label">{{__('message.PEMP PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -210,6 +216,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="cap_pdf" class="col-sm-2 col-form-label">{{__('message.CAP PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 
@@ -221,6 +228,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="fecha" class="col-sm-2 col-form-label">{{__('message.Fecha')}}	</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 

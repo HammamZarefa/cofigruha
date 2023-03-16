@@ -37,7 +37,7 @@ class PartnerController extends Controller
    public function store(Request $request)
    {
        $request->validate([
-           'logo' => 'required',
+           'logo' => 'required|max:2048',
            'nombre' => 'required',
            'enlace' => 'required',
        ]);
@@ -45,22 +45,23 @@ class PartnerController extends Controller
        $partner->name = $request->nombre;
        $partner->link = $request->enlace;
 
-       $cover = $request->file('logo');
 
+       $partner->empresa = $request->empresa;
+       $partner->direccion = $request->direccion;
+       $partner->codigo_postal = $request->codigo_postal;
+       $partner->poblacion = $request->poblacion;
+       $partner->provincia = $request->provincia;
+       $partner->telefono = $request->telefono;
+       $partner->email = $request->email;
+       $cover = $request->file('logo');
        if($cover){
        $cover_path = $cover->store('images/partner', 'public');
-
        $partner->cover = $cover_path;
        }
-
       if ( $partner->save()) {
-
        return redirect()->route('admin.partner')->with('success', 'partner added successfully');
-
       } else {
-
        return redirect()->route('admin.partner.create')->with('error', 'partner failed to add');
-
       }
    }
 
@@ -100,23 +101,29 @@ class PartnerController extends Controller
        $request->validate([
            'nombre' => 'required',
            'enlace' => 'required',
+           'logo'=>'max:2048'
        ]);
 //       dd($request);
        $partner = Partner::findOrFail($id);
        $partner->name = $request->nombre;
        $partner->link = $request->enlace;
 
-       $new_cover = $request->file('cover');
+       $partner->empresa = $request->empresa;
+       $partner->direccion = $request->direccion;
+       $partner->codigo_postal = $request->codigo_postal;
+       $partner->poblacion = $request->poblacion;
+       $partner->provincia = $request->provincia;
+       $partner->telefono = $request->telefono;
+       $partner->email = $request->email;
+
+       $new_cover = $request->file('logo');
 
        if($new_cover){
        if($partner->cover && file_exists(storage_path('app/public/' . $partner->cover))){
            \Storage::delete('public/'. $partner->cover);
        }
-
        $new_cover_path = $new_cover->store('images/partner', 'public');
-
        $partner->cover = $new_cover_path;
-
        }
 
       if ( $partner->save()) {

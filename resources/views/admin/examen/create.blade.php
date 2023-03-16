@@ -107,9 +107,9 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="url" class="col-sm-2 col-form-label">{{__('message.URL')}} </label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
-
                     <input type="file" name="url" id="url"   class="form-control {{$errors->first('url') ? "is-invalid" : "" }} " value="{{old('url')}}">
                     <div class="invalid-feedback">
                         {{ $errors->first('url') }}

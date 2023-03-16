@@ -316,6 +316,7 @@ Name">
                 </div>
             </div>
             <div class="form-group col-md-4">
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if(substr($formadores->dni_img, -3) == 'pdf')
 
                     @if($formadores->dni_img && file_exists(storage_path('app/public/' . $formadores->operador_pdf)))
@@ -358,6 +359,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="operador_pdf" class="col-sm-4 col-form-label">{{__('message.Operador PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->operador_pdf && file_exists(storage_path('app/public/' . $formadores->operador_pdf)))
                     <label for="operador_pdf" class="col-sm-1 col-form-label">
                         <a id="operador_pdf_download" href="{{asset('storage/' . $formadores->operador_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -381,6 +383,7 @@ Name">
 
             <div class="form-group col-md-4">
                 <label for="cert_empresa_pdf" class="col-sm-4 col-form-label">{{__('message.Cert Empresa PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->cert_empresa_pdf && file_exists(storage_path('app/public/' . $formadores->cert_empresa_pdf)))
                     <label for="cert_empresa_pdf" class="col-sm-1 col-form-label">
                         <a id="cert_empresa_pdf_download" href="{{asset('storage/' . $formadores->cert_empresa_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -404,6 +407,7 @@ Name">
 
             <div class="form-group col-md-4">
                 <label for="vida_laboral_pdf" class="col-sm-4 col-form-label">{{__('message.Vida laboral pdf')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->vida_laboral_pdf && file_exists(storage_path('app/public/' . $formadores->vida_laboral_pdf)))
                     <label for="vida_laboral_pdf" class="col-sm-1 col-form-label">
                         <a id="vida_laboral_pdf_download" href="{{asset('storage/' . $formadores->vida_laboral_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -427,6 +431,7 @@ Name">
 
             <div class="form-group col-md-4">
                 <label for="prl_pdf" class="col-sm-4 col-form-label">{{__('message.PRL PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->prl_pdf && file_exists(storage_path('app/public/' . $formadores->prl_pdf)))
                     <label for="prl_pdf" class="col-sm-1 col-form-label">
                         <a id="prl_pdf_download" href="{{asset('storage/' . $formadores->prl_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -450,6 +455,7 @@ Name">
 
             <div class="form-group col-md-4">
                 <label for="pemp_pdf" class="col-sm-4 col-form-label">{{__('message.PEMP PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->pemp_pdf && file_exists(storage_path('app/public/' . $formadores->pemp_pdf)))
                     <label for="pemp_pdf" class="col-sm-1 col-form-label">
                         <a id="pemp_pdf_download" href="{{asset('storage/' . $formadores->pemp_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -475,6 +481,7 @@ Name">
 
             <div class="form-group col-md-4">
                 <label for="cap_pdf" class="col-sm-4 col-form-label">{{__('message.CAP PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($formadores->cap_pdf && file_exists(storage_path('app/public/' . $formadores->cap_pdf)))
                     <label for="cap_pdf" class="col-sm-1 col-form-label">
                         <a id="cap_pdf_download" href="{{asset('storage/' . $formadores->cap_pdf)}}" download><i class="fa fa-download"></i> </a> </label>
@@ -497,6 +504,7 @@ Name">
             </div>
             <div class="form-group col-md-4">
                 <label for="fecha" class="col-sm-2 col-form-label">{{__('message.Fecha')}} </label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 

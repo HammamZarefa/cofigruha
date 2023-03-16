@@ -41,13 +41,13 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="contenido" value="1" id=1 onclick="test(this)">
                     <label class="form-check-label" for="flexRadioDefault1">
-                        Teoria
+                        Teoría
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="contenido" value="2" id=2 checked onclick="test1(this)">
                     <label class="form-check-label" for="flexRadioDefault2">
-                        Practica
+                        Práctica
                     </label>
                 </div>
             </div>

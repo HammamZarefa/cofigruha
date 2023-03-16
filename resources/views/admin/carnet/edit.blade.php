@@ -92,6 +92,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="foto" class="col-sm-2 col-form-label">{{__('message.Foto')}} </label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     {{-- <input type="text" class="form-control" id="title" placeholder="Title"> --}}
 

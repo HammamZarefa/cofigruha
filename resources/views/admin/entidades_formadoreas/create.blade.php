@@ -200,6 +200,7 @@ input[type="radio"]:focus {
             </div>
                     <div class="form-group col-md-4">
                         <div class="picture-container">
+                            <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                             <div class="picture">
                                 <img src="" class="picture-src" id="wizardPicturePreview" height="200px" width="400px" title=""/>
                                 <input type="file" id="wizard-picture" name="logo" class="form-control {{$errors->first('logo') ? "is-invalid" : "" }} ">
@@ -264,7 +265,7 @@ input[type="radio"]:focus {
             <div class="form-group col-md-4">
 
                 <label for="doc_medios_pdf" class="col-sm-5 col-form-label">{{__('message.Doc Medios PDF')}}</label>
-
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-12">
 
                     <input type="file" name='doc_medios_pdf' class="form-control {{$errors->first('doc_medios_pdf') ? "is-invalid" : "" }} " value="{{old('doc_medios_pdf')}}" id="doc_medios_pdf" placeholder="Link Linkedin">

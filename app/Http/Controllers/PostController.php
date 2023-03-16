@@ -42,38 +42,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         \Validator::make($request->all(), [
             "title" => "required",
-            "cover" => "required",
+//            "cover" => "required|max:2048",
             "body" => "required",
             "category" => "required",
             "tags" => "array|required",
             "keyword" => "required",
             "meta_desc" => "required"
         ])->validate();
-
         $data = $request->all();
-
         $data['slug'] = \Str::slug(request('title'));
-
         $data['category_id'] = request('category');
-
         $data['status'] = 'PUBLISH';
-
         $data['author_id'] = Auth::user()->id;
-
         $cover = $request->file('cover');
-
         if($cover){
         $cover_path = $cover->store('images/blog', 'public');
-
         $data['cover'] = $cover_path;
         }
-
         $post = Post::create($data);
-
         $post->tags()->attach(request('tags'));
-
         if ($post) {
             if($request->public == null){
                 $post->public = 0;
@@ -82,11 +72,8 @@ class PostController extends Controller
             }
             $post->save();
                 return redirect()->route('admin.post')->with('success', 'Post added successfully');
-
                } else {
-
                 return redirect()->route('admin.post.create')->with('error', 'Post failed to add');
-
                }
     }
 
@@ -130,49 +117,34 @@ class PostController extends Controller
             "category" => "required",
             "tags" => "array|required",
             "keyword" => "required",
-            "meta_desc" => "required"
+            "meta_desc" => "required",
+//            "cover" => "max:2048"
         ])->validate();
-
         $post = Post::findOrFail($id);
-
         $data = $request->all();
-
         $data['slug'] = \Str::slug(request('title'));
-
         $data['category_id'] = request('category');
-
         $cover = $request->file('cover');
-
         if($cover){
-
             if($post->cover && file_exists(storage_path('app/public/' . $post->cover))){
                 \Storage::delete('public/'. $post->cover);
             }
-
         $cover_path = $cover->store('images/blog', 'public');
-
         $data['cover'] = $cover_path;
         }
-
         $update = $post->update($data);
-
         $post->tags()->sync(request('tags'));
-
         if ($update) {
             if($request->public == "0"){
                 $post->public = 0;
             }else{
                 $post->public = 1;
             }
-//                        dd($post->public);
             $post->save();
 
                 return redirect()->route('admin.post')->with('success', 'Data added successfully');
-
                } else {
-
                 return redirect()->route('admin.post.create')->with('error', 'Data failed to add');
-
                }
     }
 
@@ -186,9 +158,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
-
         $post->delete();
-
         return redirect()->route('admin.post')->with('success','Post moved to trash');
     }
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Exports\CursoExport;
+use App\Models\User;
+use App\Notifications\NewCourse;
 use Illuminate\Http\Request;
 
 use App\Models\{Asistent,
@@ -15,9 +17,11 @@ use App\Models\{Asistent,
     Pcategory,
     Tipo_De_Curso,
     Tipo_Maquina};
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use http\Env\Response;
+use Matrix\Exception;
 
 class CursosController extends Controller
 {
@@ -29,7 +33,6 @@ class CursosController extends Controller
     public function index()
     {
         $cursos = Cursos::orderBy('id','desc')->where('estado',1)->get();
-
         return view('admin.cursos.index',compact('cursos'));
     }
 
@@ -95,8 +98,8 @@ class CursosController extends Controller
 
         $tipo_maquina=Tipo_Maquina::select('id','tipo_maquina')->get();
         $tipo_curso=Tipo_De_Curso::select('id','tipo_curso')->get();
-        $examen_t=Examen::select('id','nombre')->where('tipo',1)->get();
-        $examen_p=Examen::select('id','nombre')->where('tipo',2)->get();
+        $examen_t=Examen::select('id','nombre')->where('tipo',1)->orderby('codigo')->get();
+        $examen_p=Examen::select('id','nombre')->where('tipo',2)->orderby('codigo')->get();
 
         $x =Cursos::select('curso')->orderBy('id','desc')->latest()->get();
 //        dd(count($x));
@@ -202,11 +205,26 @@ $now = now().date('');
         $asistentes_pdf = $request->file('asistentes_pdf');
 
         if($asistentes_pdf){
-            $asistentes_pdf_path = $asistentes_pdf->store('Cursos/'.$request->codigo, 'public');
+            if($asistentes_pdf->getClientOriginalName()!= 'LIST-'.str_replace('-', '', $cursos->codigo).'.pdf')
+                return back()->with('error','Asisstant file name error');
+            $asistentes_pdf_path = $asistentes_pdf->storeAs('Cursos/'.$request->codigo,$asistentes_pdf->getClientOriginalName(), 'public');
             $cursos->asistentes_pdf = $asistentes_pdf_path;
         }
 
         if ($cursos->save()) {
+            try {
+                $data['cursos'] = $cursos;
+                Mail::send('email.newCourse', $data, function ($message) {
+                    $message->from('info@formacionanapat.es');
+                    $message->subject('Nuevo curso');
+                    $message->to('formacion@anapat.es');
+                });
+                return redirect()->route('admin.cursos')->with('success', 'Data added successfully');
+            }catch (Exception $e) {
+                return redirect()->route('admin.cursos')->with('success', 'Data added successfully');
+            }
+//            foreach (User::where('perfil','Administrador')->get() as $admin)
+//                $admin->notify(new NewCourse($cursos));
 
             return redirect()->route('admin.cursos')->with('success', 'Data added successfully');
 
@@ -253,11 +271,11 @@ $now = now().date('');
         $cursos = Cursos::findOrFail($id);
         $tipo_maquina=Tipo_Maquina::select('id','tipo_maquina')->get();
         $tipo_curso=Tipo_De_Curso::select('id','tipo_curso')->get();
-        $examen_t=Examen::select('id','nombre','url')->where('tipo',1)->get();
-        $examen_p=Examen::select('id','nombre','url')->where('tipo',2)->get();
-        $asistent = Asistent::orderBy('id','desc')->where('curso',$id)->get();
+        $examen_t=Examen::select('id','nombre','url')->where('tipo',1)->orderby('codigo')->get();
+        $examen_p=Examen::select('id','nombre','url')->where('tipo',2)->orderby('codigo')->get();
+        $asistent = Asistent::orderBy('id')->where('curso',$id)->get();
         $operador = Operadores::orderBy('id','desc')->get();
-        $horario = Horario::orderBy('id','desc')->where('curso',$id)->get();
+        $horario = Horario::orderBy('id')->where('curso',$id)->get();
 
         return view('admin.cursos.edit',compact('cursos','horario','asistent','operador','entidad','formador','tipo_maquina','tipo_curso','examen_t','examen_p','formadors','formadors2','formadors3'));
     }
@@ -271,6 +289,7 @@ $now = now().date('');
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'curso' => 'required|max:255',
             'tipo_curso' => 'required',
@@ -361,13 +380,14 @@ $now = now().date('');
 
 
         $asistentes_pdf = $request->file('asistentes_pdf');
-
         if($asistentes_pdf){
+            if($asistentes_pdf->getClientOriginalName()!= 'LIST-'.str_replace('-', '', $cursos->codigo).'.pdf')
+                return back()->with('error','Asisstant file name error');
             if($cursos->asistentes_pdf && file_exists(storage_path('app/public/' . $cursos->asistentes_pdf))){
                 \Storage::delete('public/'. $cursos->asistentes_pdf);
             }
 
-            $asistentes_pdf_path = $asistentes_pdf->store('images/Cursos', 'public');
+            $asistentes_pdf_path = $asistentes_pdf->storeAs('Cursos/'.$cursos->codigo,$asistentes_pdf->getClientOriginalName() ,'public');
 
             $cursos->asistentes_pdf = $asistentes_pdf_path;
 
@@ -385,6 +405,27 @@ $now = now().date('');
     }
 
     /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function activo($id)
+    {
+        $cursos = cursos::findOrFail($id);
+        $cursos->estado = 1;
+//        $cursos->delete();
+        $cursos->save();
+
+        return redirect()->route('admin.cursos')->with('success', 'Data deleted successfully');
+    }
+
+    public function trashed()
+    {
+        $cursos = Cursos::onlyTrashed()->get();
+        return view('admin.cursos.trashed',compact('cursos'));
+    }
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -399,18 +440,35 @@ $now = now().date('');
     }
 
     /**
-     * Update the specified resource in storage.
+     *  Restore user data
      *
-     * @param  int  $id
+     * @param Cursos $user
+     *
      * @return \Illuminate\Http\Response
      */
-    public function activo($id)
+    public function restore(Request $request)
     {
-        $cursos = cursos::findOrFail($id);
-        $cursos->estado = 1;
-//        $cursos->delete();
-        $cursos->save();
 
-        return redirect()->route('admin.cursos')->with('success', 'Data deleted successfully');
+        Cursos::where('id',$request->id)->withTrashed()->restore();
+        return redirect()->route('admin.cursos.trashed')->withSuccess(__('Data restored successfully.'));
+    }
+
+    /**
+     * Force delete user data
+     *
+     * @param Cursos $user
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function forceDelete(Request $request)
+    {
+        Cursos::where('id',$request->id)->withTrashed()->forceDelete();
+        return redirect()->route('admin.cursos.trashed')->withSuccess(__('User force deleted successfully.'));
+    }
+
+    public function asistents(Cursos $cursos)
+    {
+        $asistents=$cursos->asistent()->with('operadores')->get();
+        return view('admin.cursos.asistents',compact('asistents','cursos'));
     }
 }

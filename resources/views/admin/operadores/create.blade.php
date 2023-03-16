@@ -46,6 +46,13 @@ input[type="radio"]:focus {
     outline: 0;
     box-shadow: none;
 }
+   input.masked,
+   .shell span {
+       font-size: 16px;
+       font-family: monospace;
+       padding-right: 10px;
+       background-color: transparent;
+       text-transform: uppercase; }
 </style>
 
 @endsection
@@ -69,7 +76,7 @@ input[type="radio"]:focus {
         <label for="dni" class="col-sm-12 col-form-label">{{__('message.Dni')}}</label>
 
         <div class="col-sm-7">
-            <input type="text" name='dni' class="form-control {{$errors->first('dni') ? "is-invalid" : "" }} " value="{{old('dni')}}" id="dni" placeholder="Documento identificativo">
+            <input type="text" name='dni' class="form-control {{$errors->first('dni') ? "is-invalid" : "" }} " value="{{old('dni')}}" id="dni" placeholder="Documento identificativo"  pattern="[A-Z0-9][0-9]{7}[A-Z0-9]" maxlength="9"/>
             <div class="invalid-feedback">
                 {{ $errors->first('dni') }}
             </div>
@@ -120,6 +127,7 @@ input[type="radio"]:focus {
 
         <div class="form-group col-md-4">
             <div class="picture-container">
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="picture" style="width: 200px">
                     <img src="" class="picture-src" id="wizardPicturePreview" height="200px" width="400px" title=""/>
                     <input type="file" id="wizard-picture" name="foto" class="form-control {{$errors->first('foto') ? "is-invalid" : "" }} ">
@@ -143,6 +151,7 @@ input[type="radio"]:focus {
 
         <div class="form-group col-md-4">
             <div class="picture-container" id="picture-container">
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="picture">
                     <img src="" class="picture-src" id="wizardPicturePreview1" height="200px" width="400px" title=""/>
                     <input type="file" id="wizard-picture1" name="dni_img" class="form-control {{$errors->first('dni_img') ? "is-invalid" : "" }} ">
@@ -164,7 +173,9 @@ input[type="radio"]:focus {
     <div class="form-group col-md-4">
         <label for="fecha_nacimiento" class="col-sm-12 col-form-label">{{__('message.Fecha Nacimiento')}}</label>
         <div class="col-sm-7">
-            <input type="date" name='fecha_nacimiento' class="form-control {{$errors->first('fecha_nacimiento') ? "is-invalid" : "" }} " value="{{old('fecha_nacimiento')}}" id="fecha_nacimiento" placeholder="fecha nacimiento">
+            <input type="date" name='fecha_nacimiento' class="form-control {{$errors->first('fecha_nacimiento') ? "is-invalid" : "" }} " value="{{old('fecha_nacimiento')}}" id="fecha_nacimiento" placeholder="fecha nacimiento" required
+            max="{{now()->subYears(18)->format('Y-m-d')}}"
+            >
             <div class="invalid-feedback">
                 {{ $errors->first('fecha_nacimiento') }}
             </div>
@@ -192,7 +203,7 @@ input[type="radio"]:focus {
         <div class="form-group col-md-4">
             <label for="direccion" class="col-sm-12 col-form-label">{{__('message.Direccion')}}</label>
             <div class="col-sm-7">
-                <input type="text" name='direccion' class="form-control {{$errors->first('direccion') ? "is-invalid" : "" }} " value="{{old('direccion')}}" id="direccion" placeholder="Dirección del formador">
+                <input type="text" name='direccion' class="form-control {{$errors->first('direccion') ? "is-invalid" : "" }} " value="{{old('direccion')}}" id="direccion" placeholder="Dirección">
                 <div class="invalid-feedback">
                     {{ $errors->first('direccion') }}
                 </div>
@@ -208,7 +219,6 @@ input[type="radio"]:focus {
                 </div>
             </div>
         </div>
-
 
         <div class="form-group col-md-4">
             <label for="mail" class="col-sm-12 col-form-label">{{__('message.Mail')}}</label>
@@ -233,9 +243,9 @@ input[type="radio"]:focus {
             <input type="hidden" name="carnet" value="">
         @endif
        <div class="form-group col-md-4">
-            <label for="fecha" class="col-sm-12 col-form-label">{{__('message.Fecha')}}</label>
+            <label for="fecha" class="col-sm-12 col-form-label">{{__('message.fecha_de_alta')}}</label>
             <div class="col-sm-7">
-                <input type="date" readonly name='fecha' class="form-control {{$errors->first('fecha') ? "is-invalid" : "" }} " value="{{$now}}" id="fecha" placeholder="Fecha de alta">
+                <input type="date"  name='fecha' class="form-control {{$errors->first('fecha') ? "is-invalid" : "" }} " value="{{$now}}" id="fecha" placeholder="Fecha de alta">
                 <div class="invalid-feedback">
                     {{ $errors->first('fecha') }}
                 </div>
@@ -302,6 +312,7 @@ function readURL(input) {
             reader.readAsDataURL(input.files[0]);
         }
     }
+
 </script>
 
 @endpush

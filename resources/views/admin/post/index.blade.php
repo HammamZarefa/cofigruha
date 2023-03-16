@@ -80,6 +80,8 @@
                         <td>{{ $post->public == 1 ? __('message.Publico') : __('message.Privado') }}</td>
 
 
+                        <td>{{ $post->public == 1 ? __('message.Publico') : __('message.Privado') }}</td>
+
                         <td>
 
                             <a href="{{route('admin.post.edit', [$post->id])}}" class="btn btn-info btn-sm"> <i class="fas fa-edit"></i> </a>

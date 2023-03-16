@@ -26,13 +26,9 @@ class OperadoresController extends Controller
     {
         $user = auth()->user();
         if ($user->perfil == 'Responsable_de_Formacion' || $user->perfil == 'Formador')
-
-            $operadores = Operadores::orderBy('id', 'desc')->where('entidad', '=', $user->entidad)->get();
-
+            $operadores = Operadores::with('asistent')->orderBy('id', 'desc')->where('entidad', '=', $user->entidad)->get();
         else
-            $operadores = Operadores::orderBy('id', 'desc')->get();
-
-
+            $operadores = Operadores::with('asistent')->orderBy('id', 'desc')->get();
         return view('admin.operadores.index', compact('operadores'));
     }
 
@@ -72,21 +68,17 @@ class OperadoresController extends Controller
             'foto' => 'max:2048',
             'dni_img' => 'max:2048',
         ]);
-
-
         $operadores = new operadores($request->except('_token', 'estado'));
-
-        if ($request->estado == null) {
+        if ($request->estado == null)
+        {
             $operadores->estado = 0;
         } else {
             $operadores->estado = 1;
         }
-
         $foto = $request->file('foto');
         $dni_img = $request->file('dni_img');
         if ($foto) {
             $fotopath = $foto->store('operadoe/' . $request->nombre, 'public');
-
             $operadores->foto = $fotopath;
         } else {
             $operadores->foto = '';
@@ -118,11 +110,8 @@ class OperadoresController extends Controller
                 $carnet->save();
 
             }
-
             return redirect()->route('admin.operadores')->with('success', 'Data added successfully');
-
         } else {
-
             return redirect()->route('admin.operadores.create')->with('error', 'Data failed to add');
 
         }
@@ -162,60 +151,51 @@ class OperadoresController extends Controller
 //                    dd($asistent);
                 }
             }
-//        dd($activeAsistent);
-
-
-
-//        }
-//        dd($activeAsistent);
-
         $tipos = Tipo_Maquina::orderBy('id', 'asc')->get();
-        if ($activeAsistent != null)
-        $cer = Certificado::where('operador',$id)->where('curso',$activeAsistent->curso)->get();
+//        if ($activeAsistent != null)
+//        $cer = Certificado::where('operador',$id)->where('curso',$activeAsistent->curso)->get();
 //        dd($cer);
 //        dd($activeAsistent);
-        if ($activeAsistent != null && $curso != null && $cert_numero != null && count($cer) == 0){
-            $certificado = new Certificado();
-            $asi_fecha = date('Y', strtotime($activeAsistent->created_at));
-            $asi_orden = $activeAsistent->orden;
-            $cert_numero = $asi_fecha . "" . $asi_orden . "" . $operador->dni;
-            $certificado->numero = $cert_numero;
-            $certificado->cer_apellidos = $operador->apellidos;
-            $certificado->cer_nombre = $operador->nombre;
-            $certificado->operador = $id;
-            $certificado->entidad = $operador->entidad;
-            if ($activeAsistent != null){
-                $certificado->curso = $activeAsistent->curso;
-                $certificado->emision = $activeAsistent->emision;
-                $certificado->vencimiento = $activeAsistent->vencimiento;
-                $certificado->observaciones = $activeAsistent->observaciones;
-            }
-
-            $certificado->dni = $operador->dni;
-            if ($curso != null){
-                if ($curso->tipo_curso == 1){
-                    $certificado->cer_type_course = 'Básico';
-                    $certificado->tipos_carnet = 'B';
-                }else{
-                    $certificado->cer_type_course = 'Renovación';
-                    $certificado->tipos_carnet = 'R';
-                }
-                $certificado->fecha_alta = $curso->fecha_alta;
-            }
-
-
-
-
-            $certificado->entidad_nombre = $operador->entidades_formadoreas->nombre;
-            if ($operador->carnett != null)
-                $certificado->carnet = $operador->carnett->id;
-            $certificado->save();
-        }
+//        if ($activeAsistent != null && $curso != null && $cert_numero != null && count($cer) == 0){
+//            $certificado = new Certificado();
+//            $asi_fecha = date('Y', strtotime($activeAsistent->created_at));
+//            $asi_orden = $activeAsistent->orden;
+//            $cert_numero = $asi_fecha . "" . $asi_orden . "" . $operador->dni;
+//            $certificado->numero = $cert_numero;
+//            $certificado->cer_apellidos = $operador->apellidos;
+//            $certificado->cer_nombre = $operador->nombre;
+//            $certificado->operador = $id;
+//            $certificado->entidad = $operador->entidad;
+//            if ($activeAsistent != null){
+//                $certificado->curso = $activeAsistent->curso;
+//                $certificado->emision = $activeAsistent->emision;
+//                $certificado->vencimiento = $activeAsistent->vencimiento;
+//                $certificado->observaciones = $activeAsistent->observaciones;
+//            }
+//
+//            $certificado->dni = $operador->dni;
+//            if ($curso != null){
+//                if ($curso->tipo_curso == 1){
+//                    $certificado->cer_type_course = 'Básico';
+//                    $certificado->tipos_carnet = 'B';
+//                }else{
+//                    $certificado->cer_type_course = 'Renovación';
+//                    $certificado->tipos_carnet = 'R';
+//                }
+//                $certificado->fecha_alta = $curso->fecha_alta;
+//            }
+//            $certificado->entidad_nombre = $operador->entidades_formadoreas->nombre;
+//            if ($operador->carnett != null)
+//                $certificado->carnet = $operador->carnett->id;
+//            $certificado->save();
+//        }
+        $certific = Certificado::where('operador',$id)->get();
 
 //        $certificado->cer_fecha = $activeAsistent->observaciones;
 //        dd($operador->carnett);
 //        dd($cert_numero);
-        return view('admin.operadores.certificado', compact('operador', 'curso', 'tipos', 'cert_numero', 'activeAsistent'));
+        return view('admin.operadores.certificado', compact('operador', 'curso', 'tipos', 'cert_numero', 'activeAsistent','certific'));
+
     }
 
     /**
@@ -232,7 +212,7 @@ class OperadoresController extends Controller
         } else {
             $entidad = EntidadesFormadoreas::select('id', 'nombre')->where('id', '=', $user->entidad)->first();
         }
-        $operadores = Operadores::findOrFail($id);
+        $operadores = Operadores::with('asistent')->findOrFail($id);
 
         return view('admin.operadores.edit', compact('operadores', 'entidad'));
     }
@@ -288,18 +268,14 @@ class OperadoresController extends Controller
             if ($operadores->foto && file_exists(storage_path('app/public/' . $operadores->foto))) {
                 \Storage::delete('public/' . $operadores->foto);
             }
-
             $foto_path = $foto->store('operadore/' . $request->nombre, 'public');
-
             $operadores->foto = $foto_path;
         }
         if ($dni_img) {
             if ($operadores->dni_img && file_exists(storage_path('app/public/' . $operadores->dni_img))) {
                 \Storage::delete('public/' . $operadores->dni_img);
             }
-
             $dni_img_path = $dni_img->store('operadore/' . $request->nombre, 'public');
-
             $operadores->dni_img = $dni_img_path;
         }
 
@@ -315,14 +291,14 @@ class OperadoresController extends Controller
                     }
 //                    $carnet->numero = $request->carnet;
                     $carnet->operador = $operadores->id;
-                    $fotoCarnet = $request->file('foto');
-                    if ($fotoCarnet) {
-                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
-
-                        $carnet->foto = $fotopath;
-                    } else {
+//                    $fotoCarnet = $request->file('foto');
+//                    if ($fotoCarnet) {
+//                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
+//
+//                        $carnet->foto = $fotopath;
+//                    } else {
                         $carnet->foto = $operadores->foto;
-                    }
+//                    }
                     $carnet->curso = 0;
                     $carnet->estado = 0 ;
                     $carnet->save();
@@ -330,27 +306,20 @@ class OperadoresController extends Controller
                     $carnet = $operadores->carnett;
                     $carnet->numero = $request->carnet;
                     $carnet->operador = $operadores->id;
-                    $fotoCarnet = $request->file('foto');
-                    if ($fotoCarnet) {
-                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
-
-                        $carnet->foto = $fotopath;
-                    } else {
-                        $carnet->foto = '';
-                    }
-
+//                    $fotoCarnet = $request->file('foto');
+//                    if ($fotoCarnet) {
+//                        $fotopath = $fotoCarnet->store('carnets/' . $request->carnet, 'public');
+//
+//                        $carnet->foto = $fotopath;
+//                    } else {
+                        $carnet->foto = $operadores->foto;
+//                    }
                     $carnet->save();
                 }
-
-
             }
-
             return redirect()->route('admin.operadores')->with('success', 'Data added successfully');
-
         } else {
-
             return redirect()->route('admin.operadores.create')->with('error', 'Data failed to add');
-
         }
     }
 
@@ -367,5 +336,10 @@ class OperadoresController extends Controller
         $operadores->delete();
 
         return redirect()->route('admin.operadores')->with('success', 'Data deleted successfully');
+    }
+    public function updateCertificate($operador,$fecha)
+    {
+        $certificate=Certificado::where('operador',$operador)->firstorfail();
+        $certificate->update(['fecha_alta'=>$fecha]);
     }
 }

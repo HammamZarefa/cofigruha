@@ -16,7 +16,7 @@
         <div class="form-group ml-5">
 
             <label for="Photo" class="col-sm-2 col-form-label">Photo</label>
-
+            <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
             <div class="col-sm-7">
 
                 <input type="file" name='photo' class="form-control {{$errors->first('photo') ? "is-invalid" : "" }} " value="{{old('photo') ? old('photo') : $testi->photo}}" id="photo">

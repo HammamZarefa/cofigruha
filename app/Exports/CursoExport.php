@@ -32,6 +32,8 @@ class CursoExport implements FromCollection,WithHeadings
             }else{
                 $curso->publico_privado = 'privado';
             }
+            $curso->fecha_inicio=date('d/m/Y H:i:s',strtotime($curso->fecha_inicio));
+            $curso->fecha_alta=date('d/m/Y',strtotime($curso->fecha_alta));
         }
         return $cursos;
     }
@@ -40,9 +42,6 @@ class CursoExport implements FromCollection,WithHeadings
     {
         return[
             'Id',
-            'created_at',
-            'updated_at',
-            'deleted_at',
             'curso',
             'tipo_curso',
             'tipo_maquina_1',
@@ -51,7 +50,6 @@ class CursoExport implements FromCollection,WithHeadings
             'tipo_maquina_4',
             'codigo',
             'entidad',
-
             'formador',
             'formador_apoyo_1',
             'formador_apoyo_2',

@@ -13,16 +13,18 @@ class EntidadExport implements FromCollection,WithHeadings
     */
     public function collection()
     {
-        return EntidadesFormadoreas::all();
+        $entidades= EntidadesFormadoreas::all();
+        foreach ($entidades as $entidad)
+        {
+            $entidad->fecha=date('d/m/Y',strtotime($entidad->fecha));
+        }
+        return $entidades;
     }
 
     public function headings(): array
     {
         return[
             'Id',
-            'created_at',
-            'updated_at',
-            'deleted_at',
             'socio',
             'cif',
             'nombre',

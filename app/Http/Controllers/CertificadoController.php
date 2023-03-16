@@ -33,7 +33,7 @@ class CertificadoController extends Controller
         foreach ($certificados as $key=>$certificado){
             $cerOpe = $certificado->operadorr;
             $cerCurso = $certificado->cursoo;
-            if (!($cerOpe->estado == 1 && $cerCurso->estado == 0)){
+            if (!(@$cerOpe->estado == 1 && @$cerCurso->estado == 0)){
                 $certificados->forget($key);
             }
         }

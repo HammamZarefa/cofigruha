@@ -174,10 +174,14 @@
             <div class="form-group col-md-4">
                 <label for="nota_p" class="col-sm-2 col-form-label">{{__('message.Nota_p')}}</label>
                 <div class="col-sm-9">
-                    <input type="text" name='nota_p'
-                           class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} "
-                           value="{{old('nota_p') ? old('nota_p') : $asistent->nota_p}}"
-                           placeholder="Nota examen practico" id="nota_t">
+                    <select name='nota_p' class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} "
+                            id="nota_p">
+                        <option  value="" {{!$asistent->notep ? "selected" : ""}}>Sin Nota</option>
+                        @foreach ($notes as $note)
+                            <option
+                                value="{{ $note }}" {{$asistent->nota_p == $note ? "selected" : ""}}>{{$note}}</option>
+                        @endforeach
+                    </select>
                     <div class="invalid-feedback">
                         {{ $errors->first('nota_p') }}
                     </div>
@@ -188,6 +192,7 @@
             {{--fourth row--}}
             <div class="form-group col-md-4">
                 <label for="examen_t_pdf" class="col-sm-4 col-form-label">{{__('message.Exámen Teórico')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($asistent->examen_t_pdf && file_exists(storage_path('app/public/' . $asistent->examen_t_pdf)))
                     <label for="examen_t_pdf" class="col-sm-1 col-form-label">
                         <a id="examen_t_pdf_download" href="{{asset('storage/' . $asistent->examen_t_pdf)}}" download><i
@@ -219,6 +224,7 @@
 
             <div class="form-group col-md-4">
                 <label for="examen_p_pdf" class="col-sm-4 col-form-label">{{__('message.Exámen Práctico')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($asistent->examen_p_pdf && file_exists(storage_path('app/public/' . $asistent->examen_p_pdf)))
                     <label for="examen_p_pdf" class="col-sm-1 col-form-label">
                         <a id="examen_p_pdf_download" href="{{asset('storage/' . $asistent->examen_p_pdf)}}" download><i
@@ -266,15 +272,13 @@
 
             <div class="form-group col-md-4">
                 <label for="emision" class="col-sm-2 col-form-label">{{__('message.Emision')}}</label>
-                <label for="emision"
-                       class="col-sm-7 col-form-label">{{$asistent->emision != null ? date('d/m/Y',strtotime($asistent->emision)) : ""}}</label>
-
-                {{--                    <div class="col-sm-9">--}}
-                {{--                        <input type="date" name='emision' class="form-control {{$errors->first('emision') ? "is-invalid" : "" }} " value="{{old('emision') ? old('emision') : $asistent->emision}}"  id="emision" placeholder="Fecha de emisión">--}}
-                {{--                        <div class="invalid-feedback">--}}
-                {{--                            {{ $errors->first('emision') }}--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
+                <div class="col-sm-9">
+                    <input type="date" name='emision'
+                           class="form-control {{$errors->first('emision') ? "is-invalid" : "" }} "
+                           value="{{old('emision') ? old('emision') : $asistent->emision}}" id="emision"
+                    {{auth()->user()->perfil=='Administrador' ? '' : 'disabled'}}>
+                    <div class="invalid-feedback">{{ $errors->first('emision') }}</div>
+                </div>
             </div>
 
 
@@ -352,29 +356,29 @@
                         </div>
                     </div>
                 </div>
-                {{--<div class="form-group col-md-4">--}}
-                    {{--<label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>--}}
-                    {{--<div class="col-sm-9">--}}
-                        {{--<select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} "--}}
-                                {{--id="tipo_4">--}}
-                            {{--<option value="0" selected>{{__('message.Choose_One')}}</option>--}}
-                            {{--@foreach ($tipo as $tipo_4)--}}
-                                {{--@if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])--}}
-                                    {{--<option--}}
-                                        {{--value="{{ $tipo_4->id }}" {{$asistent->tipo_4 == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>--}}
-                                {{--@endif--}}
-                            {{--@endforeach--}}
-                        {{--</select>--}}
-                        {{--<div class="invalid-feedback">--}}
-                            {{--{{ $errors->first('tipo_4') }}--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+                <div class="form-group col-md-4">
+                    <label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>
+                    <div class="col-sm-9">
+                        <select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} "
+                                id="tipo_4">
+                            <option value="0" selected>{{__('message.Choose_One')}}</option>
+                            @foreach ($tipo as $tipo_4)
+                                @if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])
+                                    <option
+                                        value="{{ $tipo_4->id }}" {{$asistent->tipo_4 == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>
+                                @endif
+                            @endforeach
+                        </select>
+                        <div class="invalid-feedback">
+                            {{ $errors->first('tipo_4') }}
+                        </div>
+                    </div>
+                </div>
             @else
                 <input type="hidden" name="tipo_1" value="{{$asistent->tipo_1}}">
                 <input type="hidden" name="tipo_2" value="{{$asistent->tipo_2}}">
                 <input type="hidden" name="tipo_3" value="{{$asistent->tipo_3}}">
-                {{--<input type="hidden" name="tipo_4" value="{{$asistent->tipo_4}}">--}}
+                <input type="hidden" name="tipo_4" value="{{$asistent->tipo_4}}">
             @endif
 
 
@@ -398,6 +402,96 @@
 @endsection
 
 @push('scripts')
+    <script>
+        $("#nota_p").change(function (){
+            if (this.value == 1){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 2){
+                document.getElementById('tipo_1').value = 2;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 3){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 2;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 4){
+                document.getElementById('tipo_1').value = 5;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 5){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 5;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 6){
+                document.getElementById('tipo_1').value = 2;
+                document.getElementById('tipo_2').value = 5;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 7){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 2;
+                document.getElementById('tipo_3').value = 6;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 8){
+                document.getElementById('tipo_1').value = 6;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 9){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 6;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 10){
+                document.getElementById('tipo_1').value = 2;
+                document.getElementById('tipo_2').value = 6;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 11){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 2;
+                document.getElementById('tipo_3').value = 5;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 12){
+                document.getElementById('tipo_1').value = 5;
+                document.getElementById('tipo_2').value = 6;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 13){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 5;
+                document.getElementById('tipo_3').value = 6;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 14){
+                document.getElementById('tipo_1').value = 2;
+                document.getElementById('tipo_2').value = 5;
+                document.getElementById('tipo_3').value = 6;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 15){
+                document.getElementById('tipo_1').value = 1;
+                document.getElementById('tipo_2').value = 2;
+                document.getElementById('tipo_3').value = 5;
+                document.getElementById('tipo_4').value = 6;
+            }else if (this.value == 16){
+                document.getElementById('tipo_1').value = 3;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }else if (this.value == 17){
+                document.getElementById('tipo_1').value = 4;
+                document.getElementById('tipo_2').value = 0;
+                document.getElementById('tipo_3').value = 0;
+                document.getElementById('tipo_4').value = 0;
+            }
+        })
+    </script>
     <script>
         // Prepare the preview for profile picture
         $("#wizard-picture").change(function () {

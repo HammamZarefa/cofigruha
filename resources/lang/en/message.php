@@ -255,7 +255,7 @@ return [
     'Partner' => 'Socios ',
     'Course' => 'Curso',
     'Card' => 'Carnet',
-    'Anapat' => 'Anapat',
+    'Anapat' => 'Cofigruha',
     'Compañera' => 'Compañía',
     'Formación' => 'Formación',
     'Consulta de carnet' => 'Consulta de carnet',

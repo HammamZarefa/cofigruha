@@ -50,6 +50,8 @@
 
                         <th>{{__('message.Status')}}</th>
 
+                        <th>{{__('message.Publico')}}</th>
+
                         <th>{{__('message.Option')}}</th>
 
                     </tr>
@@ -75,6 +77,8 @@
                         <td>{{ $post->keyword }}</td>
 
                         <td>{{ $post->status }}</td>
+
+                        <td>{{ $post->public == 1 ? __('message.Publico') : __('message.Privado') }}</td>
 
                         <td>
 

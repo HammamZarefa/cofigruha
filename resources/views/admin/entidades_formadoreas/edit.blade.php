@@ -209,6 +209,7 @@ input[type="radio"]:focus {
                 <div class="image">
                     <div class="form-group col-md-12">
                         <div class="picture-container">
+                            <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                             <div class="picture">
                                 <img src="{{asset('storage/' . $entidades_formadoreas->logo)}}" class="picture-src"
                                      id="wizardPicturePreview" height="200px" width="400px" title=""/>
@@ -256,6 +257,7 @@ input[type="radio"]:focus {
             </div>
             <div class="form-group col-md-4">
                 <label for="doc_medios_pdf" class="col-sm-4 col-form-label">{{__('message.Doc Medios PDF')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($entidades_formadoreas->doc_medios_pdf && file_exists(storage_path('app/public/' . $entidades_formadoreas->doc_medios_pdf)))
                 <label for="doc_medios_pdf" class="col-sm-1 col-form-label">
                     <a id="doc_medios_pdf_download" href="{{asset('storage/' . $entidades_formadoreas->doc_medios_pdf)}}" download><i class="fa fa-download"></i> </a> </label>

@@ -38,13 +38,13 @@
                 <div class="form-check">
                     <input class="form-check-input" onclick="test(this)" type="radio" {{$horario->contenido == "Teoría" ? "checked" : ""}} name="contenido" value="1" id=1>
                     <label class="form-check-label" for="flexRadioDefault1">
-                        Teoria
+                        Teoría
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" onclick="test1(this)" type="radio" name="contenido" value="2" id=2 {{$horario->contenido == "Práctica" ? "checked" : ""}}>
                     <label class="form-check-label" for="flexRadioDefault2">
-                        Practica
+                        Práctica
                     </label>
                 </div>
             </div>

@@ -72,7 +72,7 @@
             <div class="col-md-4">
                 <label for="curso" class="col-sm-12 col-form-label">{{__('message.Curso')}}</label>
                 <div class="col-sm-9">
-                    <input type="text"  name='curso'
+                    <input type="text" readonly name='curso'
                            class="form-control {{$errors->first('curso') ? "is-invalid" : "" }} "
                            value="{{$course_code}}" id="curso" placeholder="Código del curso">
                     <div class="invalid-feedback">
@@ -126,7 +126,7 @@
             <div class="col-md-4">
                 <label for="codigo" class="col-sm-12 col-form-label">{{__('message.Codigo')}}</label>
                 <div class="col-sm-9">
-                    <input type="text"  name='codigo'
+                    <input type="text" readonly name='codigo'
                            class="form-control {{$errors->first('codigo') ? "is-invalid" : "" }} "
                            value="{{old('codigo')}}" id="codigo" placeholder="Código de prácticas">
                     <div class="invalid-feedback">
@@ -253,7 +253,7 @@
                 <div class="col-sm-9">
                     <input type="text" name='direccion'
                            class="form-control {{$errors->first('direccion') ? "is-invalid" : "" }} "
-                           value="{{old('direccion')}}" id="direccion" placeholder="Dirección del curso">
+                           value="{{old('direccion')}}" id="direccion" placeholder="Dirección">
                     <div class="invalid-feedback">
                         {{ $errors->first('direccion') }}
                     </div>
@@ -304,6 +304,7 @@
 
             <div class="col-md-4">
                 <label for="asistentes_pdf" class="col-sm-12 col-form-label">{{__('message.Asistentes Pdf')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 <div class="col-sm-9">
                     <input type="file" name='asistentes_pdf'
                            class="form-control {{$errors->first('asistentes_pdf') ? "is-invalid" : "" }} "
@@ -379,8 +380,8 @@
                 </div>
             </div>
             <div class="col-md-2 d-flex flex-column justify-content-center">
-                <label for="estado" class="col-sm-12 col-form-label text-center">{{__('message.Publico')}}
-                    - {{__('message.Privado')}}</label>
+                <label for="estado" class="col-sm-12 col-form-label text-center">{{__('message.Privado')}}
+                    - {{__('message.Publico')}}</label>
                 <label class="switch">
                     <input type="checkbox" name="publico_privado" {{old('publico_privado') == "on" ? "checked" : ""}} >
                     <span class="slider round"></span>
@@ -440,6 +441,84 @@
 @push('scripts')
 
     <script>
+        var a1CheckBox = document.getElementById('1');
+        var b1CheckBox = document.getElementById('2');
+        var a2CheckBox = document.getElementById('3');
+        var b2CheckBox = document.getElementById('4');
+        var a3CheckBox = document.getElementById('5');
+        var b3CheckBox = document.getElementById('6');
+
+        var searchBox = document.getElementById('codigo');
+        var code = document.getElementById('curso').value;
+
+
+        function updateSearchBox() {
+            if (a2CheckBox.checked) {
+                a1CheckBox.disabled = true;
+                b1CheckBox.disabled = true;
+                b2CheckBox.disabled = true;
+                b3CheckBox.disabled = true;
+                a3CheckBox.disabled = true;
+            }
+            if (b2CheckBox.checked) {
+                a1CheckBox.disabled = true;
+                b1CheckBox.disabled = true;
+                a2CheckBox.disabled = true;
+                b3CheckBox.disabled = true;
+                a3CheckBox.disabled = true;
+            }
+            if (a1CheckBox.checked || b1CheckBox.checked || a3CheckBox.checked || b3CheckBox.checked) {
+                a2CheckBox.disabled = true;
+                b2CheckBox.disabled = true;
+            }
+            if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                a1CheckBox.disabled = false;
+                b1CheckBox.disabled = false;
+                a2CheckBox.disabled = false;
+                b2CheckBox.disabled = false;
+                b3CheckBox.disabled = false;
+                a3CheckBox.disabled = false;
+            }
+
+
+            if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B01-' + code;
+            } else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B02-' + code;
+            } else if (!a1CheckBox.checked && !b1CheckBox.checked && a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B03-' + code;
+            } else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B04-' + code;
+            } else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B05-' + code;
+            } else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B06-' + code;
+            } else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B07-' + code;
+            } else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B08-' + code;
+            } else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B09-' + code;
+            } else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B10-' + code;
+            } else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B11-' + code;
+            } else if (!a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B12-' + code;
+            } else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && !b3CheckBox.checked) {
+                searchBox.value = 'B13-' + code;
+            } else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && !a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B14-' + code;
+            } else if (a1CheckBox.checked && !b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B15-' + code;
+            } else if (a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B17-' + code;
+            } else if (!a1CheckBox.checked && b1CheckBox.checked && !a2CheckBox.checked && !b2CheckBox.checked && a3CheckBox.checked && b3CheckBox.checked) {
+                searchBox.value = 'B16-' + code;
+            } else {
+                searchBox.value = '{{__("message.you can not choose this type of machine togother")}}';
+            }
+        }
 
     </script>
 

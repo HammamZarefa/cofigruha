@@ -56,11 +56,12 @@
 
                         <th>{{__('message.Apellidos')}}</th>
 
-                        <th>{{__('message.tipo_carnet')}}</th>
+                        <th>Tipo de curso</th>
 
                         <th>{{__('message.Fecha De Emisión')}} </th>
 
                         <th>{{__('message.Fecha De Vencimiento')}} </th>
+                        <th>{{__('message.Curso')}} </th>
 
                         <th>{{__('message.Option')}}</th>
 
@@ -86,6 +87,7 @@
                         <td> {{ $certificado->tipos_carnet }} </td>
                         <td> {{date('d/m/Y',strtotime($certificado->emision))  }} </td>
                         <td>{{ date('d/m/Y',strtotime($certificado->vencimiento)) }}</td>
+                        <td> {{ @$certificado->cursoo->codigo }} </td>
                         <td>
 {{--                        <a href="{{route('admin.certificado.edit', [$certificado->id])}}" class="btn btn-edit btn-sm"> <i class="fas fa-eye"></i> </a>--}}
 

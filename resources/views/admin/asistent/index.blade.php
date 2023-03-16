@@ -25,41 +25,20 @@
 <!-- DataTales Example -->
 
 <div class="card shadow mb-4">
-
-    <div class="card-header py-3">
-
-        <a href="{{ route('admin.asistent.create') }}" class="btn btn-success">{{__('message.Create')}}</a>
-
-    </div>
-
     <div class="card-body col-md-12">
-
         <div class="table-responsive">
-
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
                 <thead>
-
                     <tr>
-
                         <th>{{__('message.Nombre')}}</th>
-
                         <th>{{__('message.Apellido')}}.</th>
-
                         <th>{{__('message.Número de asistente')}}</th>
-
                         <th>{{__('message.Nota Examen teorico')}}	</th>
-
                         <th>{{__('message.Nota Examen Practico')}}	</th>
-
                         <th>{{__('message.Option')}}</th>
-
                     </tr>
-
                 </thead>
-
                 <tbody>
-
                 @php
 
                 $no=0;
@@ -67,9 +46,7 @@
                 @endphp
 
                 @foreach ($asistent as $asistent)
-
                     <tr>
-
                         <td>
                             @foreach($operador as $ope)
                                 {{$ope->id == $asistent->operador ? $ope->nombre : "" }}

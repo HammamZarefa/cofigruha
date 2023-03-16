@@ -128,6 +128,7 @@
                     <div class="image">
                         <div class="form-group col-md-12">
                             <div class="picture-container">
+                                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                                 <div class="picture">
                                     <img src="{{asset('storage/' )}}" class="picture-src"
                                          id="wizardPicturePreview" height="200px" width="400px" title=""/>
@@ -146,6 +147,7 @@
                     <div class="image">
                         <div class="form-group col-md-12">
                             <div class="picture-container">
+                                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                                 <div class="picture">
                                     <img src="{{asset('storage/' . $operadore->foto)}}" class="picture-src"
                                          id="wizardPicturePreview" height="200px" width="400px" title=""/>

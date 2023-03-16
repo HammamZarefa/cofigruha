@@ -118,6 +118,7 @@
 
             <div class="form-group col-md-4">
                 <label for="url" class="col-sm-4 col-form-label">{{__('message.URL')}}</label>
+                <span class="maxsize"> El tamaño máximo de archivo subido no debe superar 2 MB</span>
                 @if($examen->url && file_exists(storage_path('app/public/' . $examen->url)))
                     <label for="url" class="col-sm-1 col-form-label">
                         <a id="url_download" href="{{asset('storage/' . $examen->url)}}" download><i class="fa fa-download"></i> </a> </label>

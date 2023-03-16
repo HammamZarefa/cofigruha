@@ -88,7 +88,7 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2 >{{__('message.LA FORMACIÓN DE ANAPAT. CARACTERÍSTICAS')}}</h2>
+                    <h2 >{{__('message.LA FORMACIÓN DE COFIGRUHA CARACTERÍSTICAS')}}</h2>
                 </div>
 
                 <div class="row">

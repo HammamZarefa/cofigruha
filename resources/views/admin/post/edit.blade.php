@@ -178,7 +178,19 @@
             </div>
             <div class="form-group ml-5">
 
-                <div class="col-sm-3">
+        </div>
+        <div class="form-group ml-5">
+            <div class="col-md-2 d-flex flex-column justify-content-center">
+                <label for="public" class="col-sm-12 col-form-label text-center">{{__('message.Publico')}}</label>
+                <label class="switch">
+                    <input type="hidden" name="public" value=0>
+                    <input type="checkbox" name="public" {{$post->public == 1 ? "checked" : ""}}>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group ml-5">
+
 
                     <button type="submit" class="btn btn-primary">{{__('message.Update')}}</button>
 

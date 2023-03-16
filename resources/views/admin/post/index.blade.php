@@ -77,6 +77,8 @@
                         <td>{{ $post->keyword }}</td>
 
                         <td>{{ $post->status }}</td>
+                        <td>{{ $post->public == 1 ? __('message.Publico') : __('message.Privado') }}</td>
+
 
                         <td>{{ $post->public == 1 ? __('message.Publico') : __('message.Privado') }}</td>
 

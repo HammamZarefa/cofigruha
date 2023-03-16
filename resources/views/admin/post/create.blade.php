@@ -9,7 +9,6 @@
             cursor: pointer;
             text-align: center;
         }
-
         .picture {
             width: 800px;
             height: 400px;
@@ -22,7 +21,6 @@
             transition: all 0.2s;
             -webkit-transition: all 0.2s;
         }
-
         .picture:hover {
             border-color: #2ca8ff;
         }
@@ -154,10 +152,23 @@
                     </label>
                 </div>
             </div>
-            <div class="form-group ml-5">
-                <div class="col-sm-3">
-                    <button type="submit" class="btn btn-primary">{{__('message.Create')}}</button>
-                </div>
+
+        </div>
+        <div class="form-group ml-5">
+            <div class="col-md-2 d-flex flex-column justify-content-center">
+                <label for="public" class="col-sm-12 col-form-label text-center">{{__('message.Publico')}}</label>
+                <label class="switch">
+                    <input type="checkbox" name="public">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="form-group ml-5">
+
+            <div class="col-sm-3">
+
+                <button type="submit" class="btn btn-primary">{{__('message.Create')}}</button>
+
             </div>
         </div>
     </form>

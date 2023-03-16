@@ -141,6 +141,7 @@ class PostController extends Controller
                 $post->public = 1;
             }
             $post->save();
+
                 return redirect()->route('admin.post')->with('success', 'Data added successfully');
                } else {
                 return redirect()->route('admin.post.create')->with('error', 'Data failed to add');

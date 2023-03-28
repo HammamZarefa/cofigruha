@@ -46,7 +46,6 @@
                         $no=0;
                     @endphp
                     @foreach ($cursos as $cursos)
-                        @can('show_course',$cursos)
                             <tr>
                                 <td>{{ $cursos->curso }}</td>
                                 <td>
@@ -103,7 +102,6 @@
                                     @endif
                                 </td>
                             </tr>
-                        @endcan
                     @endforeach
                     </tbody>
                 </table>

@@ -126,7 +126,7 @@
             <div class="col-md-4">
                 <label for="codigo" class="col-sm-12 col-form-label">{{__('message.Codigo')}}</label>
                 <div class="col-sm-9">
-                    <input type="text" readonly name='codigo'
+                    <input type="text"  name='codigo'
                            class="form-control {{$errors->first('codigo') ? "is-invalid" : "" }} "
                            value="{{old('codigo')}}" id="codigo" placeholder="Código de prácticas">
                     <div class="invalid-feedback">

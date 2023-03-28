@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\DocumentController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{BannerController,
+use App\Http\Controllers\{Auth\ForgotPasswordController,
+    BannerController,
     CarnetController,
     CertificadoController,
     EntidadesFormadoreasController,
@@ -42,6 +43,7 @@ use App\Http\Controllers\{BannerController,
 Route::get('/', [FrontController::class, 'home'])->name('homepage');
 Route::post('/', [FrontController::class, 'subscribe'])->name('subscribe');
 Route::get('about-us', [FrontController::class, 'about'])->name('about');
+Route::get('quienes-somos', [FrontController::class, 'about2'])->name('about2');
 Route::get('contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('entidades', [FrontController::class, 'entidades'])->name('entidades');
 Route::get('testimonials', [FrontController::class, 'testi'])->name('testi');
@@ -58,6 +60,7 @@ Route::get('blog', [FrontController::class, 'blog'])->name('blog');
 Route::get('blog/search',[FrontController::class, 'search'])->name('search');
 Route::get('blog/{slug}', [FrontController::class, 'blogshow'])->name('blogshow');
 Route::get('categories/{category:slug}',[FrontController::class, 'category'])->name('category');
+Route::get('privadoCategories/{category:slug}',[FrontController::class, 'privadoCategory'])->name('privadoCategory');
 Route::get('tags/{tag:slug}',[FrontController::class, 'tag'])->name('tag');
 Route::get('pages/{slug}', [FrontController::class, 'page'])->name('page');
 //Route::resource('entidades_formadoreas', 'Entidades_FormadoreasController');
@@ -68,10 +71,12 @@ Route::get('pages/{slug}', [FrontController::class, 'page'])->name('page');
 Auth::routes([
     'register' => false
 ]);
+
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post');
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>'auth'],function () {
@@ -94,15 +99,15 @@ Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>'auth'],function ()
     Route::post('banner/edit/{id}', [BannerController::class, 'update'])->middleware('can:isAdmin')->name('banner.update');
     Route::delete('banner/destroy/{id}',[BannerController::class, 'destroy'])->middleware('can:isAdmin')->name('banner.destroy');
 
-     // Manage Portfolio Categories
-     Route::get('portfolio-categories', [PcategoryController::class, 'index'])->name('pcategory');
-     Route::post('portfolio-categories', [PcategoryController::class, 'store'])->name('pcategory.store');
-     Route::get('Portfolio-categories/edit/{id}', [PcategoryController::class, 'edit'])->name('pcategory.edit');
-     Route::post('Portfolio-categories/edit/{id}', [PcategoryController::class, 'update'])->name('pcategory.update');
-     Route::delete('Portfolio-categories/destroy/{id}',[PcategoryController::class, 'destroy'])->name('pcategory.destroy');
+    // Manage Portfolio Categories
+    Route::get('portfolio-categories', [PcategoryController::class, 'index'])->name('pcategory');
+    Route::post('portfolio-categories', [PcategoryController::class, 'store'])->name('pcategory.store');
+    Route::get('Portfolio-categories/edit/{id}', [PcategoryController::class, 'edit'])->name('pcategory.edit');
+    Route::post('Portfolio-categories/edit/{id}', [PcategoryController::class, 'update'])->name('pcategory.update');
+    Route::delete('Portfolio-categories/destroy/{id}',[PcategoryController::class, 'destroy'])->name('pcategory.destroy');
 
-     // Manage asistent
-    Route::get('asistent', [AsistentController::class, 'index'])->name('asistent');
+    // Manage asistent
+//    Route::get('asistents', [AsistentController::class, 'index'])->name('asistent');
     Route::get('asistent/create/{id}', [AsistentController::class, 'create'])->name('asistent.create');
     Route::post('asistent/create', [AsistentController::class, 'store'])->name('asistent.store');
     Route::get('asistent/edit/{id}', [AsistentController::class, 'edit'])->name('asistent.edit');
@@ -120,34 +125,37 @@ Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>'auth'],function ()
     Route::post('cursos/create', [CursosController::class, 'store'])->name('cursos.store');
     Route::get('cursos/edit/{id}', [CursosController::class, 'edit'])->name('cursos.edit');
     Route::post('cursos/edit/{id}', [CursosController::class, 'update'])->name('cursos.update');
-    Route::delete('cursos/destroy/{id}',[CursosController::class, 'destroy'])->name('cursos.destroy');
     Route::post('cursos/activo/{id}',[CursosController::class, 'activo'])->name('cursos.activo');
     Route::get('cursos/export',[CursosController::class, 'export'])->name('cursos.export');
     Route::get('cursos/print/{id}',[CursosController::class, 'print'])->name('cursos.print');
     Route::get('cursos/prnpriview',[CursosController::class, 'prnpriview'])->name('cursos.prnpriview');
+    Route::get('trashed-cursos', [CursosController::class, 'trashed'])->name('cursos.trashed');
+    Route::delete('cursos/destroy/{id}',[CursosController::class, 'destroy'])->name('cursos.destroy');
+    Route::post('cursos/force-delete', [CursosController::class,'forceDelete'])->name('cursos.force-delete');
+    Route::post('cursos/restore', [CursosController::class,'restore'])->name('cursos.restore');
+    Route::get('cursos/asistents/{cursos}',[CursosController::class, 'asistents'])->name('cursos.asistents');
 
-    //print
 //    Route::get('/cursos','PrintController@index');
 //    Route::get('/prnpriview','PrintController@prnpriview');
 
 
     // Manage Categories
-     Route::get('categories', [CategoryController::class, 'index'])->name('category');
-     Route::get('categories/create', [CategoryController::class, 'create'])->name('category.create');
-     Route::post('categories/create', [CategoryController::class, 'store'])->name('category.store');
-     Route::get('categories/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
-     Route::post('categories/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
-     Route::delete('categories/destroy/{id}',[CategoryController::class, 'destroy'])->name('category.destroy');
+    Route::get('categories', [CategoryController::class, 'index'])->name('category');
+    Route::get('categories/create', [CategoryController::class, 'create'])->name('category.create');
+    Route::post('categories/create', [CategoryController::class, 'store'])->name('category.store');
+    Route::get('categories/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('categories/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
+    Route::delete('categories/destroy/{id}',[CategoryController::class, 'destroy'])->name('category.destroy');
 
-     // Manage Tags
-     Route::get('tags', [TagController::class, 'index'])->name('tag');
-     Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');
-     Route::post('tags/create', [TagController::class, 'store'])->name('tag.store');
-     Route::get('tags/edit/{id}', [TagController::class, 'edit'])->name('tag.edit');
-     Route::post('tags/edit/{id}', [TagController::class, 'update'])->name('tag.update');
-     Route::delete('tags/destroy/{id}',[TagController::class, 'destroy'])->name('tag.destroy');
+    // Manage Tags
+    Route::get('tags', [TagController::class, 'index'])->name('tag');
+    Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');
+    Route::post('tags/create', [TagController::class, 'store'])->name('tag.store');
+    Route::get('tags/edit/{id}', [TagController::class, 'edit'])->name('tag.edit');
+    Route::post('tags/edit/{id}', [TagController::class, 'update'])->name('tag.update');
+    Route::delete('tags/destroy/{id}',[TagController::class, 'destroy'])->name('tag.destroy');
 
-     // Manage Blog
+    // Manage Blog
     Route::get('post',[PostController::class, 'index'])->middleware('can:isAdmin')->name('post');
     Route::get('post/create',[PostController::class, 'create'])->middleware('can:isAdmin')->name('post.create');
     Route::post('post/create',[PostController::class, 'store'])->middleware('can:isAdmin')->name('post.store');
@@ -264,11 +272,18 @@ Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>'auth'],function ()
 
     // Manage Admin
     Route::resource('users',UserController::class);
-     Route::get('users', [UserController::class, 'index'])->middleware('can:isAdminOrResponsable')->name('users.index');
-     Route::post('users/{id}', [UserController::class, 'changepassword'])->middleware('can:isAdminOrResponsable')->name('users.changepassword');
-     Route::get('users/create', [UserController::class, 'create'])->middleware('can:isAdminOrResponsable')->name('users.create');
+    Route::get('users', [UserController::class, 'index'])->middleware('can:isAdminOrResponsable')->name('users.index');
+    Route::post('users/{id}', [UserController::class, 'changepassword'])->middleware('can:isAdminOrResponsable')->name('users.changepassword');
+    Route::get('users/create', [UserController::class, 'create'])->middleware('can:isAdminOrResponsable')->name('users.create');
 //     Route::post('users/store', [UserController::class, 'store'])->middleware('can:isAdminOrResponsable')->name('users.store');
-     Route::get('users/edit/{id}', [UserController::class, 'edit'])->middleware('can:isAdminOrResponsable')->name('users.edit');
-     Route::post('users/edit/{id}', [UserController::class, 'update'])->middleware('can:isAdminOrResponsable')->name('users.update');
-     Route::delete('users/destroy/{id}',[UserController::class, 'destroy'])->middleware('can:isAdmin')->name('users.destroy');
+    Route::get('users/edit/{id}', [UserController::class, 'edit'])->middleware('can:isAdminOrResponsable')->name('users.edit');
+    Route::post('users/edit/{id}', [UserController::class, 'update'])->middleware('can:isAdminOrResponsable')->name('users.update');
+    Route::delete('users/destroy/{id}',[UserController::class, 'destroy'])->middleware('can:isAdmin')->name('users.destroy');
+
+    // Manage Document
+    Route::get('documents/{slug}', [DocumentController::class, 'documents'])->name('documents');
+    Route::get('document/{slug}', [DocumentController::class, 'document'])->name('document');
+    Route::get('docsearch/search',[DocumentController::class, 'documentsSearch'])->name('documents.search');
+
+
 });

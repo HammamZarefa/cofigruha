@@ -62,7 +62,7 @@ class Cursos extends Model
 
     public function carnet()
     {
-        return $this->hasMany('App\Model\Carnet', 'curso');
+        return $this->hasMany(Carnet::class, 'curso');
     }
 
 }

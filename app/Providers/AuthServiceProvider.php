@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
-    private $s=['Responsable','Admin'];
+    private $s = ['Responsable', 'Admin'];
     /**
      * The policy mappings for the application.
      *
@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
 
         /* define a admin user role */
 
-        Gate::define('isAdmin', function($user) {
+        Gate::define('isAdmin', function ($user) {
 
             return $user->perfil == 'Administrador';
 
@@ -36,7 +36,7 @@ class AuthServiceProvider extends ServiceProvider
 
         /* define a manager user role */
 
-        Gate::define('isResponsable', function($user) {
+        Gate::define('isResponsable', function ($user) {
 
             return $user->perfil == 'Responsable_de_Formacion';
 
@@ -44,28 +44,33 @@ class AuthServiceProvider extends ServiceProvider
 
         /* define a user role */
 
-        Gate::define('isFormador', function($user) {
+        Gate::define('isFormador', function ($user) {
 
             return $user->perfil == 'Formador';
 
         });
-        Gate::define('isAdminOrResponsable', function($user) {
+        Gate::define('isAdminOrResponsable', function ($user) {
 
-            return $user->perfil ==   'Administrador' ||$user->perfil ==   'Responsable_de_Formacion' ;
-
-        });
-        Gate::define('isResponsableOrFormador', function($user) {
-
-            return $user->perfil ==   'Formador' ||$user->perfil ==   'Responsable_de_Formacion' ;
+            return $user->perfil == 'Administrador' || $user->perfil == 'Responsable_de_Formacion';
 
         });
+        Gate::define('isResponsableOrFormador', function ($user) {
 
-        Gate::define('isHaveEntitade', function($user) {
-
-
-            return $user->perfil ==   ('Responsable_de_Formacion' && !isset($user->entidad)) || $user->perfil == 'Administrador' ;
+            return $user->perfil == 'Formador' || $user->perfil == 'Responsable_de_Formacion';
 
         });
-        //
+
+        Gate::define('isHaveEntitade', function ($user) {
+
+
+            return $user->perfil == ('Responsable_de_Formacion' && !isset($user->entidad)) || $user->perfil == 'Administrador';
+
+        });
+        Gate::define('show_course', function ($user, $cursos) {
+            return
+                $user->perfil == 'Administrador' ||
+                ($user->perfil == 'Responsable_de_Formacion' && $user->entidad == $cursos->entidad) ||
+                ($user->perfil == 'Formador' && $user->entidad == $cursos->entidad && $cursos->formador = $user->id);
+        });
     }
 }

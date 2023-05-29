@@ -161,13 +161,12 @@
             <div class="form-group col-md-4">
                 <label for="nota_t" class="col-sm-2 col-form-label">{{__('message.Nota_t')}}</label>
                 <div class="col-sm-9">
-                    <input type="text" name='nota_t'
-                           class="form-control {{$errors->first('nota_t') ? "is-invalid" : "" }} "
-                           value="{{old('nota_t') ? old('nota_t') : $asistent->nota_t}}"
-                           placeholder="Nota examen teórico" id="nota_t">
-                    <div class="invalid-feedback">
-                        {{ $errors->first('nota_t') }}
-                    </div>
+                    <select name='nota_t' class="form-control {{$errors->first('nota_t') ? "is-invalid" : "" }} " id="nota_t">
+                        <option  value=""> Sin Nota</option>
+                        @for($i=1;$i<=10;$i++)
+                            <option value="{{ $i }}" @if($asistent->nota_t == $i) selected @endif> {{ $i }}</option>
+                        @endfor
+                    </select>
                 </div>
             </div>
 
@@ -177,10 +176,10 @@
                     <select name='nota_p' class="form-control {{$errors->first('nota_p') ? "is-invalid" : "" }} "
                             id="nota_p">
                         <option  value="" {{!$asistent->notep ? "selected" : ""}}>Sin Nota</option>
-                        @foreach ($notes as $note)
+                        @for($i=1;$i<=10;$i++)
                             <option
-                                value="{{ $note }}" {{$asistent->nota_p == $note ? "selected" : ""}}>{{$note}}</option>
-                        @endforeach
+                                value="{{ $i }}" {{$asistent->nota_p == $i ? "selected" : ""}}>{{$i}}</option>
+                        @endfor
                     </select>
                     <div class="invalid-feedback">
                         {{ $errors->first('nota_p') }}
@@ -306,7 +305,7 @@
                                 id="tipo_1">
                             <option disabled selected>{{__('message.Choose_One')}}</option>
                             @foreach ($tipo as $tipo_1)
-                                @if($tipo_1->id == $tipos[0] || $tipo_1->id == $tipos[1] || $tipo_1->id == $tipos[2] || $tipo_1->id == $tipos[3])
+                                @if($tipo_1->id == $tipos[0] || $tipo_1->id == $tipos[1] )
                                     <option
                                         value="{{ $tipo_1->id }}" {{$asistent->tipo_1 == $tipo_1->id ? "selected" : ""}}>{{ $tipo_1->tipo_maquina }}</option>
                                 @endif
@@ -326,7 +325,7 @@
                                 id="tipo_2">
                             <option value="0" selected>{{__('message.Choose_One')}}</option>
                             @foreach ($tipo as $tipo_2)
-                                @if($tipo_2->id == $tipos[0] || $tipo_2->id == $tipos[1] || $tipo_2->id == $tipos[2] || $tipo_2->id == $tipos[3])
+                                @if($tipo_2->id == $tipos[0] || $tipo_2->id == $tipos[1] )
                                     <option
                                         value="{{ $tipo_2->id }}" {{$asistent->tipo_2 == $tipo_2->id ? "selected" : ""}}>{{ $tipo_2->tipo_maquina }}</option>
                                 @endif
@@ -338,47 +337,11 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-4">
-                    <label for="tipo_3" class="col-sm-2 col-form-label">{{__('message.Tipo_3')}}</label>
-                    <div class="col-sm-9">
-                        <select name='tipo_3' class="form-control {{$errors->first('tipo_3') ? "is-invalid" : "" }} "
-                                id="tipo_3">
-                            <option value="0" selected>{{__('message.Choose_One')}}</option>
-                            @foreach ($tipo as $tipo_3)
-                                @if($tipo_3->id == $tipos[0] || $tipo_3->id == $tipos[1] || $tipo_3->id == $tipos[2] || $tipo_3->id == $tipos[3])
-                                    <option
-                                        value="{{ $tipo_3->id }}" {{$asistent->tipo_3 == $tipo_3->id ? "selected" : ""}}>{{ $tipo_3->tipo_maquina }}</option>
-                                @endif
-                            @endforeach
-                        </select>
-                        <div class="invalid-feedback">
-                            {{ $errors->first('tipo_3') }}
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="tipo_4" class="col-sm-2 col-form-label">{{__('message.Tipo_4')}}</label>
-                    <div class="col-sm-9">
-                        <select name='tipo_4' class="form-control {{$errors->first('tipo_4') ? "is-invalid" : "" }} "
-                                id="tipo_4">
-                            <option value="0" selected>{{__('message.Choose_One')}}</option>
-                            @foreach ($tipo as $tipo_4)
-                                @if($tipo_4->id == $tipos[0] || $tipo_4->id == $tipos[1] || $tipo_4->id == $tipos[2] || $tipo_4->id == $tipos[3])
-                                    <option
-                                        value="{{ $tipo_4->id }}" {{$asistent->tipo_4 == $tipo_4->id ? "selected" : ""}}>{{ $tipo_4->tipo_maquina }}</option>
-                                @endif
-                            @endforeach
-                        </select>
-                        <div class="invalid-feedback">
-                            {{ $errors->first('tipo_4') }}
-                        </div>
-                    </div>
-                </div>
+
+
             @else
                 <input type="hidden" name="tipo_1" value="{{$asistent->tipo_1}}">
                 <input type="hidden" name="tipo_2" value="{{$asistent->tipo_2}}">
-                <input type="hidden" name="tipo_3" value="{{$asistent->tipo_3}}">
-                <input type="hidden" name="tipo_4" value="{{$asistent->tipo_4}}">
             @endif
 
 
@@ -402,96 +365,7 @@
 @endsection
 
 @push('scripts')
-    <script>
-        $("#nota_p").change(function (){
-            if (this.value == 1){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 2){
-                document.getElementById('tipo_1').value = 2;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 3){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 2;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 4){
-                document.getElementById('tipo_1').value = 5;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 5){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 5;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 6){
-                document.getElementById('tipo_1').value = 2;
-                document.getElementById('tipo_2').value = 5;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 7){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 2;
-                document.getElementById('tipo_3').value = 6;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 8){
-                document.getElementById('tipo_1').value = 6;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 9){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 6;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 10){
-                document.getElementById('tipo_1').value = 2;
-                document.getElementById('tipo_2').value = 6;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 11){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 2;
-                document.getElementById('tipo_3').value = 5;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 12){
-                document.getElementById('tipo_1').value = 5;
-                document.getElementById('tipo_2').value = 6;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 13){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 5;
-                document.getElementById('tipo_3').value = 6;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 14){
-                document.getElementById('tipo_1').value = 2;
-                document.getElementById('tipo_2').value = 5;
-                document.getElementById('tipo_3').value = 6;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 15){
-                document.getElementById('tipo_1').value = 1;
-                document.getElementById('tipo_2').value = 2;
-                document.getElementById('tipo_3').value = 5;
-                document.getElementById('tipo_4').value = 6;
-            }else if (this.value == 16){
-                document.getElementById('tipo_1').value = 3;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }else if (this.value == 17){
-                document.getElementById('tipo_1').value = 4;
-                document.getElementById('tipo_2').value = 0;
-                document.getElementById('tipo_3').value = 0;
-                document.getElementById('tipo_4').value = 0;
-            }
-        })
-    </script>
+
     <script>
         // Prepare the preview for profile picture
         $("#wizard-picture").change(function () {

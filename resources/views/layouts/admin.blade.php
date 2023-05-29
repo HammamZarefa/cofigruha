@@ -11,8 +11,8 @@
 
     <title>Cofigruha</title>
     <!-- Favicons -->
-    <link href="{{ asset('admin/img/anapat.png')}}" rel="icon">
-    <link href="{{ asset('admin/img/anapat.png')}}" rel="apple-touch-icon">
+    <link href="{{ asset('storage/'.$general->logo) }}" rel="icon">
+    <link href="{{ asset('storage/'.$general->logo) }}" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -60,7 +60,7 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
-            <img width="207" height="97" src="{{ asset('admin/img/anapat.png')}}"
+            <img width="207" height="97" src="{{ asset('storage/'.$general->logo) }}"
                  class="attachment-medium size-medium" alt="" loading="lazy" srcset=""
                  sizes="(max-width: 207px) 100vw, 207px">
         </a>
@@ -72,7 +72,7 @@
                 <!-- Sidebar Toggle (Topbar) -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center d-md-none"
                    href="{{ route('admin.dashboard') }}">
-                    <img width="207" height="97" src="{{ asset('admin/img/anapat.png')}}"
+                    <img width="207" height="97" src="{{ asset('storage/'.$general->logo) }}"
                          class="attachment-medium size-medium" alt="" loading="lazy" srcset=""
                          sizes="(max-width: 207px) 100vw, 207px">
                 </a>

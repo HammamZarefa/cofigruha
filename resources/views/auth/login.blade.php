@@ -35,7 +35,7 @@
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <img width="207" height="97" src="{{ asset('admin/img/logo-anpat.png')}}" class="attachment-medium size-medium" alt="" loading="lazy" srcset="{{ asset('admin/img/logo-anpat.png')}}" sizes="(max-width: 207px) 100vw, 207px">
+                <img width="207" height="97" src="{{ asset('storage/'.$general->logo) }}" class="attachment-medium size-medium" alt="" loading="lazy" srcset="{{ asset('storage/'.$general->logo) }}" sizes="(max-width: 207px) 100vw, 207px">
                 <form class="login" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="login__field">

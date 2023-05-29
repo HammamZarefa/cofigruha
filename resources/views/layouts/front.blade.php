@@ -48,7 +48,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top  d-flex">
   <a href="/" class="logo ml-5">
-        <img src="{{ asset('admin/img/logo-anpat.png')}}" alt="" class="img-fluid"></a>
+        <img src="{{ asset('storage/'.$general->logo) }}" alt="" class="img-fluid"></a>
     <div class="container d-flex align-items-center">
 
 
@@ -110,7 +110,7 @@
       <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 footer-links">
-                <img src="{{ asset('admin/img/logo-anpat.png')}}" alt="" width="70%">
+                <img src="{{ asset('storage/'.$general->logo) }}" alt="" width="70%">
             </div>
           <div class="col-lg-3 col-md-6 footer-links">
           <h3>{{__('message.Company')}}</h3>

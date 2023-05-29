@@ -66,116 +66,7 @@ class AsistentController extends Controller
         if ($corse->tipo_maquina_2 != null) {
             array_push($tipo_maq, $corse->tipo_maquina_2);
         }
-        if ($corse->tipo_maquina_3 != null) {
-            array_push($tipo_maq, $corse->tipo_maquina_3);
-        }
-        if ($corse->tipo_maquina_4 != null) {
-            array_push($tipo_maq, $corse->tipo_maquina_4);
-        }
-        if (count($tipo_maq) == 4) {
-            for ($i = 1; $i < 16; $i++) {
-                array_push($notes, $i);
-            }
-        } elseif (count($tipo_maq) == 3) {
 
-            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1 || $tipo_maq[2] == 1) {
-//                array_push($notes,1);
-            } else {
-                array_push($notes, 2);
-                array_push($notes, 4);
-                array_push($notes, 6);
-                array_push($notes, 8);
-                array_push($notes, 10);
-                array_push($notes, 12);
-                array_push($notes, 14);
-            }
-
-            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2) {
-//                array_push($notes,2);
-            } else {
-                array_push($notes, 1);
-                array_push($notes, 4);
-                array_push($notes, 5);
-                array_push($notes, 8);
-                array_push($notes, 9);
-                array_push($notes, 12);
-                array_push($notes, 13);
-            }
-            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5) {
-//                array_push($notes,4);
-            } else {
-                array_push($notes, 1);
-                array_push($notes, 2);
-                array_push($notes, 3);
-                array_push($notes, 8);
-                array_push($notes, 9);
-                array_push($notes, 10);
-                array_push($notes, 11);
-            }
-            if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6) {
-//                array_push($notes,8);
-            } else {
-                array_push($notes, 1);
-                array_push($notes, 2);
-                array_push($notes, 3);
-                array_push($notes, 4);
-                array_push($notes, 5);
-                array_push($notes, 6);
-                array_push($notes, 7);
-            }
-
-        } elseif (count($tipo_maq) == 2) {
-            if ($tipo_maq[0] == 1 || $tipo_maq[1] == 1) {
-                if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2 || $tipo_maq[2] == 2) {
-                    array_push($notes, 1);
-                    array_push($notes, 2);
-                    array_push($notes, 3);
-                } elseif ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || $tipo_maq[2] == 5) {
-                    array_push($notes, 1);
-                    array_push($notes, 4);
-                    array_push($notes, 5);
-                } elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || $tipo_maq[2] == 6) {
-                    array_push($notes, 1);
-                    array_push($notes, 8);
-                    array_push($notes, 9);
-                }
-
-            }
-            if ($tipo_maq[0] == 2 || $tipo_maq[1] == 2) {
-                if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5 || @$tipo_maq[2] == 5) {
-                    array_push($notes, 2);
-                    array_push($notes, 4);
-                    array_push($notes, 6);
-                } elseif ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || @$tipo_maq[2] == 6) {
-                    array_push($notes, 2);
-                    array_push($notes, 8);
-                    array_push($notes, 10);
-                }
-
-            }
-            if ($tipo_maq[0] == 5 || $tipo_maq[1] == 5) {
-                if ($tipo_maq[0] == 6 || $tipo_maq[1] == 6 || @$tipo_maq[2] == 6) {
-                    array_push($notes, 4);
-                    array_push($notes, 8);
-                    array_push($notes, 12);
-                }
-
-            }
-        } elseif (count($tipo_maq) == 1) {
-            if ($tipo_maq[0] == 1) {
-                array_push($notes, 1);
-            } elseif ($tipo_maq[0] == 2) {
-                array_push($notes, 2);
-            } elseif ($tipo_maq[0] == 3) {
-                array_push($notes, 16);
-            } elseif ($tipo_maq[0] == 4) {
-                array_push($notes, 17);
-            } elseif ($tipo_maq[0] == 5) {
-                array_push($notes, 4);
-            } elseif ($tipo_maq[0] == 6) {
-                array_push($notes, 8);
-            }
-        }
         $x = Asistent::select('orden')->where('curso', $id)->orderBy('id', 'desc')->latest()->get();
         if (count($x) > 0) {
             $orden = $x[0]->orden + 1;
@@ -186,8 +77,7 @@ class AsistentController extends Controller
         $tipo_1 = $corse->tipo_maquina_1;
         $tipo_2 = $corse->tipo_maquina_2;
         $tipo_3 = $corse->tipo_maquina_3;
-        $tipo_4 = $corse->tipo_maquina_4;
-        $tipos = [$tipo_1, $tipo_2, $tipo_3, $tipo_4];
+        $tipos = [$tipo_1, $tipo_2];
         return view('admin.asistent.create', compact('notes', 'curso', 'orden', 'id', 'operador', 'tipo_carnet', 'tipo', 'cursos', 'tipos'));
     }
 

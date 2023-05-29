@@ -22,7 +22,7 @@ class Carnet extends Model
 
     public function cursos()
     {
-        return $this->belongsTo('App\Model\Cursos', 'curso');
+        return $this->belongsTo(Cursos::class, 'curso');
     }
 
     public function Tipo_Maquinas()

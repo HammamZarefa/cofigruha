@@ -151,7 +151,7 @@
                             <div class="client-logo">
                                 <a href="{{ route('partner',$partner->id) }}"  rel="noopener noreferrer">
                                     <img src="{{ asset('storage/'.$partner->cover) }}" class="img-fluid" alt="">
-                                    <h2 style="text-align: center;"> {{$partner->name}}</h2>
+{{--                                    <h2 style="text-align: center;"> {{$partner->name}}</h2>--}}
                                 </a>
                             </div>
                         </div>

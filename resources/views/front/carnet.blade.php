@@ -19,9 +19,9 @@
                                 </div>
                             <hr/>
                             <p>operador : {{$operador->nombre}} {{$operador->apellidos}}</p>
-                            <p>Fecha De Alta : {{$carnet->fecha_de_alta}}</p>
+                            <p>Fecha De Vencimiento : {{$carnet->fecha_de_alta}}</p>
                             <p>Fecha De Emision : {{$carnet->fecha_de_emision}}</p>
-                            <p>Tipos De Pemp : {{$carnet->tipos_de_pemp}}</p>
+                            <p>Tipos De GHA : {{$carnet->Tipo_Maquinas->pluck('tipo_maquina')->implode(' , ')}}</p>
                             <p>Curso : {{$carnet->cursos->codigo}}</p>
                             <p>Examen Teorico Realizado: {{$carnet->examen_teorico_realizado}}</p>
                             <p>Estado : {{$carnet->estado == 0 ? "No" : "Si"}}</p>

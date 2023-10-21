@@ -37,7 +37,6 @@ class FrontController extends Controller
         $faqs = Faq::all();
         $pages =Link::all();
         $general = General::find(1);
-//        $link = Link::orderBy('name','asc')->get();
         $lpost = Post::where('status','=','PUBLISH')->orderBy('id','desc')->limit(5)->get();
         $partner = Partner::orderBy('name','asc')->limit(8)->get();
         $pcategories = Pcategory::all()->where('estado', 1);
@@ -133,13 +132,13 @@ class FrontController extends Controller
      */
     public function searchcarnet(Request $request)
     {
-//        dd($request);
+//      dd($request);
         $general = General::find(1);
 //        dd($general);
         $now = now().date('');
-        $carnet = Carnet::where('numero',$request->numero)->whereDate('fecha_de_emision' , '>' ,$now )->first();
+        $carnet = Carnet::where('numero',$request->numero)->with('Tipo_Maquinas')->first();
         $carnet2 = Carnet::where('numero',$request->numero)->whereDate('fecha_de_emision' , '<=' ,$now )->first();
-//dd($carnet2);
+//      dd($carnet2);
         if ($carnet2 != null && $carnet == null){
             $test = "Esta Carné ya expiró.";
             return view('front.carnets', compact('general','test'));

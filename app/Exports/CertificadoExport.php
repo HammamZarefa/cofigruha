@@ -42,7 +42,7 @@ class CertificadoExport implements FromCollection, WithHeadings
             foreach ($certificados as $key => $certificado) {
                 $cerOpe = $certificado->operadorr;
                 $cerCurso = $certificado->cursoo;
-                if ($cerOpe->estado != 0 || $cerCurso->estado != 1 || $cerCurso->cerrado != 1) {
+                if (@$cerOpe->estado != 0 || @$cerCurso->estado != 1 || $cerCurso->cerrado != 1) {
                     $certificados->forget($key);
                 }
             }
